@@ -1,0 +1,29 @@
+@import "vars"
+
+header
+    padding: 20px 0
+    background: #fff
+
+.logo
+    max-width: 300px
+    width: 100%
+    @include d-flex
+
+.nav-user
+    display: flex
+    align-items: center
+    margin: 0 0 0 auto
+    &__btn
+        width: 48px
+        height: 48px
+        min-width: 48px
+        margin: 0 8px 0 0
+        padding: 16px
+        border-radius: 50%
+        @include d-flex
+        &:hover
+            background: $accent
+            img
+                filter: invert(1)
+        &:last-child
+            margin: 0

@@ -1,0 +1,23 @@
+.form-authorization {
+  max-width: 904px;
+  width: 100%;
+  margin: 0 auto;
+}
+.form-authorization .btn-login {
+  margin: 0 auto;
+  min-width: 200px;
+}
+.form-authorization .form-footer span {
+  opacity: 0.6;
+  display: block;
+}
+.form-authorization .form-footer a {
+  margin: 4px auto 0;
+}
+
+.form-footer {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin: 24px auto 0;
+}

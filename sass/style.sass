@@ -88,17 +88,19 @@ input, textarea, select
   width: 100%
   height: 52px
   background: #efefef
-  color: #000
+  color: $black
   font-size: 16px
   font-weight: 500
   line-height: 18px
   cursor: pointer
   &::placeholder
-    color: #595959
+    color: rgba(37, 37, 37, .4)
 
   &:hover, &:focus
     outline: none
     box-shadow: none
+  &.text-center
+    text-align: center   
 
 input[type="radio"], input[type="checkbox"]
   width: auto
@@ -122,12 +124,12 @@ textarea
 
 .label-title
   width: 100%
-  display: block
   margin: 0 auto 8px
   font-weight: 600
   font-size: 16px
   display: flex
   align-items: center
+  justify-content: center
 
 button, .btn
   outline: none
@@ -149,12 +151,20 @@ button, .btn
   align-items: center
   justify-content: center
   text-align: center
-  padding: 10px 45px
+  padding: 10px 32px
   font-size: 16px
-  font-weight: bold
-  height: 46px
-  border-radius: 10px
+  font-weight: 600
+  line-height: 18px
+  height: 52px
+  border-radius: 30px
   transition: 0.3s ease
+
+.btn-black
+  color: #fff
+  background: #000
+  &:hover, &:focus
+    background: $accent
+    color: #fff  
 
 .svg-icon
   display: inline-block
@@ -167,6 +177,14 @@ strong, b
 
 ul, ol
   padding: 0 0 0 20px
+
+.text-decoration
+  text-decoration: underline
+
+a.color-black
+  color: #000
+  &:hover
+    color: $black    
 
 .my-ul
   list-style: none
@@ -192,6 +210,14 @@ h1, .h1
   margin: 0 auto 32px
 
 h2, .h2
+  width: 100%
+  margin: 0
+
+.mb-24
+  margin-bottom: 24px  
+
+.mb-32
+  margin-bottom: 32px  
 
 .slick-slider
   width: 100%

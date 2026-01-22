@@ -44,7 +44,39 @@
     <section class="authorization page">
       <div class="container">
         <div class="row">
+          <div class="col-12 col-lg-8 offset-lg-2">
+            <h1 class="text-center">Авторизация</h1>
+            <form method="post" class="form-authorization w-100">
+              <div class="row">
+                <div class="col-12 col-lg-6 mb-32">
+                  <label class="text-center">
+                    <span class="label-title text-center">E-mail</span>
+                    <input type="mail" name="mail" required placeholder="Введите E-mail при регистрации"
+                      class="text-center">
+                  </label>
+                </div>
+                <div class="col-12 col-lg-6 mb-32">
+                  <label class="text-center">
+                    <span class="label-title text-center">Пароль</span>
+                    <input type="password" name="password" required placeholder="Введите ваш пароль"
+                      class="text-center">
+                  </label>
+                </div>
 
+                <div class="col-12">
+                  <button type="submit" class="btn btn-black btn-login">Войти</button>
+
+                </div>
+
+                <div class="col-12">
+                  <div class="form-footer">
+                    <span>Забыли пароль?</span>
+                    <a href="password.html" class="link text-decoration color-black">Восстановить пароль</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -53,8 +85,28 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-12 d-flex align-items-center flex-wrap">
+        <div class="col-12 col-lg-8 d-flex flex-wrap">
           <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+       
+          <div class="footer-column">
+            <div class="copyright">© 2023-2025 ООО «ВашВагон»</div>
+            <a href="tel:+78001234567" class="footer-phone footel-link">+7 800 123-45-67</a>
+            <a href="mailto:info@rvpgroup.com" class="footer-mail footel-link">info@rvpgroup.com</a>
+          </div>
+
+       
+          <ul class="menu-documents my-ul">
+            <li><a href="politics.html" target="_blank">Политика конфиденциальности</a></li>
+            <li><a href="agreement.html" target="_blank">Пользовательское соглашение
+              </a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <a href="#" class="link-developer" target="_blank">
+            <span>Разработано в</span>
+            <img src="img/logo-developer.svg" alt="">
+          </a>
         </div>
       </div>
     </div>

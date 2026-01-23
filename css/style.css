@@ -201,6 +201,10 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.label-title small {
+  margin: 0 0 0 auto;
+  opacity: 0.48;
+}
 
 button, .btn {
   outline: none;

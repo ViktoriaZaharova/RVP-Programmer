@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVP programmer</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex align-items-center flex-wrap">
+          <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
+
+          <nav class="nav-user">
+            <a href="#" class="btn-help nav-user__btn"><img src="img/help-icon.svg" alt=""></a>
+            <a href="#" class="btn-help nav-user__btn"><img src="img/user-icon.svg" alt=""></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+
+    <section class="authorization registration page">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 offset-lg-2">
+            <h1>Регистрация</h1>
+
+            <form method="post" class="form-authorization w-100">
+              <div class="form-box">
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="h3">Персональные данные</h2>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ФИО <small>*</small></span>
+                      <input type="text" name="name" required placeholder="Введите ваше ФИО">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Телефон <small>*</small></span>
+                      <input type="text" name="phone" required placeholder="+7 (___) ___-__-__">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Логин <small>*</small></span>
+                      <input type="text" name="login" required placeholder="Введите ваш логин">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">E-mail <small>*</small></span>
+                      <input type="mail" name="mail" required placeholder="Введите E-mail">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Пароль <small>*</small></span>
+                      <input type="password" name="password" required placeholder="Введите ваш пароль">
+                    </label>
+                  </div>
+
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Пароль еще раз <small>*</small></span>
+                      <input type="password" name="double_password" required placeholder="Введите ваш пароль еще раз">
+                    </label>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="form-box">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="h3">Реквизиты</h3>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Полное наименование организации <small>*</small></span>
+                      <input type="text" name="name_company" required placeholder="Введите наименование организации">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Юридический адрес <small>*</small></span>
+                      <input type="text" name="address" required placeholder="Введите юридический адрес">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">Почтовый адрес <small>*</small></span>
+                      <input type="text" name="post_address" required placeholder="Введите почтовый адрес">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ИНН <small>*</small></span>
+                      <input type="text" name="inn" required placeholder="Введите ИНН">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">КПП</span>
+                      <input type="text" name="kpp" placeholder="Введите КПП">
+                    </label>
+                  </div>
+
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ОКПО</span>
+                      <input type="text" name="okpo" placeholder="Введите ОКПО">
+                    </label>
+                  </div>
+
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ОКАТО</span>
+                      <input type="text" name="okato" placeholder="Введите ОКАТО">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ОКВЭД (основной)</span>
+                      <input type="text" name="okwed" placeholder="Введите ОКВЭД">
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6 mb-24">
+                    <label>
+                      <span class="label-title">ОГРН</span>
+                      <input type="text" name="ogrn" placeholder="Введите ОГРН">
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-black">Подать заявку</button>
+
+              </div>
+
+              <div class="col-12">
+                <div class="form-footer">
+                  <span>Забыли пароль?</span>
+                  <a href="password.html" class="link text-decoration color-black">Восстановить пароль</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-wrap align-items-start">
+          <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+
+
+
+          <div class="footer-column">
+            <div class="copyright">© 2023-2025 ООО «ВашВагон»</div>
+            <a href="tel:+78001234567" class="footer-phone footer-link color-white">+7 800 123-45-67</a>
+            <a href="mailto:info@rvpgroup.com" class="footer-mail footer-link color-white">info@rvpgroup.com</a>
+          </div>
+
+
+          <ul class="menu-documents my-ul">
+            <li><a href="politics.html" target="_blank">Политика конфиденциальности</a></li>
+            <li><a href="agreement.html" target="_blank">Пользовательское соглашение
+              </a></li>
+          </ul>
+
+          <a href="#" class="link-developer" target="_blank">
+            <span>Разработано в</span>
+            <img src="img/logo-developer.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>

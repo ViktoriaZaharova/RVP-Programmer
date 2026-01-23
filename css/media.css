@@ -107,6 +107,13 @@
   .thanks-page .box-text {
     margin: 16px auto 24px;
   }
+  .link-group {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .link-group__item {
+    font-weight: 500;
+  }
 }
 @media only screen and (max-width: 670px) {
   .link-developer {

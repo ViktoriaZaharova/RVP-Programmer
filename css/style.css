@@ -277,6 +277,13 @@ a.color-black:hover {
   color: #252525;
 }
 
+a.color-white {
+  color: #fff;
+}
+a.color-white:hover {
+  color: #383E40;
+}
+
 .my-ul {
   list-style: none;
   padding: 0;
@@ -309,6 +316,14 @@ h1, .h1 {
 h2, .h2 {
   width: 100%;
   margin: 0;
+}
+
+h3, .h3 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: normal;
+  margin: 0 0 32px;
 }
 
 .mb-24 {

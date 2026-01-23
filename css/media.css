@@ -1,2 +1,144 @@
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1400px) {
+  .container {
+    padding: 0 24px;
+  }
+  footer .logo {
+    max-width: 250px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  footer {
+    font-size: 14px;
+  }
+  footer .logo {
+    max-width: 157px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+  .row {
+    margin: 0 -12px;
+  }
+  .row > * {
+    padding: 0 12px;
+  }
+  .logo {
+    max-width: 200px;
+  }
+  header {
+    padding: 15px 0;
+  }
+  .nav-user__btn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    padding: 11px;
+    margin: 0;
+  }
+  h1, .h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .label-title {
+    font-size: 14px;
+  }
+  .btn {
+    height: 48px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  input, textarea, select {
+    height: 48px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 10px;
+  }
+  .form-footer {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  footer {
+    padding: 24px 0;
+  }
+  footer .logo {
+    max-width: none;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 0 24px;
+  }
+  footer .logo img {
+    max-width: 157px;
+  }
+  .footer-column {
+    margin: 0 32px 0 0;
+  }
+  .agreement-content {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .agreement-content p {
+    margin: 0 0 16px;
+  }
+  .agreement-content p:last-child {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .link-developer {
+    width: 100%;
+    margin: 24px 0 0;
+  }
+  .footer-column {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header {
+    padding: 9px 0;
+  }
+  header .container {
+    padding: 0 16px;
+  }
+  header .row {
+    margin: 0 -16px;
+  }
+  header .row > * {
+    padding: 0 16px;
+  }
+  .logo {
+    max-width: 157px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .row {
+    margin: 0 -24px;
+  }
+  .row > * {
+    padding: 0 24px;
+  }
+  .mb-32 {
+    margin-bottom: 24px;
+  }
+  .page {
+    padding: 16px 0;
+  }
+  .authorization {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .agreement-content p {
+    margin: 0 0 10px;
+  }
+  .agreement-content p:last-child {
+    margin: 0;
+  }
+}

@@ -255,6 +255,40 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   color: #fff;
 }
 
+.btn-border {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+}
+.btn-border:hover, .btn-border:focus, .btn-border.active {
+  background: #383E40;
+  color: #fff;
+}
+
+.btn-group {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.btn-group .btn {
+  margin: 0 16px 0 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+.btn-group .btn:last-child {
+  margin: 0;
+}
+
+.btn-group > .btn-group:not(:last-child) > .btn, .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:first-child) > .btn, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn {
+  border-radius: 40px;
+}
+
+.btn-group > .btn-group:not(:first-child), .btn-group > :not(.btn-check:first-child) + .btn {
+  margin: 0;
+}
+
 .svg-icon {
   display: inline-block;
   width: 100%;
@@ -336,6 +370,14 @@ h3, .h3 {
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
 }
 
 .link-group {

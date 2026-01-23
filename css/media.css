@@ -100,6 +100,13 @@
     font-size: 12px;
     line-height: 20px;
   }
+  .thanks-checked {
+    max-width: 64px;
+    margin: 0 auto 16px;
+  }
+  .thanks-page .box-text {
+    margin: 16px auto 24px;
+  }
 }
 @media only screen and (max-width: 670px) {
   .link-developer {
@@ -155,5 +162,8 @@
   }
   .agreement-content p:last-child {
     margin: 0;
+  }
+  .authorization {
+    padding: 34px 0;
   }
 }

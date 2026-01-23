@@ -82,3 +82,27 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+
+.thanks-page h1 {
+  margin: 0 auto;
+}
+.thanks-page .box-text {
+  margin: 24px auto 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.thanks-checked {
+  margin: 0 auto 16px;
+  max-width: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

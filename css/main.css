@@ -63,3 +63,22 @@
 .form-box:last-child::after {
   display: none;
 }
+
+.text-required {
+  margin: 8px 0 32px;
+  opacity: 0.6;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.consent {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.form-registration .label-title {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}

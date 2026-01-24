@@ -53,3 +53,47 @@ header {
 .nav-user__btn:last-child {
   margin: 0;
 }
+
+.header {
+  padding: 0;
+  background: #f6f6f6;
+  position: relative;
+  z-index: 1;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0.05;
+  background: #000;
+}
+
+.nav-menu {
+  margin: 0 0 0 20px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.menu li {
+  padding: 8px 0 0;
+}
+.menu li a {
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-top: 2px solid transparent;
+}
+.menu li a.active {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}

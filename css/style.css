@@ -19,6 +19,13 @@
   src: url("../fonts/Inter/Inter-SemiBold.eot");
   src: url("../fonts/Inter/Inter-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter/Inter-SemiBold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Inter/Inter-Bold.eot");
+  src: url("../fonts/Inter/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter/Inter-Bold.woff") format("woff"), url("../fonts/Inter/Inter-Bold.ttf") format("truetype");
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

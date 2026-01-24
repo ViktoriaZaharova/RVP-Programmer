@@ -18,13 +18,54 @@ header
         height: 48px
         min-width: 48px
         margin: 0 8px 0 0
-        padding: 16px
         border-radius: 50%
+        position: relative
+        z-index: 1
+        font-size: 16px
+        font-weight: 600
+        line-height: 18px
+        color: rgba(#000, .7)
         @include d-flex
+        &-val
+            position: absolute
+            top: -1px
+            right: -9px
+            width: 20px
+            height: 16px
+            background: #F23139
+            color: #fff
+            font-size: 10px
+            font-weight: bold
+            border-radius: 20px
+            @include d-flex
+        &.dropdown-toggle
+            margin: 0
+            width: fit-content
+            border-radius: 10px
+
+            span
+                margin: 0 0 0 10px
+            &:after
+                margin: 0 0 0 10px
+                width: 8px
+                height: 8px
+                min-width: 8px
+                border: none
+                background: url('../img/arrow-bottom.svg') no-repeat center
+                background-size: 100%
+            &:hover
+                &::after
+                    filter: invert(1)
+
+        img
+            width: 16px
+            height: 16px
         &:hover
             background: $accent
+            color: #fff
             img
                 filter: invert(1)
+
         &:last-child
             margin: 0
 
@@ -52,11 +93,82 @@ header
     font-size: 16px
     font-weight: 600
     line-height: 18px
+    position: relative
+    z-index: 2
     li
         padding: 8px 0 0
+        margin: 0 -2px 0 0
+        &:last-child
+            margin: 0
         a
             background: #fff
             border: 2px solid rgba(#000, .05)
-            border-top: 2px solid transparent
+            border-top-color: #f6f6f6
+            width: 236px
+            height: 80px
+            border-radius: 12px 12px 0 0
+            color: rgba(#000, .7)
+            @include d-flex
+            &:hover, &:focus
+                background: #fafafa
             &.active
+                color: #000
                 border-top: 2px solid rgba(#000, .05)
+                border-bottom-color: #fff
+
+.user-menu
+    width: 320px
+    padding: 16px
+    border-radius: 16px
+    border: none
+    box-shadow: 0 16px 40px rgba(0,0,0,.15)
+    transform: translateY(-8px)
+    top: auto !important
+    bottom: 100%
+    margin-bottom: 12px
+
+.user-menu__header
+    display: flex
+    align-items: center
+    gap: 12px
+    margin-bottom: 16px
+
+.user-menu__name
+    font-weight: 600
+
+.user-menu__email
+    font-size: 14px
+    color: #7a7a7a
+
+.user-menu a
+    display: block
+    padding: 10px 0
+    color: #1f1f1f
+    text-decoration: none
+    border-bottom: 1px solid #f0f0f0
+
+    &:last-child
+        border-bottom: none
+
+    &:hover
+        color: #6b4eff
+
+/* overlay */
+.header::after
+    content: ""
+    position: fixed
+    inset: 0
+    background: rgba(0, 0, 0, 0.25)
+    opacity: 0
+    pointer-events: none
+    transition: opacity .2s ease
+    z-index: 998
+
+/* когда dropdown открыт */
+.header:has(.dropdown-menu.show)::after
+    opacity: 1
+    pointer-events: auto
+
+/* dropdown выше подложки */
+.dropdown-menu
+    z-index: 999

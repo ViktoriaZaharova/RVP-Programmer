@@ -119,6 +119,21 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .error-page__img {
+    max-width: 323px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+  .error-page__content {
+    max-width: none;
+    text-align: center;
+    width: 100%;
+  }
+  .error-page .btn-group {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 @media only screen and (max-width: 768px) {
   .btn-registration, .btn-authorization {
@@ -192,5 +207,16 @@
 @media only screen and (max-width: 370px) {
   .btn {
     padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .container {
+    padding: 0 16px;
+  }
+  .row {
+    margin: 0 -16px;
+  }
+  .row > * {
+    padding: 0 16px;
   }
 }

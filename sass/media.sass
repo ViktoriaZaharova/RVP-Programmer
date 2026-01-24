@@ -108,6 +108,18 @@
     .password-page-v2
         align-items: flex-start
 
+    .error-page
+        &__img
+            max-width: 323px
+            width: 100%
+            margin: 0 auto 40px
+        &__content
+            max-width: none
+            text-align: center
+            width: 100%
+        .btn-group
+            justify-content: center
+
 
 @media only screen and (max-width: 768px)
     .btn-registration, .btn-authorization
@@ -177,3 +189,11 @@
         padding: 0 15px
 
     
+@media only screen and (max-width: 340px)
+    .container
+        padding: 0 16px
+
+    .row
+        margin: 0 -16px
+        >*
+            padding: 0 16px

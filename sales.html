@@ -44,12 +44,74 @@
 
             <div class="dropdown nav-user__dropdown">
               <a href="#" class="btn-cabinet nav-user__btn dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="img/user-icon.svg" alt="">
+                <img src="img/user.svg" alt="">
                 <span>Кабинет</span>
               </a>
 
               <div class="dropdown-menu dropdown-menu-end user-menu">
-                <!-- содержимое -->
+
+                <div class="user-menu__mobile-head">
+                  <div class="user-menu__mobile-title">Личный кабинет</div>
+                  <button class="user-menu__close" type="button" data-bs-toggle="dropdown">
+                    <img src="img/close-icon.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="user-menu__header">
+                  <div class="user-menu__avatar">
+                    <img src="img/user-icon.svg" alt="">
+                  </div>
+                  <div class="user-menu__info">
+                    <div class="user-menu__name">Иван Иванов</div>
+                    <a href="mailto:info@mail.ru" class="user-menu__email">info@mail.ru</a>
+                  </div>
+
+                  <a href="#" class="btn-notification nav-user__btn user-menu__notify"><img
+                      src="img//notification-icon.svg" alt="">
+                    <span class="nav-user__btn-val">2</span>
+                  </a>
+
+                </div>
+
+                <div class="user-menu__actions">
+                  <a href="messages.html" class="user-menu__action btn btn-grey">
+                    <img src="img/chat.svg" alt="">
+                    <span>Сообщения</span>
+                  </a>
+                  <a href="documents.html" class="user-menu__action btn btn-grey">
+                    <img src="img/docs.svg" alt="">
+                    <span>Документы</span>
+                  </a>
+                </div>
+
+
+                <div class="user-menu__section">
+                  <div class="user-menu__title">Объявления</div>
+                  <a href="sales.html" class="user-menu__link">Продажи</a>
+                  <a href="procurement.html" class="user-menu__link">Закупки</a>
+                </div>
+
+                <div class="user-menu__divider"></div>
+                <div class="user-menu__section">
+                  <a href="favorites.html" class="user-menu__link">Избранное</a>
+                </div>
+                <div class="user-menu__divider"></div>
+
+                <div class="user-menu__section">
+                  <a href="main-company.html" class="user-menu__link">Моя компания</a>
+                  <a href="presets.html" class="user-menu__link">Предустановки</a>
+                  <a href="paid-services.html" class="user-menu__link">Платные услуги</a>
+                  <a href="settings.html" class="user-menu__link">Настройки уведомлений</a>
+                  <a href="profile.html" class="user-menu__link">Профиль</a>
+                </div>
+
+                <div class="user-menu__footer">
+                  <a href="#" class="btn btn-grey btn-md w-100 btn-radius user-menu__logout">
+                    <img src="img/exit-icon.svg" alt="">
+                    <span>Выйти</span>
+                  </a>
+                </div>
+
               </div>
             </div>
 

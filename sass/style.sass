@@ -161,6 +161,15 @@ button, .btn
   height: 52px
   border-radius: 30px
   transition: 0.3s ease
+  img
+    margin: 0 10px 0 0
+    width: 16px
+
+.btn-radius
+  border-radius: 12px
+
+.btn-md
+  height: 48px  
 
 .btn-black
   color: #fff
@@ -175,6 +184,16 @@ button, .btn
   &:hover, &:focus, &.active
     background: $accent
     color: #fff
+
+.btn-grey
+  box-shadow: 0px -2px 0px 0px #0000000D inset
+  background: rgba(#000, .05)
+  color: #000
+  &:hover, &:focus, &.active
+    background: $accent
+    color: #fff
+    img
+      filter: invert(1)
 
 .btn-group
   flex-wrap: wrap

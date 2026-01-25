@@ -1,6 +1,10 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1600px)
+    .menu li a
+        width: 186px
+
 @media only screen and (max-width: 1400px)
     .container
         padding: 0 24px
@@ -9,11 +13,24 @@
         .logo
             max-width: 250px
 
+    .menu li a
+        width: 144px
+        height: 78px
+
 @media only screen and (max-width: 1200px)
     footer
         font-size: 14px
         .logo
             max-width: 157px
+
+    .nav-user__btn.dropdown-toggle
+        &:after
+            display: none
+        span
+            display: none
+
+    .logo
+        max-width: 260px
 
 @media only screen and (max-width: 992px)
     .container
@@ -35,7 +52,6 @@
         height: 38px
         min-width: 38px
         margin: 0
-            
 
     h1, .h1
         font-size: 20px
@@ -44,7 +60,7 @@
     h3, .h3
         font-size: 18px
         line-height: 20px
-        margin: 0 0 24px    
+        margin: 0 0 24px
 
     .label-title
         font-size: 14px
@@ -53,6 +69,7 @@
         height: 48px
         font-size: 14px
         line-height: 16px
+        padding: 5px 20px
 
     input, textarea, select
         height: 48px
@@ -83,7 +100,7 @@
         p
             margin: 0 0 16px
             &:last-child
-                margin: 0    
+                margin: 0
 
     .form-box::after, .text-required
         margin: 0 0 24px
@@ -120,6 +137,23 @@
         .btn-group
             justify-content: center
 
+    .user-menu
+        width: 320px
+        padding: 24px
+        top: -45px !important
+
+    .nav-menu
+        margin: 0 20px
+        flex: 1
+
+    .menu
+        flex: 1
+        li
+            flex: 1
+            padding: 6px 0 0
+            a
+                height: 60px
+                width: 100%
 
 @media only screen and (max-width: 768px)
     .btn-registration, .btn-authorization
@@ -137,7 +171,6 @@
 @media only screen and (max-width: 576px)
     h1, .h1
         margin: 0 auto 24px
-
 
     header
         padding: 9px 0
@@ -163,7 +196,7 @@
         margin-bottom: 24px
 
     .page
-        padding: 16px 0    
+        padding: 16px 0
 
     .authorization
         align-items: flex-start
@@ -172,11 +205,58 @@
         p
             margin: 0 0 10px
             &:last-child
-                margin: 0    
+                margin: 0
 
     .authorization
         padding: 34px 0
 
+    .user-menu
+        width: calc(100vw - 24px)
+        // max-height: calc(100vh - 24px)
+        // margin: 12px
+        padding: 32px
+        border-radius: 12px
+        overflow-y: auto
+        right: -5px !important
+        &__mobile-head
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 16px
+
+        &__mobile-title
+            font-size: 18px
+            line-height: 20px
+            font-weight: 600
+
+    .user-menu__close
+        width: 24px
+        height: 24px
+        min-width: 24px
+        border-radius: 50%
+        border: none
+        background: #000
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 5px
+    
+
+    .user-menu__close span
+        transform: translate(-50%, -50%) rotate(45deg)
+
+    .user-menu__close span::before
+        transform: rotate(90deg)
+
+    .user-menu__link
+        height: 48px
+        font-size: 16px
+
+    .user-menu__action
+        height: 40px
+        font-size: 12px
+        line-height: 14px
 
 @media only screen and (max-width: 480px)
 
@@ -188,7 +268,6 @@
     .btn
         padding: 0 15px
 
-    
 @media only screen and (max-width: 340px)
     .container
         padding: 0 16px

@@ -13,6 +13,7 @@
   <!-- add plugins css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <!-- add plugins css end -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -123,10 +124,286 @@
 
   <div class="content">
 
-    <section class="sales-page page">
+    <section class="sales-page page page-p0">
+      <div class="nav-breadcrumb">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ol class="breadcrumb my-ul">
+                <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Запасные части</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="sales-page__sidebar sidebar p-32">
 
+              <div class="category-dropdown dropdown">
+                <button class="btn btn-black btn-lg btn-radius w-100 dropdown-toggle" data-bs-toggle="dropdown">
+                  <span><img src="img/toggle-icon.svg" alt=""></span>
+                  Категория
+                </button>
+
+                <div class="dropdown-menu category-menu">
+
+                  <div class="category-menu__col">
+                    <a href="#" class="category-link active">
+                      Запасные части
+                      <span>›</span>
+                    </a>
+
+                    <a href="#" class="category-link">
+                      Подвижной состав (вагоны)
+                      <span>›</span>
+                    </a>
+                  </div>
+
+                  <div class="category-menu__col">
+                    <a href="#" class="category-link">
+                      Крытый <span>›</span>
+                    </a>
+                    <a href="#" class="category-link">Платформа <span>›</span></a>
+                    <a href="#" class="category-link">Полувагон <span>›</span></a>
+                    <a href="#" class="category-link">Цистерна <span>›</span></a>
+                    <a href="#" class="category-link">Изотермический <span>›</span></a>
+                    <a href="#" class="category-link">Прочие <span>›</span></a>
+                  </div>
+
+                  <div class="category-menu__col">
+                    <a href="#" class="category-link">Универсальные</a>
+                    <a href="#" class="category-link">Специализированные</a>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="sidebar-block">
+                <div class="sidebar-title">Местонахождение</div>
+
+                <div class="sidebar-tags">
+                  <a href="#" class="btn btn-md btn-black-grey btn-radius sidebar-tags__selected" data-bs-toggle="modal"
+                    data-bs-target="#cityModal"><span class="sidebar-tags__selected-icon"><img src="img/plus-icon.svg"
+                        alt=""></span><span class="sidebar-tags__selected-text">Выбрать</span></a>
+                  <a href="#" class="sidebar-tags__selected btn btn-grey btn-md btn-radius"><span
+                      class="sidebar-tags__selected-icon"><img src="img/close-icon.svg" alt=""></span><span
+                      class="sidebar-tags__selected-text">Екатеринбург</span></a>
+                  <a href="#" class="sidebar-tags__selected btn btn-grey btn-md btn-radius"><span
+                      class="sidebar-tags__selected-icon"><img src="img/close-icon.svg" alt=""></span><span
+                      class="sidebar-tags__selected-text">Нижний Тагил</span></a>
+                </div>
+              </div>
+
+              <div class="sidebar-block">
+                <div class="sidebar-title">Продавец</div>
+
+                <div class="sidebar-tags">
+                  <a href="#" class="btn btn-md btn-black-grey btn-radius sidebar-tags__selected" data-bs-toggle="modal"
+                    data-bs-target="#cityModal"><span class="sidebar-tags__selected-icon"><img src="img/plus-icon.svg"
+                        alt=""></span><span class="sidebar-tags__selected-text">Выбрать</span></a>
+                  <a href="#" class="sidebar-tags__selected btn btn-grey btn-md btn-radius"><span
+                      class="sidebar-tags__selected-icon"><img src="img/close-icon.svg" alt=""></span><span
+                      class="sidebar-tags__selected-text">ООО “Lokar”</span></a>
+                  <a href="#" class="sidebar-tags__selected btn btn-grey btn-md btn-radius"><span
+                      class="sidebar-tags__selected-icon"><img src="img/close-icon.svg" alt=""></span><span
+                      class="sidebar-tags__selected-text">ООО “Ferros”</span></a>
+                  <a href="#" class="sidebar-tags__selected btn btn-grey btn-md btn-radius"><span
+                      class="sidebar-tags__selected-icon"><img src="img/close-icon.svg" alt=""></span><span
+                      class="sidebar-tags__selected-text">ИП Фкедоренко Максим Юрьевич</span></a>
+                </div>
+
+                <div class="list-checkbox">
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text"><img src="img/confirmed-icon.svg" alt="">Подтвержденные</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Только <span class="pro-label">PRO</span></span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox" checked>
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text"><img src="img/star-icon.svg" alt="">4 звезды и выше</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text"><img src="img/heart-icon.svg" alt="">В моем избранном</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="sidebar-block">
+                <div class="sidebar-title">Цена</div>
+
+
+                <div class="filter-block">
+
+                  <!-- Цена -->
+                  <div class="filter-price">
+                    <div class="filter-price__inputs">
+                      <input type="text" id="price-min" value="0">
+                      <span>—</span>
+                      <input type="text" id="price-max" value="1000000">
+                    </div>
+
+                    <div id="price-slider"></div>
+                  </div>
+
+                  <!-- Переключатель -->
+                  <div class="filter-vat">
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="vat" value="all" checked>
+                      <span>Все</span>
+                    </label>
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="vat" value="vat">
+                      <span>С НДС</span>
+                    </label>
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="vat" value="novat">
+                      <span>Без НДС</span>
+                    </label>
+
+                  </div>
+
+                </div>
+              </div>
+
+              
+
+              <div class="sidebar-block">
+                <div class="sidebar-title">Сведения</div>
+
+
+                <div class="list-checkbox">
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">В наличии</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Опт</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Розница</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Есть фото</span>
+                  </label>
+
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Есть описание</span>
+                  </label>
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Есть характеристики</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="user-menu__divider"></div>
+              <div class="sidebar-actions w-100">
+                <button class="btn btn-grey btn-md btn-radius btn-outline-secondary">Сбросить</button>
+                <button class="btn btn-black btn-md btn-radius">Показать</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-9 border-column">
+            <div class="sales-page__content p-32">
+              <form method="post" class="form-search w-100">
+                <label>
+                  <input type="text" placeholder="Поиск предложений" name="search">
+                </label>
+                <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+              </form>
+              <h1>
+                Запчасти и комплектующие для ж/д транспорта
+              </h1>
+
+              <!-- tabs -->
+              <div class="content-toolbar">
+                <div class="view-tabs">
+                  <button class="view-tab active" data-view="list">☰</button>
+                  <button class="view-tab" data-view="grid">▦</button>
+                </div>
+              </div>
+
+              <!-- products -->
+              <div class="products products-list active">
+
+                <!-- card -->
+                <div class="product-card">
+                  <div class="product-img">
+                    <img src="img/no-photo.svg" alt="">
+                  </div>
+
+                  <div class="product-info">
+                    <div class="product-title">
+                      Автосцепка СА-3 106.01.000-0Сб
+                    </div>
+                    <div class="product-meta">
+                      Артикул: 106.01.000-0Сб
+                    </div>
+                  </div>
+
+                  <div class="product-company">
+                    ООО «Lokar»
+                    <span class="rating">★ 5.0</span>
+                  </div>
+
+                  <div class="product-price">
+                    6 000 ₽
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- grid -->
+              <div class="products products-grid">
+
+                <div class="product-card">
+                  <div class="product-img">
+                    <img src="img/no-photo.svg" alt="">
+                  </div>
+                  <div class="product-title">
+                    Автосцепка СА-3 106.01.000-0Сб
+                  </div>
+                  <div class="product-price">6 000 ₽</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -161,13 +438,12 @@
   </footer>
 
 
-
-
   <!-- add plugins js-->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <!-- add plugins js end-->
 
   <script src="js/common.js"></script>

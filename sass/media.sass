@@ -148,6 +148,8 @@
 
     .menu
         flex: 1
+        font-size: 14px
+        line-height: 16px
         li
             flex: 1
             padding: 6px 0 0
@@ -159,7 +161,7 @@
     .btn-registration, .btn-authorization
         min-width: auto
 
-@media only screen and (max-width: 670px)
+@media only screen and (max-width: 690px)
     .link-developer
         width: 100%
         margin: 24px 0 0
@@ -167,6 +169,36 @@
     .footer-column
         width: 100%
         margin: 0 0 24px
+
+    .nav-menu
+        flex: none
+        order: 1
+        width: calc( 100% + 40px)
+        margin: 0 -20px
+
+    .nav-user
+        padding: 9px 0
+        .nav-user__btn-val
+            display: none
+
+    .nav-user__dropdown
+        .btn-cabinet
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                right: 3px
+                width: 6px
+                height: 6px
+                border-radius: 50%
+                background: #F23139
+
+    .menu li
+        padding: 0
+        a
+            height: 48px
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -241,7 +273,6 @@
         align-items: center
         justify-content: center
         padding: 5px
-    
 
     .user-menu__close span
         transform: translate(-50%, -50%) rotate(45deg)
@@ -267,6 +298,10 @@
 @media only screen and (max-width: 370px)
     .btn
         padding: 0 15px
+
+    .nav-user
+        .btn-notification
+            display: none    
 
 @media only screen and (max-width: 340px)
     .container

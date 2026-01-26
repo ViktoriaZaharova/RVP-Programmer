@@ -58,6 +58,9 @@ html, body
 .page
   padding: 48px 0
 
+.page-p0
+  padding: 0
+
 img
   display: block
   max-width: 100%
@@ -154,7 +157,7 @@ button, .btn
   align-items: center
   justify-content: center
   text-align: center
-  padding: 10px 32px
+  padding: 10px 24px
   font-size: 16px
   font-weight: 600
   line-height: 18px
@@ -169,14 +172,31 @@ button, .btn
   border-radius: 12px
 
 .btn-md
-  height: 48px  
+  height: 48px
+  font-size: 14px
+
+.btn-lg
+  height: 68px
 
 .btn-black
   color: #fff
   background: #000
-  &:hover, &:focus
+  &:hover, &:focus, &.active
     background: $accent
     color: #fff
+  &.dropdown-toggle
+    &:after
+      margin: 0 0 0 auto
+      width: 12px
+      height: 12px
+      background: url('../img/arrow-bottom-white.svg') no-repeat center
+      background-size: 100%
+      border: none
+
+.drodpown-toggle
+  &.show
+    &:after
+      transform: rotate(180deg)
 
 .btn-border
   border: 2px solid rgba(#000, .1)
@@ -194,6 +214,13 @@ button, .btn
     color: #fff
     img
       filter: invert(1)
+
+.btn-black-grey
+  background: rgba(#000, .7)
+  color: #fff
+  &:hover, &:focus, &.active
+    background: $accent
+    color: #fff
 
 .btn-group
   flex-wrap: wrap
@@ -275,6 +302,9 @@ h3, .h3
 .mb-32
   margin-bottom: 32px
 
+.p-32
+  padding: 32px 0
+
 .font-500
   font-weight: 500
 
@@ -298,6 +328,43 @@ h3, .h3
     &:last-child
       margin: 0
 
+.nav-breadcrumb
+  width: 100%
+  padding: 24px 0
+  border-bottom: 1px solid rgba(#000, .05)
+
+.breadcrumb
+  width: 100%
+  margin: 0
+  font-size: 12px
+  font-weight: 500
+  line-height: 14px
+  color: rgba(#000, .48)
+
+.breadcrumb-item
+  display: flex
+  align-items: center
+  a
+    color: rgba(#000, .48)
+    &:hover
+      color: #000
+
+.breadcrumb-item+.breadcrumb-item
+  padding: 0
+  margin: 0 0 0 24px
+
+.breadcrumb-item+.breadcrumb-item::before
+  margin: 0 24px 0 0
+  content: ''
+  background: url('../img/arrow-breadcrumb.svg') no-repeat center
+  background-size: 100%
+  height: 8px
+  width: 5px
+  padding: 0
+
+.border-column
+  border-left: 1px solid rgba(#000, .05)
+
 .slick-slider
   width: 100%
 
@@ -308,26 +375,44 @@ h3, .h3
 .label-checkbox
   position: relative
   display: flex
-  align-items: flex-start
-  color: rgba(255, 255, 255, 0.5)
+  align-items: center
+  color: #000
   font-size: 14px
-  margin: 15px 0 0
-  line-height: 1.14
+  line-height: 16px
+  font-weight: 600
+  margin: 0 0 10px
+  &:last-child
+    margin: 0
+  input
+    display: none
+    &:checked ~ .label-checkbox__custom
+      border-color: $green
+      background: $green url("../img/checked-icon.svg") no-repeat center
+      background-size: 14px
+  &__custom
+    margin: 0 10px 0 0
+    position: relative
+    border: 2px solid rgba(#000, .2)
+    border-radius: 8px
+    background-color: #fff
+    width: 24px
+    height: 24px
+    min-width: 24px
+    cursor: pointer
+  &__text
+    display: flex
+    align-items: center
+    img
+      margin: 0 10px 0 0
 
-.inp-check
-  display: none
-
-.checkbox-custom
-  margin: 0 12px 0 0
-  position: relative
-  border-radius: 6px
-  background-color: #fff
-  width: 16px
-  height: 16px
-  min-width: 16px
-  cursor: pointer
-
-.inp-check:checked ~ .checkbox-custom
-  background: #fff url("../img/check-black.svg") no-repeat center
-  background-size: 8px
 //checkbox my end
+.pro-label
+  background: $green
+  color: #fff
+  margin: 0 0 0 10px
+  padding: 3px 8px
+  border-radius: 10px
+  font-size: 8px
+  line-height: 10px
+  font-weight: bold
+  text-transform: uppercase

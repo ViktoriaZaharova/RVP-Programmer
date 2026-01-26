@@ -98,6 +98,10 @@ html, body {
   padding: 48px 0;
 }
 
+.page-p0 {
+  padding: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -243,7 +247,7 @@ button:hover, button:focus, .btn:hover, .btn:focus {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-size: 16px;
   font-weight: 600;
   line-height: 18px;
@@ -263,15 +267,33 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 
 .btn-md {
   height: 48px;
+  font-size: 14px;
+}
+
+.btn-lg {
+  height: 68px;
 }
 
 .btn-black {
   color: #fff;
   background: #000;
 }
-.btn-black:hover, .btn-black:focus {
+.btn-black:hover, .btn-black:focus, .btn-black.active {
   background: #383E40;
   color: #fff;
+}
+.btn-black.dropdown-toggle:after {
+  margin: 0 0 0 auto;
+  width: 12px;
+  height: 12px;
+  background: url("../img/arrow-bottom-white.svg") no-repeat center;
+  background-size: 100%;
+  border: none;
+}
+
+.drodpown-toggle.show:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .btn-border {
@@ -296,6 +318,15 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 .btn-grey:hover img, .btn-grey:focus img, .btn-grey.active img {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.btn-black-grey {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+.btn-black-grey:hover, .btn-black-grey:focus, .btn-black-grey.active {
+  background: #383E40;
+  color: #fff;
 }
 
 .btn-group {
@@ -406,6 +437,10 @@ h3, .h3 {
   margin-bottom: 32px;
 }
 
+.p-32 {
+  padding: 32px 0;
+}
+
 .font-500 {
   font-weight: 500;
 }
@@ -442,6 +477,55 @@ h3, .h3 {
   margin: 0;
 }
 
+.nav-breadcrumb {
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumb {
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.breadcrumb-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.breadcrumb-item a {
+  color: rgba(0, 0, 0, 0.48);
+}
+.breadcrumb-item a:hover {
+  color: #000;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding: 0;
+  margin: 0 0 0 24px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  margin: 0 24px 0 0;
+  content: "";
+  background: url("../img/arrow-breadcrumb.svg") no-repeat center;
+  background-size: 100%;
+  height: 8px;
+  width: 5px;
+  padding: 0;
+}
+
+.border-column {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .slick-slider {
   width: 100%;
 }
@@ -455,31 +539,57 @@ h3, .h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  color: rgba(255, 255, 255, 0.5);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
   font-size: 14px;
-  margin: 15px 0 0;
-  line-height: 1.14;
+  line-height: 16px;
+  font-weight: 600;
+  margin: 0 0 10px;
 }
-
-.inp-check {
+.label-checkbox:last-child {
+  margin: 0;
+}
+.label-checkbox input {
   display: none;
 }
-
-.checkbox-custom {
-  margin: 0 12px 0 0;
+.label-checkbox input:checked ~ .label-checkbox__custom {
+  border-color: #20815C;
+  background: #20815C url("../img/checked-icon.svg") no-repeat center;
+  background-size: 14px;
+}
+.label-checkbox__custom {
+  margin: 0 10px 0 0;
   position: relative;
-  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   background-color: #fff;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
   cursor: pointer;
 }
+.label-checkbox__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.label-checkbox__text img {
+  margin: 0 10px 0 0;
+}
 
-.inp-check:checked ~ .checkbox-custom {
-  background: #fff url("../img/check-black.svg") no-repeat center;
-  background-size: 8px;
+.pro-label {
+  background: #20815C;
+  color: #fff;
+  margin: 0 0 0 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

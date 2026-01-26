@@ -191,66 +191,95 @@
 
 .filter-vat
     display: flex
-    gap: 8px
     margin-top: 14px
-
+    border-radius: 12px
+    background: rgba(#000, .05)
+    padding: 2px
     &__item
         cursor: pointer
+        margin: 0
+        flex: 1
+        text-align: center
+        input
+            display: none
 
-    &__item input
-        display: none
-
-    &__item span
-        display: inline-flex
-        align-items: center
-        justify-content: center
-        height: 32px
-        padding: 0 14px
-        border-radius: 16px
-        background: #f1f1f1
-        font-size: 13px
-        font-weight: 500
-        color: #666
-        transition: all .2s ease
-        white-space: nowrap
+        span
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 44px
+            padding: 14px
+            border-radius: 11px
+            background: transparent
+            font-size: 14px
+            font-weight: 600
+            color: #000
+            transition: all .2s ease
+            white-space: nowrap
 
     &__item input:checked + span
-        background: #1fa87a
-        color: #fff
+        background: #fff
+        box-shadow: 0px 1px 3px 0px #0000001A
+
+.filter-price
+    &__prices
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 22px 0 0
+        font-weight: 500
+        font-size: 14px
+        color: rgba(#000, .4)
 
 .filter-price__inputs
     display: flex
     align-items: center
-    gap: 8px
-    margin-bottom: 12px
+    margin-bottom: 34px
 
     input
-        width: 90px
-        height: 36px
-        border-radius: 10px
+        flex: 1
+        height: 48px
+        border-radius: 12px
         border: none
-        background: #f2f2f2
-        text-align: center
         font-weight: 500
-        color: #222
+        font-size: 14px
+        color: #000
+    span
+        width: 10px
+        display: block
+        height: 4px
+        background: rgba(#000, .05)
 
 #price-slider
     height: 4px
-    background: #e1e1e1
-    border-radius: 2px
+    background: rgba(#000, .1)
+    border-radius: 4px
     border: none
-
+    margin: 0 0 22px
     .ui-slider-range
-        background: #1fa87a
+        background: $green
 
     .ui-slider-handle
-        width: 16px
-        height: 16px
-        top: -6px
+        width: 32px
+        height: 32px
+        top: -16px
         border-radius: 50%
-        background: #1fa87a
+        background: #fff
         border: none
         cursor: pointer
+        box-shadow: 0px 1px 3px 0px #0000001A
+        &::before
+            content: ''
+            position: absolute
+            left: 50%
+            top: 50%
+            background: rgba(#000, .1)
+            border-radius: 50%
+            width: 20px
+            height: 20px
+            transform: translate(-50%,-50%)
 
     .ui-slider-handle:focus
         outline: none

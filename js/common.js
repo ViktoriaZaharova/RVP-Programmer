@@ -71,3 +71,44 @@ $(function () {
     $max.val(formatPrice(max));
   });
 });
+
+
+// slick slider
+$('.watched-slider').slick({
+  slidesToShow: 7,
+  infinite: false,
+  prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
+  nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+});
+
+
+
+// subsection toggle
+$(function () {
+  const $container = $('.subsections');
+  const $items = $container.find('.subsection-link').not('.subsection-link__toggle');
+  const $toggle = $container.find('.subsection-link__toggle');
+  const visibleCount = 11;
+
+  if ($items.length > visibleCount) {
+    $items.slice(visibleCount).hide();
+  } else {
+    $toggle.hide();
+  }
+
+  $toggle.on('click', function (e) {
+    e.preventDefault();
+
+    const isOpen = $container.hasClass('is-open');
+
+    if (isOpen) {
+      $items.slice(visibleCount).hide();
+      $(this).find('span').text('Показать все');
+      $container.removeClass('is-open');
+    } else {
+      $items.show();
+      $(this).find('span').text('Скрыть');
+      $container.addClass('is-open');
+    }
+  });
+});

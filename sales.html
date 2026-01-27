@@ -123,20 +123,20 @@
   </header>
 
   <div class="content">
-
-    <section class="sales-page page page-p0">
-      <div class="nav-breadcrumb">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <ol class="breadcrumb my-ul">
-                <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Запасные части</li>
-              </ol>
-            </div>
+    <div class="nav-breadcrumb">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Запасные части</li>
+            </ol>
           </div>
         </div>
       </div>
+    </div>
+    <section class="sales-page page page-p0">
+
 
       <div class="container">
         <div class="row">
@@ -351,57 +351,146 @@
                 Запчасти и комплектующие для ж/д транспорта
               </h1>
 
-              <!-- tabs -->
-              <div class="content-toolbar">
-                <div class="view-tabs">
-                  <button class="view-tab active" data-view="list">☰</button>
-                  <button class="view-tab" data-view="grid">▦</button>
-                </div>
+              <div class="subsections">
+                <a href="#" class="subsection-link">Автосцепка СА-3</a>
+                <a href="#" class="subsection-link">Аппарат поглощающий</a>
+                <a href="#" class="subsection-link">Балка надрессорная</a>
+                <a href="#" class="subsection-link">Балочка центрирующая</a>
+                <a href="#" class="subsection-link">Башмак тормозной</a>
+                <a href="#" class="subsection-link">Вентилятор Ebmpapst</a>
+                <a href="#" class="subsection-link">Железнодорожная автоматика и СЦБ</a>
+                <a href="#" class="subsection-link">Заклепки</a>
+                <a href="#" class="subsection-link">Автосцепка СА-3</a>
+                <a href="#" class="subsection-link">Аппарат поглощающий</a>
+                <a href="#" class="subsection-link">Балка надрессорная</a>
+                <a href="#" class="subsection-link">Аппарат поглощающий</a>
+                <a href="#" class="subsection-link">Балка надрессорная</a>
+                <a href="#" class="subsection-link">Балочка центрирующая</a>
+                <a href="#" class="subsection-link">Башмак тормозной</a>
+                <a href="#" class="subsection-link">Вентилятор Ebmpapst</a>
+                <a href="#" class="subsection-link subsection-link__toggle"><img src="img/plus-black.svg"
+                    alt=""><span>Показать все</span></a>
               </div>
 
-              <!-- products -->
-              <div class="products products-list active">
+              <!-- фильтры -->
+              <div class="content-filters m-32">
 
-                <!-- card -->
-                <div class="product-card">
-                  <div class="product-img">
-                    <img src="img/no-photo.svg" alt="">
-                  </div>
+                <div class="filter-vat content-filters__vat">
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="all" checked="">
+                    <span>Все</span>
+                  </label>
 
-                  <div class="product-info">
-                    <div class="product-title">
-                      Автосцепка СА-3 106.01.000-0Сб
-                    </div>
-                    <div class="product-meta">
-                      Артикул: 106.01.000-0Сб
-                    </div>
-                  </div>
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="vat">
+                    <span>Б/У</span>
+                  </label>
 
-                  <div class="product-company">
-                    ООО «Lokar»
-                    <span class="rating">★ 5.0</span>
-                  </div>
-
-                  <div class="product-price">
-                    6 000 ₽
-                  </div>
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="novat">
+                    <span>Новые</span>
+                  </label>
                 </div>
+
+                <div class="filter-vat content-filters__sort">
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio2" value="vat">
+                    <span><img src="img/sorting-icon.svg" alt=""></span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio2" value="all" checked="">
+                    <span>Сначала дешевле</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio2" value="vat">
+                    <span>Сначала дороже</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio2" value="novat">
+                    <span>По дате</span>
+                  </label>
+                </div>
+
+                <ul class="nav nav-tabs content-filters__tabs my-ul" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                      role="tab" aria-controls="home" aria-selected="true"><img src="img/column-icon.svg"
+                        alt=""></button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                      type="button" role="tab" aria-controls="profile" aria-selected="false"><img src="img/row-icon.svg"
+                        alt=""></button>
+                  </li>
+                </ul>
 
               </div>
 
-              <!-- grid -->
-              <div class="products products-grid">
 
-                <div class="product-card">
-                  <div class="product-img">
-                    <img src="img/no-photo.svg" alt="">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade w-100" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <h3 class="title-decor">1 предложение - Екатеринбург, Нижний Тагил</h3>
+                  <!-- grid -->
+                  <div class="products products-grid">
+
+                    <div class="product-card">
+                      <div class="product-card__img">
+                        <a href="#" class="link-add-favorite"></a>
+                        <img src="img/product1.png" alt="">
+                        <ul class="list-labels my-ul">
+                          <li class="list-labels__item label-new bg-green">Новый</li>
+                          <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                          <li class="list-labels__item label-retail bg-white">Розница</li>
+                        </ul>
+                      </div>
+                      <div class="product-card__body">
+                        <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                        <div class="price">7 300
+                          ₽</div>
+                        <div class="product-card__address">
+                          <p>Рязанская область, Рязань</p>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
-                  <div class="product-title">
-                    Автосцепка СА-3 106.01.000-0Сб
-                  </div>
-                  <div class="product-price">6 000 ₽</div>
+
                 </div>
 
+                <div class="tab-pane fade show active w-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <!-- products -->
+                  <div class="products products-list">
+
+                    <!-- card -->
+                    <div class="product-card">
+                      <div class="product-img">
+                        <img src="img/no-photo.svg" alt="">
+                      </div>
+
+                      <div class="product-info">
+                        <div class="product-title">
+                          Автосцепка СА-3 106.01.000-0Сб
+                        </div>
+                        <div class="product-meta">
+                          Артикул: 106.01.000-0Сб
+                        </div>
+                      </div>
+
+                      <div class="product-company">
+                        ООО «Lokar»
+                        <span class="rating">★ 5.0</span>
+                      </div>
+
+                      <div class="product-price">
+                        6 000 ₽
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -423,8 +512,208 @@
                 <div class="product-card">
                   <div class="product-card__img">
                     <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
                   </div>
-                  <div class="product-card__body"></div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img p-32">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product4.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -164,3 +164,55 @@ $(function () {
     });
   });
 });
+
+$(function () {
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+
+    if (w < 576) return 4;
+    if (w < 992) return 8;
+    return 15;
+  }
+
+  $('.btn-toggle-product-column').each(function () {
+    const $btn = $(this);
+    const $wrapper = $btn.prev('.product-column-item');
+    const $cards = $wrapper.find('.product-card-column');
+
+    function init() {
+      const VISIBLE_COUNT = getVisibleCount();
+
+      // сначала показываем всё (важно при ресайзе / табах)
+      $cards.removeClass('is-hidden');
+
+      if ($cards.length <= VISIBLE_COUNT) {
+        $btn.hide();
+        return;
+      }
+
+      // скрываем лишние
+      $cards.slice(VISIBLE_COUNT).addClass('is-hidden');
+      $btn.show();
+    }
+
+    init();
+
+    // показать все и скрыть кнопку
+    $btn.on('click', function (e) {
+      e.preventDefault();
+
+      $cards.removeClass('is-hidden');
+      $btn.hide();
+    });
+
+    // пересчёт при ресайзе
+    let resizeTimer;
+    $(window).on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(init, 200);
+    });
+  });
+
+});
+

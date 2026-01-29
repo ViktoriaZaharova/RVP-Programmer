@@ -81,6 +81,28 @@ $('.watched-slider').slick({
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
 });
 
+$('.product-card-slider').on('init reInit afterChange', function (event, slick) {
+  if (slick.slideCount <= 1) {
+    $(this).find('.slick-dots').hide();
+  } else {
+    $(this).find('.slick-dots').show();
+  }
+});
+
+$('.product-card-slider').slick({
+  slidesToShow: 1,
+  arrows: false,
+  dots: true,
+  fade: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  infinite: false
+});
+
+$('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+  $('.product-card-slider').slick('refresh');
+});
+
 
 
 // subsection toggle

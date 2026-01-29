@@ -728,6 +728,53 @@ h3.title-decor:before {
           transform: rotate(180deg);
 }
 
+.slick-dots {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  z-index: 1;
+  opacity: 1;
+  padding: 0;
+  list-style: none;
+}
+.slick-dots li {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 0 6px 0 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+.slick-dots li:last-child {
+  margin: 0;
+}
+.slick-dots li.slick-active {
+  background: #F23139;
+}
+.slick-dots li button {
+  display: none;
+}
+
 .label-checkbox {
   position: relative;
   display: -webkit-box;

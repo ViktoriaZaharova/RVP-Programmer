@@ -5,6 +5,24 @@
     .menu li a
         width: 186px
 
+    .products-grid
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+
+    .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
+        height: 264px
+
+    .pagination a
+        width: 57px
+
+    .product-card-row__col
+        width: 190px
+
+    .sales-page
+        .pagination
+            li
+                &:nth-child(8), &:nth-child(9), &:nth-child(10)
+                    display: none
+                    
 @media only screen and (max-width: 1400px)
     .container
         padding: 0 24px
@@ -19,6 +37,25 @@
 
     .products-grid
         grid-template-columns: repeat(4, 1fr)
+
+@media only screen and (max-width: 1300px)
+    .products-grid
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+
+    .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
+        height: 280px
+
+    .product-card-row .list-labels
+        flex-direction: row
+        align-items: flex-start
+        margin: 0 0 8px
+        li
+            margin: 0 8px 0 0
+
+    .product-card-row__body
+        flex-direction: column
+        align-items: flex-start
+        padding: 0 0 0 24px    
 
 @media only screen and (max-width: 1200px)
     footer

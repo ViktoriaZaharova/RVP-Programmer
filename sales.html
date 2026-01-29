@@ -430,10 +430,10 @@
 
 
               <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active w-100" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade w-100" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="products products-column">
                     <div class="product-column-item w-100">
-                      <h3 class="title-decor">1 предложение - Екатеринбург, Нижний Тагил</h3>
+                      <div class="title-decor h3">1 предложение - Екатеринбург, Нижний Тагил</div>
                       <!-- grid -->
                       <div class="products products-grid">
                         <div class="product-card product-card-column">
@@ -565,7 +565,7 @@
 
 
                     <div class="product-column-item w-100">
-                      <h3 class="title-decor">103 предложения - в других городах</h3>
+                      <div class="title-decor h3">103 предложения - в других городах</div>
 
                       <div class="products products-grid">
                         <div class="product-card product-card-column">
@@ -1372,12 +1372,12 @@
                   </div>
                 </div>
 
-                <div class="tab-pane fade  w-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade show active w-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                   <!-- products -->
                   <div class="products products-list">
 
                     <div class="products-list-item">
-                      <h3 class="title-decor">1 предложение - Екатеринбург, Нижний Тагил</h3>
+                      <div class="title-decor h3">1 предложение - Екатеринбург, Нижний Тагил</div>
                       <!-- card -->
                       <div class="product-card product-card-row">
                         <div class="product-card-row__col">
@@ -1385,26 +1385,27 @@
                             <img src="img/product5.png" alt="">
                           </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
-                        <div class="product-card-row__col flex-column">
+                        <div class="product-card-row__col flex-column col-2">
                           <div class="product-card__company color-grey">ООО “Lokar”</div>
                           <div class="product-card-status">
                             <div class="professional-status bg-green">PRO</div>
@@ -1415,9 +1416,13 @@
                               <div class="rating-notification">2</div>
                             </div>
                           </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
                         </div>
 
-                        <div class="product-card-row__col">
+                        <div class="product-card-row__col col-3">
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -1436,42 +1441,44 @@
                     </div>
 
                     <div class="products-list-item border-bottom">
-                      <h3 class="title-decor">103 предложения - в других городах</h3>
+                      <div class="title-decor h3">103 предложения - в других городах</div>
                       <!-- card -->
                       <div class="product-card product-card-row">
                         <div class="product-card-row__col">
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-brown">Б/У</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
-                        <div class="product-card-row__col flex-column">
+                        <div class="product-card-row__col flex-column col-2">
                           <div class="product-card__company color-grey">ООО “Lokar”</div>
                           <div class="product-card-status">
                             <div class="status-item"><img src="img/status.svg" alt=""></div>
-
+                          </div>
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
                           </div>
                         </div>
 
-                        <div class="product-card-row__col">
+                        <div class="product-card-row__col col-3">
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -1493,27 +1500,27 @@
                           <div class="product-img">
                             <img src="img/product6.jpg" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-brown">Б/У</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
-                        <div class="product-card-row__col flex-column">
+                        <div class="product-card-row__col flex-column col-2">
                           <div class="product-card__company color-grey">ООО “Ferros”</div>
                           <div class="product-card-status">
                             <div class="professional-status bg-green">PRO</div>
@@ -1524,9 +1531,13 @@
                               <div class="rating-notification">2</div>
                             </div>
                           </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
                         </div>
 
-                        <div class="product-card-row__col">
+                        <div class="product-card-row__col col-3">
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -1548,25 +1559,25 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                              подшипники</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1603,24 +1614,24 @@
                           <div class="product-img">
                             <img src="img/product7.jpg" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1650,24 +1661,24 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1704,24 +1715,24 @@
                           <div class="product-img">
                             <img src="img/product3.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-brown">Б/У</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1759,24 +1770,24 @@
                           <div class="product-img">
                             <img src="img/product8.jpg" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1813,25 +1824,25 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                              подшипники</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1868,24 +1879,24 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-brown">Б/У</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1918,25 +1929,25 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                              подшипники</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -1973,24 +1984,24 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -2027,24 +2038,24 @@
                           <div class="product-img">
                             <img src="img/product7.jpg" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -2074,24 +2085,24 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -2128,24 +2139,24 @@
                           <div class="product-img">
                             <img src="img/product3.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-brown">Б/У</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -2183,24 +2194,24 @@
                           <div class="product-img">
                             <img src="img/product8.jpg" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">
@@ -2237,25 +2248,25 @@
                           <div class="product-img p-10">
                             <img src="img/product2.png" alt="">
                           </div>
+                          <div class="product-card-row__body">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
+                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                            </ul>
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
 
-                          <ul class="list-labels my-ul">
-                            <li class="list-labels__item label-new bg-green">Новый</li>
-                            <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                            <li class="list-labels__item label-retail bg-grey">Розница</li>
-                          </ul>
-                          <div class="product-info">
-                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                              подшипники</a>
-                            <div class="product-meta color-grey">
-                              Артикул: 106.01.000-0Сб
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm color-grey mt-16">Характеристики
+                                и
+                                описание</a>
                             </div>
-
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16">Характеристики
-                              и
-                              описание</a>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col flex-column">

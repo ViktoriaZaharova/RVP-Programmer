@@ -79,6 +79,27 @@ $('.watched-slider').slick({
   infinite: false,
   prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+  responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 6,
+      }
+    },
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        wariableWidth: true,
+      }
+    }
+  ]
 });
 
 $('.product-card-slider').on('init reInit afterChange', function (event, slick) {

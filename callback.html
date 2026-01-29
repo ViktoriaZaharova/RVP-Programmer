@@ -23,15 +23,98 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex align-items-center flex-wrap">
           <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
-
+          <nav class="nav-menu">
+            <ul class="menu my-ul">
+              <li class="nav-item"><a href="sales.html" class="nav-link active">Продажи</a></li>
+              <li class="nav-item"><a href="procurement.html" class="nav-link">Закупки</a></li>
+              <li class="nav-item"><a href="companies.html" class="nav-link">Компании</a></li>
+            </ul>
+          </nav>
           <nav class="nav-user">
             <a href="#" class="btn-help nav-user__btn"><img src="img/help-icon.svg" alt=""></a>
-            <a href="#" class="btn-cabinet nav-user__btn"><img src="img/user-icon.svg" alt=""></a>
+            <a href="#" class="btn-chat nav-user__btn"><img src="img/chat-icon.svg" alt=""></a>
+            <a href="#" class="btn-notification nav-user__btn"><img src="img//notification-icon.svg" alt="">
+              <span class="nav-user__btn-val">2</span>
+            </a>
+
+            <div class="dropdown nav-user__dropdown">
+              <a href="#" class="btn-cabinet nav-user__btn dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="img/user.svg" alt="">
+                <span>Кабинет</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end user-menu">
+
+                <div class="user-menu__mobile-head">
+                  <div class="user-menu__mobile-title">Личный кабинет</div>
+                  <button class="user-menu__close" type="button" data-bs-toggle="dropdown">
+                    <img src="img/close-icon.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="user-menu__header">
+                  <div class="user-menu__avatar">
+                    <img src="img/user-icon.svg" alt="">
+                  </div>
+                  <div class="user-menu__info">
+                    <div class="user-menu__name">Иван Иванов</div>
+                    <a href="mailto:info@mail.ru" class="user-menu__email">info@mail.ru</a>
+                  </div>
+
+                  <a href="#" class="btn-notification nav-user__btn user-menu__notify"><img
+                      src="img//notification-icon.svg" alt="">
+                    <span class="nav-user__btn-val">2</span>
+                  </a>
+
+                </div>
+
+                <div class="user-menu__actions">
+                  <a href="messages.html" class="user-menu__action btn btn-grey">
+                    <img src="img/chat.svg" alt="">
+                    <span>Сообщения</span>
+                  </a>
+                  <a href="documents.html" class="user-menu__action btn btn-grey">
+                    <img src="img/docs.svg" alt="">
+                    <span>Документы</span>
+                  </a>
+                </div>
+
+
+                <div class="user-menu__section">
+                  <div class="user-menu__title">Объявления</div>
+                  <a href="sales.html" class="user-menu__link">Продажи</a>
+                  <a href="procurement.html" class="user-menu__link">Закупки</a>
+                </div>
+
+                <div class="user-menu__divider"></div>
+                <div class="user-menu__section">
+                  <a href="favorites.html" class="user-menu__link">Избранное</a>
+                </div>
+                <div class="user-menu__divider"></div>
+
+                <div class="user-menu__section">
+                  <a href="main-company.html" class="user-menu__link">Моя компания</a>
+                  <a href="presets.html" class="user-menu__link">Предустановки</a>
+                  <a href="paid-services.html" class="user-menu__link">Платные услуги</a>
+                  <a href="settings.html" class="user-menu__link">Настройки уведомлений</a>
+                  <a href="profile.html" class="user-menu__link">Профиль</a>
+                </div>
+
+                <div class="user-menu__footer">
+                  <a href="#" class="btn btn-grey btn-md w-100 btn-radius user-menu__logout">
+                    <img src="img/exit-icon.svg" alt="">
+                    <span>Выйти</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
           </nav>
         </div>
       </div>
@@ -39,14 +122,26 @@
   </header>
 
   <div class="content">
-
-   <section class="authorization callback-page page">
+    <div class="nav-breadcrumb">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Запасные части</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="callback-page page">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8 offset-lg-2">
-            <h1>Обратная связь</h1>
+
 
             <form method="post" class="form-authorization form-registration w-100">
+              <h1>Обратная связь</h1>
               <div class="form-box">
                 <div class="row">
                   <div class="col-12">
@@ -58,7 +153,7 @@
                       <input type="text" name="name" placeholder="Введите ваше ФИО">
                     </label>
                   </div>
-                   <div class="col-12 col-sm-6 mb-24">
+                  <div class="col-12 col-sm-6 mb-24">
                     <label>
                       <span class="label-title">E-mail <small>*</small></span>
                       <input type="mail" name="mail" required placeholder="Введите E-mail">
@@ -70,14 +165,14 @@
                       <input type="text" name="phone" required placeholder="+7 (___) ___-__-__">
                     </label>
                   </div>
-                  
+
                   <div class="col-12 mb-24">
                     <label>
                       <span class="label-title">Текст сообщения <small>*</small></span>
                       <input type="text" name="password" required placeholder="Введите от 5 до 2000 символов">
                     </label>
                   </div>
-<div class="col-12">
+                  <div class="col-12">
                     <div class="text-required">* — Поля обязательные для регистрации</div>
                     <button type="submit" class="btn btn-black">Подать заявку</button>
                     <div class="consent">Нажимая кнопку «Подать заявку» Вы даете согласие на обработку Ваших

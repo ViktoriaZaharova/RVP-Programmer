@@ -199,6 +199,9 @@
         cursor: pointer
         margin: 0
         flex: 1
+        display: flex
+        align-items: center
+        justify-content: center
         text-align: center
         input
             display: none
@@ -298,6 +301,8 @@
         @include d-flex
         &.p-32
             padding: 32px
+            background: rgba(#000, .02)
+
         img
             width: 100%
             height: 100%
@@ -309,11 +314,15 @@
         bottom: 0
         left: 0
         padding: 16px
+        font-weight: bold
     .link-add-favorite
         position: absolute
         right: 16px
         top: 16px
         z-index: 1
+        &:hover, &:focus, &.active
+            background: url('../img/favorite-icon-green.svg') no-repeat center
+            background-size: 100%
     &__body
         width: 100%
         padding: 24px 0 0
@@ -366,10 +375,223 @@
     flex-wrap: wrap
     .filter-vat
         width: fit-content
-        margin: 0 24px 0 0 
+        margin: 0 24px 0 0
         &:last-child
             margin: 0
     .content-filters__vat
         margin: 0 auto 0 0
-    &__tabs
-        margin: 0 0 0 24px
+
+
+.products
+    width: 100%
+
+.product-card-row
+    position: relative
+    z-index: 1
+    border-top: 1px solid rgba(#000, .1)
+    display: flex
+    align-items: stretch
+    &__col
+        padding: 32px 16px
+        display: flex
+        align-items: flex-start
+        width: fit-content
+        border-right: 1px solid rgba(#000, .1)
+        width: 252px
+        &:last-child
+            border: none
+            padding-right: 0
+        &:first-child
+            padding-left: 0
+            flex: 1
+    .product-img
+        width: 90px
+        height: 90px
+        min-width: 90px
+        border-radius: 12px
+        @include d-flex
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &.p-10
+            padding: 10px
+            background: rgba(#000,.05)
+    .list-labels
+        position: relative
+        z-index: 1
+        bottom: 0
+        left: 0
+        padding: 6px 0 0
+        margin: 0 24px
+        flex-direction: column
+        align-items: flex-start
+        width: fit-content
+        li
+            margin: 0 0 8px
+            &:last-child
+                margin: 0
+    .product-card__address
+        margin: 4px 0 0
+    .price
+        margin: 0
+    .avialability
+        margin: 8px 0 0
+        font-size: 12px
+        line-height: 14px
+
+.date-public
+    padding: 6px 10px
+    border-radius: 12px
+    border: 1px solid rgba(#000, .1)
+    font-size: 12px
+    line-height: 14px
+    font-weight: 500
+    margin: 18px 0 0
+    width: fit-content
+
+.products-list-item
+    margin: 0 0 24px
+    &:last-child
+        margin: 0
+    &.border-bottom
+        border-bottom: 1px solid rgba(#000, .1)
+
+.professional-status, .status-item
+    margin: 0 8px 0 0
+    &:last-child
+        margin: 0
+
+.professional-status
+    padding: 3px 8px
+    border-radius: 10px
+    font-size: 9px
+    line-height: 10px
+    font-weight: bold
+    &.bg-green
+        background: $green
+        color: #fff
+
+.product-meta
+    font-size: 12px
+    line-height: 14px
+    margin: 8px 0 0
+
+.product-card__company
+    margin: 0 0 8px
+    width: 100%
+    font-size: 12px
+    font-weight: 600
+    line-height: 14px
+
+.product-card-status
+    display: flex
+    align-items: center
+
+.product-card__favorite
+    width: 16px
+    height: 16px
+    margin: 0 0 0 auto
+    background: url('../img/favorite-icon-black.svg') no-repeat center
+    background-size: 100%
+    &:hover, &:focus, &.active
+        background: url('../img/favorite-icon-green.svg') no-repeat center
+        background-size: 100%
+
+.rating
+    display: flex
+    align-items: center
+    font-size: 12px
+    line-height: 14px
+    font-weight: 600
+    color: rgba(#000, .6)
+
+.rating-icon
+    margin: 0 4px 0 0
+
+.rating-notification
+    margin: 0 0 0 4px
+    background: rgba(#000, .48)
+    color: #fff
+    padding: 4px 7px
+    font-size: 10px
+    font-weight: bold
+    line-height: 8px
+    border-radius: 10px
+
+.products-footer
+    margin: 20px 0 0
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+.pagination
+    display: flex
+    align-items: stretch
+    li
+        margin: 0 10px 0 0
+        &:last-child
+            margin: 0
+    a
+        border-radius: 24px
+        width: 58px
+        height: 48px
+        background: rgba(#000,.05 )
+        font-size: 14px
+        font-weight: 600
+        line-height: 16px
+        color: #000
+        @include d-flex
+        &:hover, &:focus, &.active
+            background: #000
+            color: #fff
+            stroke: #fff
+            svg
+                stroke: #fff
+        svg
+            stroke: #000
+            fill: none
+            width: 6px
+            height: 9px
+    .nav-link-arrow
+        &.disabled
+            svg
+                opacity: 0.6
+        &.nav-link-arrow-next
+            svg
+                transform: rotate(180deg)
+
+.content-filters__pages
+    width: fit-content
+    margin: 0 0 0 auto
+    span
+        display: flex
+        align-items: center
+        padding: 16px
+        font-size: 14px
+        font-weight: 600
+        line-height: 16px
+
+.products-grid
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: 8px
+    .product-card__body
+        padding: 23px
+        border-radius: 24px
+        border: 1px solid rgba(#000, .1)
+        margin: 16px 0 0
+    .product-card__info
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 16px 0
+    .price
+        margin: 0        
+    .avialability
+        font-size: 12px
+        line-height: 14px
+    .btn-sm
+        height: 40px

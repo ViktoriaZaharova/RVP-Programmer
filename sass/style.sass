@@ -175,6 +175,13 @@ button, .btn
   height: 48px
   font-size: 14px
 
+.btn-sm
+  font-size: 12px
+  line-height: 14px
+  height: 32px
+  padding: 9px 16px
+
+
 .btn-lg
   height: 68px
 
@@ -214,6 +221,10 @@ button, .btn
     color: #fff
     img
       filter: invert(1)
+  &.color-grey
+    color: rgba(#000, .6)
+    &:hover, &:focus, &.active
+      color: #fff
 
 .btn-black-grey
   background: rgba(#000, .7)
@@ -324,6 +335,9 @@ h3.title-decor
     border-radius: 6px
     margin: 0 24px 0 0
 
+.mt-16
+  margin-top: 16px    
+
 .m-32
   margin: 32px 0
 
@@ -344,6 +358,15 @@ h3.title-decor
 
 .font-600
   font-weight: 600
+
+.bg-green
+  background: $green
+
+.bg-white
+  background: #fff
+
+.bg-brown 
+  background: $brown     
 
 .link-group
   width: 100%
@@ -424,8 +447,14 @@ h3.title-decor
     &.bg-green
       background: $green
       color: #fff
+    &.bg-white
+      background: #fff
+    &.bg-grey
+      background: rgba(#000, .05)  
     &.label-new
       margin: 0 auto 0 0
+    &.bg-brown
+      color: #fff
 
 .link-add-favorite
   width: 16px

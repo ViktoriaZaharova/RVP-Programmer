@@ -270,6 +270,13 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   font-size: 14px;
 }
 
+.btn-sm {
+  font-size: 12px;
+  line-height: 14px;
+  height: 32px;
+  padding: 9px 16px;
+}
+
 .btn-lg {
   height: 68px;
 }
@@ -318,6 +325,12 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 .btn-grey:hover img, .btn-grey:focus img, .btn-grey.active img {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+.btn-grey.color-grey {
+  color: rgba(0, 0, 0, 0.6);
+}
+.btn-grey.color-grey:hover, .btn-grey.color-grey:focus, .btn-grey.color-grey.active {
+  color: #fff;
 }
 
 .btn-black-grey {
@@ -465,6 +478,10 @@ h3.title-decor:before {
   margin: 0 24px 0 0;
 }
 
+.mt-16 {
+  margin-top: 16px;
+}
+
 .m-32 {
   margin: 32px 0;
 }
@@ -491,6 +508,18 @@ h3.title-decor:before {
 
 .font-600 {
   font-weight: 600;
+}
+
+.bg-green {
+  background: #20815C;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-brown {
+  background: #AA8C72;
 }
 
 .link-group {
@@ -605,8 +634,17 @@ h3.title-decor:before {
   background: #20815C;
   color: #fff;
 }
+.list-labels__item.bg-white {
+  background: #fff;
+}
+.list-labels__item.bg-grey {
+  background: rgba(0, 0, 0, 0.05);
+}
 .list-labels__item.label-new {
   margin: 0 auto 0 0;
+}
+.list-labels__item.bg-brown {
+  color: #fff;
 }
 
 .link-add-favorite {

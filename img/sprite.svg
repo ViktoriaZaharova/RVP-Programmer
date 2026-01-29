@@ -1,5 +1,14 @@
 <svg display="none" xmlns="http://www.w3.org/2000/svg">
-    
+    <symbol id="arrow-left" viewBox="0 0 6 9">
+        <path d="M4.56055 0.530273L1.06055 4.03027L4.56055 7.53027" stroke-width="1.5" />
+        <path d="M4.56055 0.530273L1.06055 4.03027L4.56055 7.53027" stroke-width="1.5" />
+        <path d="M4.56055 0.530273L1.06055 4.03027L4.56055 7.53027" stroke-width="1.5" />
+    </symbol>
 
+    <symbol id="arrow-right" viewBox="0 0 6 9">
+        <path d="M0.530273 0.530273L4.03027 4.03027L0.530273 7.53027" stroke-width="1.5" />
+        <path d="M0.530273 0.530273L4.03027 4.03027L0.530273 7.53027" stroke-width="1.5" />
+        <path d="M0.530273 0.530273L4.03027 4.03027L0.530273 7.53027" stroke-width="1.5" />
+    </symbol>
 
 </svg>

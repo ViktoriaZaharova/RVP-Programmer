@@ -112,3 +112,33 @@ $(function () {
     }
   });
 });
+
+
+// toggler btn product card
+$(function () {
+  const VISIBLE_COUNT = 11;
+
+  $('.products-list-item').each(function () {
+    const $block = $(this);
+    const $cards = $block.find('.product-card.product-card-row');
+    const $btn = $block.next('.btn-toggle-product');
+
+    // если карточек меньше или равно 11
+    if ($cards.length <= VISIBLE_COUNT) {
+      $btn.hide();
+      return;
+    }
+
+    // скрываем лишние
+    $cards.slice(VISIBLE_COUNT).hide();
+    $btn.show();
+
+    // обработчик кнопки
+    $btn.on('click', function (e) {
+      e.preventDefault();
+
+      $cards.show();
+      $btn.hide();
+    });
+  });
+});

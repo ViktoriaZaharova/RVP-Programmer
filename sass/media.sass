@@ -17,6 +17,9 @@
         width: 144px
         height: 78px
 
+    .products-grid
+        grid-template-columns: repeat(4, 1fr)
+
 @media only screen and (max-width: 1200px)
     footer
         font-size: 14px
@@ -31,6 +34,9 @@
 
     .logo
         max-width: 260px
+
+    .products-grid
+        grid-template-columns: repeat(3, 1fr)
 
 @media only screen and (max-width: 992px)
     .container
@@ -161,6 +167,9 @@
     .btn-registration, .btn-authorization
         min-width: auto
 
+    .products-grid
+        grid-template-columns: repeat(2, 1fr)
+
 @media only screen and (max-width: 690px)
     .link-developer
         width: 100%
@@ -290,6 +299,8 @@
         line-height: 14px
 
 @media only screen and (max-width: 480px)
+    .products-grid
+        grid-template-columns: 1fr
 
 @media only screen and (max-width: 420px)
     .btn
@@ -301,7 +312,7 @@
 
     .nav-user
         .btn-notification
-            display: none    
+            display: none
 
 @media only screen and (max-width: 340px)
     .container

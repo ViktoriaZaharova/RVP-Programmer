@@ -93,10 +93,18 @@ $('.watched-slider').slick({
       }
     },
     {
-      breakpoint: 992,
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        wariableWidth: true,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+        arrows: false
       }
     }
   ]
@@ -131,21 +139,48 @@ $(function () {
   const $container = $('.subsections');
   const $items = $container.find('.subsection-link').not('.subsection-link__toggle');
   const $toggle = $container.find('.subsection-link__toggle');
-  const visibleCount = 11;
 
-  if ($items.length > visibleCount) {
-    $items.slice(visibleCount).hide();
-  } else {
-    $toggle.hide();
+  function getVisibleCount() {
+    const w = $(window).width();
+
+    if (w >= 1300) return 11; // desktop
+    if (w >= 992)  return 6;  // <1300
+    if (w >= 768)  return 5;  // <992
+    if (w >= 576)  return 7;  // <768
+    return 5;                 // <576
   }
 
+  function updateView() {
+    const visibleCount = getVisibleCount();
+
+    if ($items.length > visibleCount) {
+      if (!$container.hasClass('is-open')) {
+        $items.hide().slice(0, visibleCount).show();
+      }
+      $toggle.show();
+    } else {
+      $items.show();
+      $toggle.hide();
+    }
+  }
+
+  // первичная инициализация
+  updateView();
+
+  // ресайз
+  $(window).on('resize', function () {
+    updateView();
+  });
+
+  // toggle
   $toggle.on('click', function (e) {
     e.preventDefault();
 
+    const visibleCount = getVisibleCount();
     const isOpen = $container.hasClass('is-open');
 
     if (isOpen) {
-      $items.slice(visibleCount).hide();
+      $items.hide().slice(0, visibleCount).show();
       $(this).find('span').text('Показать все');
       $container.removeClass('is-open');
     } else {
@@ -155,6 +190,7 @@ $(function () {
     }
   });
 });
+
 
 
 // toggler btn product card
@@ -237,3 +273,39 @@ $(function () {
 
 });
 
+// filter mobile 
+$(function () {
+  const $buttonText = $('.sort-button__text');
+  const $radios = $('.filter-vat__item-input');
+
+  function updateButtonText() {
+    const text = $radios.filter(':checked').siblings('span').text();
+    $buttonText.text(text);
+  }
+
+  updateButtonText();
+
+  $radios.on('change', function () {
+    updateButtonText();
+  });
+});
+
+$(function () {
+  const $radios = $('.filter-vat__item-input');
+  const dropdownEl = document.querySelector('.content-filters__sort.dropdown');
+  const dropdownBtn = document.querySelector('.sort-button');
+
+  // экземпляр Bootstrap dropdown
+  const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdownBtn);
+
+  $radios.on('change', function () {
+    // обновляем текст кнопки
+    const text = $(this).siblings('span').text();
+    $('.sort-button__text').text(text);
+
+    // закрываем dropdown только на < 992
+    if (window.innerWidth < 992) {
+      bsDropdown.hide();
+    }
+  });
+});

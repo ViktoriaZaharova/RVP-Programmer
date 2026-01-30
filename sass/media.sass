@@ -280,6 +280,11 @@
         line-height: 22px
         margin: 0 0 24px
 
+    h2, .h2
+        font-size: 22px
+        line-height: 24px
+        margin: 0 0 24px
+
     h3, .h3
         font-size: 18px
         line-height: 20px
@@ -493,8 +498,6 @@
     .slick-prev
         left: 4px
 
-    
-
 @media only screen and (max-width: 690px)
     .link-developer
         width: 100%
@@ -578,6 +581,30 @@
     .products-list-item
         margin: 0 0 16px
 
+    .sort-button
+        .sort-button__text
+            display: none
+        img
+            margin: 0
+
+    .sort-button, .btn-filter-mobile
+        padding: 12px
+        height: 32px
+
+    .nav-tabs .nav-link
+        height: 32px
+        padding: 9px
+
+    .filter-vat__item span
+        height: 32px
+
+    .content-filters .filter-vat
+        margin: 0 8px 0 0
+        &:last-child
+            margin: 0
+
+    .content-filters .content-filters__vat
+        margin: 0 auto 0 0
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -667,6 +694,37 @@
         height: 40px
         font-size: 12px
         line-height: 14px
+
+    .watched-slider
+        width: calc( 100% + 20px )
+        .product-card
+            width: 100px
+            &__img
+                height: 100px
+                &.p-32
+                    padding: 16px
+            .list-labels__item
+                display: none
+                &:first-child
+                    display: flex
+            .link-add-favorite
+                display: none
+            &__body
+                padding: 8px 0 0
+            &__name
+                font-size: 10px
+            .price
+                margin: 6px 0 0
+
+    .price
+        font-size: 12px
+        line-height: 14px
+
+    .content-filters .content-filters__vat
+        display: none
+
+    .content-filters .filter-mobile
+        margin: 0 auto 0 0
 
 @media only screen and (max-width: 480px)
     .products-grid

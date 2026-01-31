@@ -138,6 +138,25 @@
   margin: 40px 0;
 }
 
+.sidebar-btn__close {
+  position: absolute;
+  top: 30px;
+  right: 6px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
 .sidebar-block, .category-dropdown {
   margin: 0 0 40px;
 }
@@ -605,6 +624,12 @@
 .product-card-row__col.col-2 .product-card__address {
   display: none;
 }
+.product-card-row__col.col-2 .product-card__info {
+  display: none;
+}
+.product-card-row__col.col-4 .product-card__btn-characteristics {
+  display: none;
+}
 .product-card-row .product-img {
   width: 90px;
   height: 90px;
@@ -675,6 +700,27 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.product-card-row__body .product-card__address {
+  display: none;
+}
+.product-card-row__body .product-img {
+  display: none;
+}
+.product-card-row__head {
+  width: 100%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 12px;
+}
+.product-card-row__head .list-labels {
+  margin: 0;
+}
+
 .date-public {
   padding: 6px 10px;
   border-radius: 12px;
@@ -1067,9 +1113,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 20px;
 }
 .buttons-navigation-group .btn-toggle-product {
-  margin: 0 8px;
+  margin: 0 auto;
+  width: 100%;
 }
 .buttons-navigation-group .nav-link-arrow {
   width: 38px;
@@ -1093,4 +1144,12 @@
 .buttons-navigation-group .nav-link-arrow-next svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.watched-section {
+  overflow: hidden;
+}
+
+.product-card-slider[data-slides="1"] .slick-dots {
+  display: none;
 }

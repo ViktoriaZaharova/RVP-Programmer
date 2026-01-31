@@ -202,6 +202,8 @@
         font-size: 12px
         line-height: 14px
         padding: 8px 16px
+        img
+            width: 8px
 
     .sidebar-title::after
         margin: 0 0 0 10px
@@ -434,6 +436,16 @@
 
     .sidebar-column
         display: none
+        position: fixed
+        left: 0
+        top: 0
+        max-width: 320px
+        width: 100%
+        height: 100%
+        background: #fff
+        overflow-y: auto
+        z-index: 10
+        padding: 0 40px 0 20px
 
     .content-column
         width: 100%
@@ -460,7 +472,7 @@
         border-radius: 10px
 
     .product-card .list-labels
-        padding: 8px
+        padding: 8px 
 
     .product-card__img
         border-radius: 18px
@@ -579,7 +591,7 @@
             min-width: 100px
 
     .products-list-item
-        margin: 0 0 16px
+        margin: 0
 
     .sort-button
         .sort-button__text
@@ -606,29 +618,164 @@
     .content-filters .content-filters__vat
         margin: 0 auto 0 0
 
+    .sidebar-btn__close
+        display: flex
+
+    .product-card-row
+        flex-wrap: wrap
+        padding: 24px 0
+        .product-card__favorite
+            display: none
+        &__col
+            border: none
+            padding: 0
+            margin: 0 0 12px
+            width: 100%
+            flex-wrap: wrap
+            &:last-child
+                margin: 0
+            .product-img
+                width: 64px
+                height: 64px
+                min-width: 64px
+                margin: 0
+                display: none
+            &.col-2
+                flex-direction: row !important
+                .product-card__address, .date-public
+                    display: none
+            
+                .product-card__info
+                    display: block
+            &.col-4
+                .price, .avialability
+                    display: none
+                .product-card__info
+                    width: 100%
+                    justify-content: space-between
+                    flex-direction: row
+                    align-items: flex-start
+                .btn
+                    font-weight: 500
+                    color: #000
+                    font-size: 10px
+                    line-height: 15px
+                .mt-16, .date-public
+                    margin: 0
+                .product-card__btn-characteristics
+                    display: flex
+            .product-card__info
+                margin: 0 0 0 auto
+                text-align: right
+                align-items: flex-end
+        .list-labels
+            padding: 0
+            margin: 0
+        &__body
+            padding: 0
+            flex-direction: row
+            align-items: flex-start
+            justify-content: space-between
+            .list-labels
+                display: none
+                margin: 0
+            .product-card__address
+                display: block
+                color: #000
+                margin: 8px 0 0
+            .product-img
+                display: flex
+            .product-card__btn-characteristics
+                display: none
+        &__head
+            display: flex
+            .product-card__favorite
+                display: flex
+
+    .date-public
+        font-size: 10px
+        line-height: 12px
+        padding: 10px
+
+    .product-card__company
+        font-weight: 500
+        color: #000
+
+    .rating
+        color: #000
+        font-size: 10px
+        line-height: 12px
+
+
+    .rating-icon
+        width: 10px
+
+    .rating-notification
+        font-size: 8px
+        line-height: 8px
+        padding: 2px 5px
+
+    .professional-status
+        font-size: 8px
+        line-height: 10px
+
+    .category-dropdown .btn.dropdown-toggle
+        height: 48px
+        padding: 17px 20px
+        font-size: 12px
+        line-height: 14px
+
+    .wrapper-row .category-dropdown
+        max-width: 143px
+        min-width: 143px
+
+    .btn-black.dropdown-toggle:after
+        width: 8px
+        height: 8px
+        margin: 0 0 0 10px
+
+    .form-search
+        margin: 0 0 16px
+        input
+            height: 48px
+            padding: 0 10px 0 48px
+
+    .form-search [type=submit]
+        width: 12px
+        height: 12px
+        top: 18px
+        left: 20px
+
+    .buttons-navigation-group
+        margin: 0 0 16px
+        .btn-toggle-product
+            margin: 0 8px
+
+    .subsections
+        gap: 8px
+
+    .product-card-column
+        .product-card__btn-characteristics
+            display: none
+
 @media only screen and (max-width: 576px)
     h1, .h1
         margin: 0 auto 24px
 
     header
         padding: 9px 0
-        .container
-            padding: 0 16px
-        .row
-            margin: 0 -16px
-            >*
-                padding: 0 16px
+   
 
     .logo
         max-width: 157px
 
     .container
-        padding: 0 24px
+        padding: 0 16px
 
     .row
-        margin: 0 -24px
+        margin: 0 -16px
         >*
-            padding: 0 24px
+            padding: 0 16px
 
     .mb-32
         margin-bottom: 24px
@@ -696,7 +843,7 @@
         line-height: 14px
 
     .watched-slider
-        width: calc( 100% + 20px )
+        width: calc( 100% + 14px )
         .product-card
             width: 100px
             &__img
@@ -726,9 +873,23 @@
     .content-filters .filter-mobile
         margin: 0 auto 0 0
 
+    h1, .h1
+        margin: 0 0 16px
+
+    .content-filters
+        margin: 16px 0
+
+
+    .sales-page__content, .sales-page__sidebar
+        padding: 0
+
+    .product-card__address
+        font-size: 10px
+        line-height: 12px
+
 @media only screen and (max-width: 480px)
-    .products-grid
-        grid-template-columns: 1fr
+    // .products-grid
+    //     grid-template-columns: 1fr
 
 @media only screen and (max-width: 420px)
     .btn
@@ -742,14 +903,17 @@
         .btn-notification
             display: none
 
-@media only screen and (max-width: 340px)
-    .container
-        padding: 0 16px
+    .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
+        height: 136px
 
-    .row
-        margin: 0 -16px
-        >*
-            padding: 0 16px
+
+@media only screen and (max-width: 340px)
+    .subsection-link
+        font-size: 10px
+        padding: 6px 8px
+
+    .sort-button, .btn-filter-mobile
+        padding: 10px
 
 @media (min-width: 1100px)
     .content-filters__sort.dropdown
@@ -771,3 +935,4 @@
         box-shadow: none
         background: transparent
         transform: none !important
+

@@ -73,6 +73,19 @@ $(function () {
 });
 
 
+
+$(function () {
+  $('.btn-filter-mobile').click(function (e) {
+    e.preventDefault();
+    $('.sidebar-column').fadeIn();
+  });
+
+  $('.sidebar-btn__close').click(function (e) {
+    e.preventDefault();
+    $('.sidebar-column').fadeOut();
+  });
+});
+
 // slick slider
 $('.watched-slider').slick({
   slidesToShow: 7,
@@ -111,12 +124,18 @@ $('.watched-slider').slick({
 });
 
 $('.product-card-slider').on('init reInit afterChange', function (event, slick) {
-  if (slick.slideCount <= 1) {
-    $(this).find('.slick-dots').hide();
+  const $slider = $(this);
+
+  // реальные слайды (без slick-cloned)
+  const realSlidesCount = slick.$slides.not('.slick-cloned').length;
+
+  if (realSlidesCount <= 1) {
+    $slider.find('.slick-dots').hide();
   } else {
-    $(this).find('.slick-dots').show();
+    $slider.find('.slick-dots').show();
   }
 });
+
 
 $('.product-card-slider').slick({
   slidesToShow: 1,
@@ -132,6 +151,151 @@ $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
   $('.product-card-slider').slick('refresh');
 });
 
+// toggle card product
+$(function () {
+
+  const LIMITS = {
+    row: 11,
+    column: 15
+  };
+
+  const MOBILE_WIDTH = 690;
+
+  function isMobile() {
+    return $(window).width() < MOBILE_WIDTH;
+  }
+
+  function getActiveTab() {
+    return $('.tab-pane.active, .tab-pane.show.active');
+  }
+
+  function initProductsInTab($tab) {
+    if (!$tab.length) return;
+
+    const $rowCards = $tab.find('.product-card-row');
+    const $columnCards = $tab.find('.product-card-column');
+
+    let $cards = $rowCards.length ? $rowCards : $columnCards;
+    let limit = $rowCards.length ? LIMITS.row : LIMITS.column;
+
+    // desktop / tablet логика
+    if (!isMobile()) {
+
+      if ($cards.length <= limit) {
+        $('.btn-toggle-product').hide();
+        $cards.show();
+        return;
+      }
+
+      $cards.hide().slice(0, limit).show();
+      $('.btn-toggle-product').show();
+
+    } else {
+      // mobile < 690 — кнопку не скрываем
+      $cards.show();
+      $('.btn-toggle-product').show();
+    }
+  }
+
+  // первичная инициализация
+  initProductsInTab(getActiveTab());
+
+  // клик по кнопке
+  $('.btn-toggle-product').on('click', function (e) {
+    e.preventDefault();
+
+    const $tab = getActiveTab();
+    if (!$tab.length) return;
+
+    $tab.find('.product-card-row, .product-card-column').show();
+
+    // обновляем slick внутри column
+    $tab.find('.product-card-slider.slick-initialized').each(function () {
+      $(this).slick('setPosition');
+    });
+
+    // кнопку скрываем ТОЛЬКО не на мобиле
+    if (!isMobile()) {
+      $(this).hide();
+    }
+  });
+
+  // при переключении табов
+  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+    initProductsInTab(getActiveTab());
+  });
+
+  // при ресайзе (например, поворот телефона)
+  $(window).on('resize', function () {
+    initProductsInTab(getActiveTab());
+  });
+
+});
+
+
+$(function () {
+
+  const LIMITS = {
+    row: 11,
+    column: 15
+  };
+
+  function getActiveTab() {
+    return $('.tab-pane.active, .tab-pane.show.active');
+  }
+
+  function initProductsInTab($tab) {
+    if (!$tab.length) return;
+
+    const $rowCards = $tab.find('.product-card-row');
+    const $columnCards = $tab.find('.product-card-column');
+
+    let $cards = $rowCards.length ? $rowCards : $columnCards;
+    let limit = $rowCards.length ? LIMITS.row : LIMITS.column;
+
+    // если карточек меньше лимита — просто скрываем кнопку
+    if ($cards.length <= limit) {
+      $('.btn-toggle-product').hide();
+      return;
+    }
+
+    // скрываем лишние
+    $cards.hide().slice(0, limit).show();
+
+    $('.btn-toggle-product').show();
+  }
+
+  // первичная инициализация
+  initProductsInTab(getActiveTab());
+
+  // клик по кнопке "Показать ещё"
+  $('.btn-toggle-product').on('click', function (e) {
+    e.preventDefault();
+
+    const $tab = getActiveTab();
+    if (!$tab.length) return;
+
+    const $rowCards = $tab.find('.product-card-row');
+    const $columnCards = $tab.find('.product-card-column');
+
+    let $cards = $rowCards.length ? $rowCards : $columnCards;
+
+    $cards.show();
+
+    // если есть slick — пересобираем
+    $tab.find('.product-card-slider.slick-initialized').each(function () {
+      $(this).slick('setPosition');
+    });
+
+    $(this).hide();
+  });
+
+  // при переключении табов
+  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+    initProductsInTab(getActiveTab());
+  });
+
+});
 
 
 // subsection toggle
@@ -144,9 +308,9 @@ $(function () {
     const w = $(window).width();
 
     if (w >= 1300) return 11; // desktop
-    if (w >= 992)  return 6;  // <1300
-    if (w >= 768)  return 5;  // <992
-    if (w >= 576)  return 7;  // <768
+    if (w >= 992) return 6;  // <1300
+    if (w >= 768) return 5;  // <992
+    if (w >= 576) return 7;  // <768
     return 5;                 // <576
   }
 
@@ -192,87 +356,6 @@ $(function () {
 });
 
 
-
-// toggler btn product card
-$(function () {
-  const VISIBLE_COUNT = 11;
-
-  $('.products-list-item').each(function () {
-    const $block = $(this);
-    const $cards = $block.find('.product-card.product-card-row');
-    const $btn = $block.next('.btn-toggle-product');
-
-    // если карточек меньше или равно 11
-    if ($cards.length <= VISIBLE_COUNT) {
-      $btn.hide();
-      return;
-    }
-
-    // скрываем лишние
-    $cards.slice(VISIBLE_COUNT).hide();
-    $btn.show();
-
-    // обработчик кнопки
-    $btn.on('click', function (e) {
-      e.preventDefault();
-
-      $cards.show();
-      $btn.hide();
-    });
-  });
-});
-
-$(function () {
-
-  function getVisibleCount() {
-    const w = window.innerWidth;
-
-    if (w < 576) return 4;
-    if (w < 992) return 8;
-    return 15;
-  }
-
-  $('.btn-toggle-product-column').each(function () {
-    const $btn = $(this);
-    const $wrapper = $btn.prev('.product-column-item');
-    const $cards = $wrapper.find('.product-card-column');
-
-    function init() {
-      const VISIBLE_COUNT = getVisibleCount();
-
-      // сначала показываем всё (важно при ресайзе / табах)
-      $cards.removeClass('is-hidden');
-
-      if ($cards.length <= VISIBLE_COUNT) {
-        $btn.hide();
-        return;
-      }
-
-      // скрываем лишние
-      $cards.slice(VISIBLE_COUNT).addClass('is-hidden');
-      $btn.show();
-    }
-
-    init();
-
-    // показать все и скрыть кнопку
-    $btn.on('click', function (e) {
-      e.preventDefault();
-
-      $cards.removeClass('is-hidden');
-      $btn.hide();
-    });
-
-    // пересчёт при ресайзе
-    let resizeTimer;
-    $(window).on('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(init, 200);
-    });
-  });
-
-});
-
 // filter mobile 
 $(function () {
   const $buttonText = $('.sort-button__text');
@@ -309,3 +392,4 @@ $(function () {
     }
   });
 });
+

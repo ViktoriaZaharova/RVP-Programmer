@@ -97,6 +97,20 @@
     .user-menu__divider
         margin: 40px 0
 
+.sidebar-btn__close
+    position: absolute
+    top: 30px
+    right: 6px
+    z-index: 1
+    width: 32px
+    height: 32px
+    background: rgba(0, 0, 0, 0.6)
+    border-radius: 50%
+    padding: 8px
+    align-items: center
+    justify-content: center
+    display: none
+
 .sidebar-block, .category-dropdown
     margin: 0 0 40px
     &:last-child
@@ -189,7 +203,6 @@
         @include d-flex
     label
         margin: 0
-
 
 .filter-vat
     display: flex
@@ -382,7 +395,7 @@
             margin: 0
     .content-filters__vat
         margin: 0 auto 0 0
-    
+
 .products
     width: 100%
 
@@ -407,6 +420,12 @@
             flex: 1
         &.col-2
             .product-card__address
+                display: none
+
+            .product-card__info
+                display: none
+        &.col-4
+            .product-card__btn-characteristics
                 display: none
     .product-img
         width: 90px
@@ -448,7 +467,18 @@
         width: 100%
         display: flex
         align-items: flex-start
-    .product-card__info
+        .product-card__address
+            display: none
+        .product-img
+            display: none
+    &__head
+        width: 100%
+        display: none
+        align-items: center
+        justify-content: space-between
+        margin: 0 0 12px
+        .list-labels
+            margin: 0
 
 .date-public
     padding: 6px 10px
@@ -704,8 +734,11 @@
 .buttons-navigation-group
     display: flex
     align-items: center
+    justify-content: space-between
+    margin: 0 0 20px
     .btn-toggle-product
-        margin: 0 8px
+        margin: 0 auto
+        width: 100%
     .nav-link-arrow
         width: 38px
         height: 40px
@@ -726,3 +759,9 @@
     .nav-link-arrow-next
         svg
             transform: rotate(180deg)
+
+.watched-section
+    overflow: hidden
+
+.product-card-slider[data-slides="1"] .slick-dots
+    display: none

@@ -123,179 +123,149 @@ $('.watched-slider').slick({
   ]
 });
 
-$('.product-card-slider').on('init reInit afterChange', function (event, slick) {
-  const $slider = $(this);
+// ==================================================
+// SLICK: скрывать точки если 1 слайд
+// ==================================================
+function toggleSlickDots($slider, slick) {
+  setTimeout(() => {
+    const $dots = $slider.find('.slick-dots');
+    if ($dots.length) {
+      $dots.toggle(slick.slideCount > 1);
+    }
+  }, 0);
+}
 
-  // реальные слайды (без slick-cloned)
-  const realSlidesCount = slick.$slides.not('.slick-cloned').length;
-
-  if (realSlidesCount <= 1) {
-    $slider.find('.slick-dots').hide();
-  } else {
-    $slider.find('.slick-dots').show();
-  }
-});
-
-
-$('.product-card-slider').slick({
-  slidesToShow: 1,
-  arrows: false,
-  dots: true,
-  fade: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  infinite: false
-});
+$('.product-card-slider')
+  .on('init reInit setPosition', function (e, slick) {
+    toggleSlickDots($(this), slick);
+  })
+  .slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    infinite: false
+  });
 
 $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
-  $('.product-card-slider').slick('refresh');
+  $('.product-card-slider.slick-initialized').slick('setPosition');
 });
 
-// toggle card product
-$(function () {
 
-  const LIMITS = {
-    row: 11,
-    column: 15
-  };
 
-  const MOBILE_WIDTH = 690;
+$(function(){
 
-  function isMobile() {
-    return $(window).width() < MOBILE_WIDTH;
-  }
+  // ===============================
+  // КОЛОНКИ
+  // ===============================
+  $('.products.products-column').each(function(){
+    const $container = $(this);
+    const $btn = $container.find('.btn-toggle-column');
 
-  function getActiveTab() {
-    return $('.tab-pane.active, .tab-pane.show.active');
-  }
+    function getColumnVisible() {
+      const w = $(window).width();
+      if(w >= 992) return 15;       // ПК
+      if(w >= 768) return 16;       // Планшет
+      return 10;                    // Мобильные (пример, можно менять)
+    }
 
-  function initProductsInTab($tab) {
-    if (!$tab.length) return;
+    function updateColumns() {
+      const COLUMN_VISIBLE = getColumnVisible();
 
-    const $rowCards = $tab.find('.product-card-row');
-    const $columnCards = $tab.find('.product-card-column');
+      $container.find('.product-column-item').each(function(){
+        const $item = $(this);
+        const $cards = $item.find('.product-card-column');
 
-    let $cards = $rowCards.length ? $rowCards : $columnCards;
-    let limit = $rowCards.length ? LIMITS.row : LIMITS.column;
+        $cards.hide();
+        $cards.slice(0, COLUMN_VISIBLE).show();
+      });
 
-    // desktop / tablet логика
-    if (!isMobile()) {
-
-      if ($cards.length <= limit) {
-        $('.btn-toggle-product').hide();
-        $cards.show();
-        return;
+      if($container.find('.product-card-column:hidden').length > 0){
+        $btn.show();
+      } else {
+        $btn.hide();
       }
+    }
 
-      $cards.hide().slice(0, limit).show();
-      $('.btn-toggle-product').show();
+    // Изначальная инициализация
+    updateColumns();
 
+    // При ресайзе окна пересчитываем
+    $(window).on('resize', function(){
+      updateColumns();
+    });
+
+    $btn.off('click').on('click', function(e){
+      e.preventDefault();
+      const COLUMN_VISIBLE = getColumnVisible();
+
+      $container.find('.product-column-item').each(function(){
+        const $item = $(this);
+        const $cards = $item.find('.product-card-column');
+        const $hidden = $cards.filter(':hidden');
+
+        $hidden.slice(0, COLUMN_VISIBLE).show();
+
+        // обновляем slick
+        $hidden.slice(0, COLUMN_VISIBLE).find('.product-card-slider').each(function(){
+          const $slider = $(this);
+          if($slider.hasClass('slick-initialized')){
+            $slider.slick('setPosition');
+          }
+        });
+      });
+
+      if($container.find('.product-card-column:hidden').length === 0){
+        $btn.hide();
+      }
+    });
+
+  });
+
+  // ===============================
+  // РЯДЫ
+  // ===============================
+  $('.products.products-list').each(function(){
+    const $container = $(this);
+    const $btn = $container.find('.btn-toggle-row');
+    const ROW_VISIBLE = 11;
+
+    $container.find('.products-list-item').each(function(){
+      const $listItem = $(this);
+      const $cards = $listItem.find('.product-card-row');
+
+      $cards.hide();
+      $cards.slice(0, ROW_VISIBLE).show();
+    });
+
+    if($container.find('.product-card-row:hidden').length > 0){
+      $btn.show();
     } else {
-      // mobile < 690 — кнопку не скрываем
-      $cards.show();
-      $('.btn-toggle-product').show();
+      $btn.hide();
     }
-  }
 
-  // первичная инициализация
-  initProductsInTab(getActiveTab());
+    $btn.off('click').on('click', function(e){
+      e.preventDefault();
 
-  // клик по кнопке
-  $('.btn-toggle-product').on('click', function (e) {
-    e.preventDefault();
+      $container.find('.products-list-item').each(function(){
+        const $listItem = $(this);
+        const $cards = $listItem.find('.product-card-row');
+        const $hidden = $cards.filter(':hidden');
+        $hidden.slice(0, ROW_VISIBLE).show();
+      });
 
-    const $tab = getActiveTab();
-    if (!$tab.length) return;
-
-    $tab.find('.product-card-row, .product-card-column').show();
-
-    // обновляем slick внутри column
-    $tab.find('.product-card-slider.slick-initialized').each(function () {
-      $(this).slick('setPosition');
+      if($container.find('.product-card-row:hidden').length === 0){
+        $btn.hide();
+      }
     });
-
-    // кнопку скрываем ТОЛЬКО не на мобиле
-    if (!isMobile()) {
-      $(this).hide();
-    }
-  });
-
-  // при переключении табов
-  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
-    initProductsInTab(getActiveTab());
-  });
-
-  // при ресайзе (например, поворот телефона)
-  $(window).on('resize', function () {
-    initProductsInTab(getActiveTab());
   });
 
 });
 
 
-$(function () {
 
-  const LIMITS = {
-    row: 11,
-    column: 15
-  };
-
-  function getActiveTab() {
-    return $('.tab-pane.active, .tab-pane.show.active');
-  }
-
-  function initProductsInTab($tab) {
-    if (!$tab.length) return;
-
-    const $rowCards = $tab.find('.product-card-row');
-    const $columnCards = $tab.find('.product-card-column');
-
-    let $cards = $rowCards.length ? $rowCards : $columnCards;
-    let limit = $rowCards.length ? LIMITS.row : LIMITS.column;
-
-    // если карточек меньше лимита — просто скрываем кнопку
-    if ($cards.length <= limit) {
-      $('.btn-toggle-product').hide();
-      return;
-    }
-
-    // скрываем лишние
-    $cards.hide().slice(0, limit).show();
-
-    $('.btn-toggle-product').show();
-  }
-
-  // первичная инициализация
-  initProductsInTab(getActiveTab());
-
-  // клик по кнопке "Показать ещё"
-  $('.btn-toggle-product').on('click', function (e) {
-    e.preventDefault();
-
-    const $tab = getActiveTab();
-    if (!$tab.length) return;
-
-    const $rowCards = $tab.find('.product-card-row');
-    const $columnCards = $tab.find('.product-card-column');
-
-    let $cards = $rowCards.length ? $rowCards : $columnCards;
-
-    $cards.show();
-
-    // если есть slick — пересобираем
-    $tab.find('.product-card-slider.slick-initialized').each(function () {
-      $(this).slick('setPosition');
-    });
-
-    $(this).hide();
-  });
-
-  // при переключении табов
-  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
-    initProductsInTab(getActiveTab());
-  });
-
-});
 
 
 // subsection toggle

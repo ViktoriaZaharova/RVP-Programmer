@@ -475,6 +475,9 @@
   .products-grid .product-card-column + .btn {
     display: none;
   }
+  .btn img {
+    width: 12px;
+  }
 }
 @media only screen and (max-width: 930px) {
   .products-grid .product-card__body {
@@ -561,6 +564,10 @@
   }
   .slick-prev {
     left: 4px;
+  }
+  .text-small {
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 @media only screen and (max-width: 690px) {
@@ -662,7 +669,7 @@
     min-width: 100px;
   }
   .products-list-item {
-    margin: 0;
+    margin: 0 0 16px;
   }
   .sort-button .sort-button__text {
     display: none;
@@ -879,6 +886,9 @@
   }
   .product-card-column .product-card__btn-characteristics {
     display: none;
+  }
+  .buttons-navigation-group .btn-toggle-product {
+    height: 40px;
   }
 }
 @media only screen and (max-width: 576px) {

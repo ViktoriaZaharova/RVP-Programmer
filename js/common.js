@@ -265,6 +265,34 @@ $(function(){
 });
 
 
+$(function() {
+  $('.category-link[data-tab]').on('mouseenter', function() {
+    var tab = $(this).data('tab');
+
+    // убираем актив у всех ссылок, кроме тех, что в цепочке
+    $('.category-link').removeClass('active');
+
+    // добавляем active на текущую ссылку
+    $(this).addClass('active');
+
+    // показываем подменю для текущего таба через CSS класс
+    $('.category-menu__col-sub').removeClass('show');
+    $('.category-menu__col-sub[data-tab="' + tab + '"]').addClass('show');
+
+    // добавляем active к родительским ссылкам (по цепочке)
+    var parentTab = $('.category-menu__col-sub[data-tab="' + tab + '"]').data('parent-tab');
+    while (parentTab) {
+      $('.category-link[data-tab="' + parentTab + '"]').addClass('active');
+      parentTab = $('.category-menu__col-sub[data-tab="' + parentTab + '"]').data('parent-tab');
+    }
+  });
+
+  // при уходе мыши с меню, скрываем все подменю и убираем актив
+  $('.category-menu').on('mouseleave', function() {
+    $('.category-menu__col-sub').removeClass('show');
+    $('.category-link').removeClass('active');
+  });
+});
 
 
 

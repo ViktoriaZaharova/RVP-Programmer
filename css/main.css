@@ -1161,3 +1161,61 @@
 .product-card-slider.one-slide .slick-dots {
   display: none;
 }
+
+.category-menu {
+  padding: 32px;
+}
+
+.category-menu-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+}
+
+.category-menu-item {
+  width: 100%;
+  min-width: 224px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.category-menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #000;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.category-menu-item a svg {
+  margin: 0 0 0 8px;
+  fill: none;
+  width: 12px;
+  height: 12px;
+  stroke: rgba(0, 0, 0, 0.6);
+}
+.category-menu-item a:first-child {
+  padding-top: 0;
+}
+.category-menu-item a:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.category-menu-item a:hover, .category-menu-item a:focus, .category-menu-item a.active {
+  color: #20815C;
+}
+
+.category-menu__col-sub {
+  display: none;
+}
+.category-menu__col-sub.show {
+  display: block;
+}

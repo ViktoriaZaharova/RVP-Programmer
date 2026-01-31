@@ -244,7 +244,7 @@
     z-index: 0
 
 .filter-vat-dropdown.dropdown-menu.show
-    z-index: 10        
+    z-index: 10
 
 .filter-price
     &__prices
@@ -771,3 +771,73 @@
 
 .product-card-slider.one-slide .slick-dots
     display: none
+
+.category-menu
+    padding: 32px
+
+.category-menu-wrapper
+    width: 100%
+    display: flex
+    align-items: flex-start
+    gap: 32px
+
+.category-menu-item
+    width: 100%
+    min-width: 224px
+    font-size: 14px
+    font-weight: 500
+    a
+        display: flex
+        align-items: center
+        width: 100%
+        color: #000
+        padding: 16px 0
+        border-bottom: 1px solid rgba(#000,.1)
+        svg
+            margin: 0 0 0 8px
+            fill: none
+            width: 12px
+            height: 12px
+            stroke: rgba(#000, .6)
+        &:first-child
+            padding-top: 0
+        &:last-child
+            padding-bottom: 0
+            border: none
+        &:hover, &:focus, &.active
+            color: $green
+
+
+// .category-menu
+//     width: 250px
+//     background: $menu-bg
+//     border: 1px solid $menu-border
+//     position: relative
+
+// .category-menu__col,
+// .category-menu__col-sub
+//     display: none
+//     flex-direction: column
+
+//     a
+//         display: block
+//         padding: 10px 15px
+//         color: #333
+//         text-decoration: none
+//         transition: background $transition-speed
+
+//     &:hover
+//         background: $menu-hover-bg
+
+//     span
+//         float: right
+//         transition: transform $transition-speed
+
+  // показываем подменю по активному data-tab
+// .category-link[data-tab].active + .category-menu__col-sub[data-tab="#{$attr('data-tab')}"]
+//     display: flex
+
+.category-menu__col-sub
+    display: none
+    &.show
+        display: block

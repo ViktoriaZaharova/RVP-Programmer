@@ -150,35 +150,50 @@
 
                 <div class="dropdown-menu category-menu">
 
-                  <div class="category-menu__col">
-                    <a href="#" class="category-link active">
-                      Запасные части
-                      <span>›</span>
-                    </a>
+                  <div class="category-menu-wrapper">
+                    <div class="category-menu__col category-menu-item">
+                      <a href="#" class="category-link" data-tab="tab-1">
+                        Запасные части<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="category-link" data-tab="tab-2">
+                        Подвижной состав (вагоны)<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
 
-                    <a href="#" class="category-link">
-                      Подвижной состав (вагоны)
-                      <span>›</span>
-                    </a>
+                    <!-- Подменю 1 уровня -->
+                    <div class="category-menu__col-sub category-menu-item" data-tab="tab-2" data-parent-tab="tab-2">
+                      <a href="#" class="category-link" data-tab="tab-2-1">Крытый<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                      <a href="#" class="category-link" data-tab="tab-2-2">Платформа<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                      <a href="#" class="category-link" data-tab="tab-2-3">Полувагон<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                      <a href="#" class="category-link" data-tab="tab-2-4">Цистерна<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                      <a href="#" class="category-link" data-tab="tab-2-5">Изотермический<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                      <a href="#" class="category-link" data-tab="tab-2-6">Прочие<svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></a>
+                    </div>
+
+                    <!-- Подменю 2 уровня -->
+                    <div class="category-menu__col-sub category-menu-item" data-tab="tab-2-1" data-parent-tab="tab-2">
+                      <a href="#" class="category-link" data-tab="tab-2-1-1">Универсальные</a>
+                      <a href="#" class="category-link" data-tab="tab-2-1-2">Специализированные</a>
+                    </div>
                   </div>
-
-                  <div class="category-menu__col">
-                    <a href="#" class="category-link">
-                      Крытый <span>›</span>
-                    </a>
-                    <a href="#" class="category-link">Платформа <span>›</span></a>
-                    <a href="#" class="category-link">Полувагон <span>›</span></a>
-                    <a href="#" class="category-link">Цистерна <span>›</span></a>
-                    <a href="#" class="category-link">Изотермический <span>›</span></a>
-                    <a href="#" class="category-link">Прочие <span>›</span></a>
-                  </div>
-
-                  <div class="category-menu__col">
-                    <a href="#" class="category-link">Универсальные</a>
-                    <a href="#" class="category-link">Специализированные</a>
-                  </div>
-
                 </div>
+
               </div>
 
               <div class="sidebar-block">

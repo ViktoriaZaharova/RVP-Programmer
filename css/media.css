@@ -1038,8 +1038,11 @@
   .content-filters {
     margin: 16px 0;
   }
-  .sales-page__content, .sales-page__sidebar {
+  .sales-page__content {
     padding: 0;
+  }
+  .sales-page__sidebar {
+    max-width: 260px;
   }
   .product-card__address {
     font-size: 10px;

@@ -360,6 +360,14 @@
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
+.filter-vat-dropdown {
+  z-index: 0;
+}
+
+.filter-vat-dropdown.dropdown-menu.show {
+  z-index: 10;
+}
+
 .filter-price__prices {
   width: 100%;
   display: -webkit-box;

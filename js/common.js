@@ -265,34 +265,44 @@ $(function(){
 });
 
 
-$(function() {
-  $('.category-link[data-tab]').on('mouseenter', function() {
-    var tab = $(this).data('tab');
+$(function () {
 
-    // убираем актив у всех ссылок, кроме тех, что в цепочке
-    $('.category-link').removeClass('active');
+  const $menu = $('.category-menu');
 
-    // добавляем active на текущую ссылку
-    $(this).addClass('active');
+  $menu.on('mouseenter', '.has-submenu > .category-link', function () {
+    const $item = $(this).parent();
 
-    // показываем подменю для текущего таба через CSS класс
-    $('.category-menu__col-sub').removeClass('show');
-    $('.category-menu__col-sub[data-tab="' + tab + '"]').addClass('show');
+    // закрываем соседей на этом уровне
+    $item
+      .siblings('.has-submenu')
+      .removeClass('is-open')
+      .find('.is-open')
+      .removeClass('is-open');
 
-    // добавляем active к родительским ссылкам (по цепочке)
-    var parentTab = $('.category-menu__col-sub[data-tab="' + tab + '"]').data('parent-tab');
-    while (parentTab) {
-      $('.category-link[data-tab="' + parentTab + '"]').addClass('active');
-      parentTab = $('.category-menu__col-sub[data-tab="' + parentTab + '"]').data('parent-tab');
-    }
+    // активируем текущий
+    $item.addClass('is-open');
+
+    // активная ссылка
+    $item
+      .closest('.category-menu')
+      .find('.category-link')
+      .removeClass('is-active');
+
+    $(this).addClass('is-active');
+
+    // активируем всю цепочку родителей
+    $item.parents('.category-item').addClass('is-open');
+    $item.parents('.category-item').children('.category-link').addClass('is-active');
   });
 
-  // при уходе мыши с меню, скрываем все подменю и убираем актив
-  $('.category-menu').on('mouseleave', function() {
-    $('.category-menu__col-sub').removeClass('show');
-    $('.category-link').removeClass('active');
+  // чтобы меню не закрывалось при движении внутри
+  $menu.on('mouseleave', function () {
+    $menu.find('.is-open').removeClass('is-open');
+    $menu.find('.is-active').removeClass('is-active');
   });
+
 });
+
 
 
 

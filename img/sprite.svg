@@ -11,5 +11,8 @@
         <path d="M0.530273 0.530273L4.03027 4.03027L0.530273 7.53027" stroke-width="1.5" />
     </symbol>
 
+    <symbol id="close-icon" viewBox="0 0 12 12">
+        <path d="M10.5 1.5L1.5 10.5M10.5 10.5L1.5 1.5" stroke-width="1.5" />
+    </symbol>
 
 </svg>

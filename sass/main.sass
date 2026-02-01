@@ -772,72 +772,97 @@
 .product-card-slider.one-slide .slick-dots
     display: none
 
+// category menu
+
 .category-menu
     padding: 32px
 
-.category-menu-wrapper
+.category-menu-level
+    list-style: none
+    margin: 0
+    padding: 0
+    &--1
+        display: flex
+        align-items: flex-start
+
+.category-item
+    position: relative
+    min-width: 224px
+
+.category-link
     width: 100%
     display: flex
-    align-items: flex-start
-    gap: 32px
-
-.category-menu-item
-    width: 100%
-    min-width: 224px
+    align-items: center
+    padding: 16px 0
     font-size: 14px
     font-weight: 500
-    a
-        display: flex
-        align-items: center
-        width: 100%
-        color: #000
-        padding: 16px 0
-        border-bottom: 1px solid rgba(#000,.1)
-        svg
-            margin: 0 0 0 8px
-            fill: none
-            width: 12px
-            height: 12px
-            stroke: rgba(#000, .6)
-        &:first-child
-            padding-top: 0
-        &:last-child
-            padding-bottom: 0
-            border: none
-        &:hover, &:focus, &.active
-            color: $green
+    color: #000
+    border-bottom: 1px solid rgba(#000, .1)
+    svg
+        margin: 0 0 0 8px
+        fill: none
+        width: 12px
+        height: 12px
+        stroke: rgba(#000, .6)
 
+    &.is-active
+        color: $green
 
-// .category-menu
-//     width: 250px
-//     background: $menu-bg
-//     border: 1px solid $menu-border
-//     position: relative
+/* ВСЕ подменю */
+.category-menu-level
+    flex-wrap: wrap
 
-// .category-menu__col,
-// .category-menu__col-sub
-//     display: none
-//     flex-direction: column
+.category-menu-level--2,
+.category-menu-level--3
+    position: absolute
+    top: 0
+    left: 100%
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    padding-left: 32px
 
+/* Показываем при активности родителя */
+.category-item.is-open > .category-menu-level
+    opacity: 1
+    visibility: visible
+    pointer-events: auto
+
+// .category-menu-item
+//     width: 100%
+//     min-width: 224px
+//     font-size: 14px
+//     font-weight: 500
+//     padding: 0 32px 0 0
+//     &:last-child
+//         padding: 0
 //     a
-//         display: block
-//         padding: 10px 15px
-//         color: #333
-//         text-decoration: none
-//         transition: background $transition-speed
+//         display: flex
+//         align-items: center
+//         width: 100%
+//         color: #000
+//         padding: 16px 0
+//         border-bottom: 1px solid rgba(#000,.1)
+//         svg
+//             margin: 0 0 0 8px
+//             fill: none
+//             width: 12px
+//             height: 12px
+//             stroke: rgba(#000, .6)
+//         &:first-child
+//             padding-top: 0
+//         &:last-child
+//             padding-bottom: 0
+//             border: none
+//         &:hover, &:focus, &.is-active
+//             color: $green
 
-//     &:hover
-//         background: $menu-hover-bg
-
-//     span
-//         float: right
-//         transition: transform $transition-speed
-
-  // показываем подменю по активному data-tab
-// .category-link[data-tab].active + .category-menu__col-sub[data-tab="#{$attr('data-tab')}"]
-//     display: flex
-
-.category-menu__col-sub
-    display: none
-    &.show
-        display: block
+// .category-menu__col-sub
+//     opacity: 0
+//     visibility: hidden
+//     pointer-events: none
+//     transition: opacity .2s ease
+//     &.is-show
+//         opacity: 1
+//         visibility: visible
+//         pointer-events: auto

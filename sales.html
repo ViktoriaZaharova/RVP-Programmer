@@ -148,7 +148,7 @@
                   Категория
                 </button>
 
-                <div class="dropdown-menu category-menu">
+                <!-- <div class="dropdown-menu category-menu">
 
                   <div class="category-menu-wrapper">
                     <div class="category-menu__col category-menu-item">
@@ -164,7 +164,6 @@
                       </a>
                     </div>
 
-                    <!-- Подменю 1 уровня -->
                     <div class="category-menu__col-sub category-menu-item" data-tab="tab-2" data-parent-tab="tab-2">
                       <a href="#" class="category-link" data-tab="tab-2-1">Крытый<svg class="svg-icon">
                           <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -186,12 +185,68 @@
                         </svg></a>
                     </div>
 
-                    <!-- Подменю 2 уровня -->
                     <div class="category-menu__col-sub category-menu-item" data-tab="tab-2-1" data-parent-tab="tab-2">
                       <a href="#" class="category-link" data-tab="tab-2-1-1">Универсальные</a>
                       <a href="#" class="category-link" data-tab="tab-2-1-2">Специализированные</a>
                     </div>
                   </div>
+                </div> -->
+
+                <div class="dropdown-menu category-menu">
+                  <ul class="category-menu-level category-menu-level--1">
+
+                    <li class="category-item has-submenu">
+                      <a href="#" class="category-link">
+                        Запасные части
+                        <svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="category-item has-submenu">
+                      <a href="#" class="category-link">
+                        Подвижной состав (вагоны)
+                        <svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+
+                      <ul class="category-menu-level category-menu-level--2">
+
+                        <li class="category-item has-submenu">
+                          <a href="#" class="category-link">
+                            Крытый
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </a>
+
+                          <ul class="category-menu-level category-menu-level--3">
+                            <li class="category-item">
+                              <a href="#" class="category-link">Универсальные</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="category-link">Специализированные</a>
+                            </li>
+                          </ul>
+
+                        </li>
+
+                        <li class="category-item">
+                          <a href="#" class="category-link">Платформа</a>
+                        </li>
+                        <li class="category-item">
+                          <a href="#" class="category-link">Полувагон</a>
+                        </li>
+                        <li class="category-item">
+                          <a href="#" class="category-link">Цистерна</a>
+                        </li>
+
+                      </ul>
+                    </li>
+
+                  </ul>
                 </div>
 
               </div>
@@ -3269,6 +3324,154 @@
     </div>
   </footer>
 
+  <!-- modals -->
+
+  <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Выбор региона или города</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-search w-100">
+            <label>
+              <input type="text" placeholder="Поиск предложений" name="search">
+            </label>
+            <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+          </form>
+
+          <!-- Popular cities -->
+          <div class="popular-cities">
+            <button class="chip">Москва</button>
+            <button class="chip">Санкт-Петербург</button>
+            <button class="chip">Новосибирск</button>
+            <button class="chip">Краснодар</button>
+            <button class="chip">Екатеринбург</button>
+            <button class="chip">Казань</button>
+            <button class="chip">Уфа</button>
+            <button class="chip">Нижний Новгород</button>
+            <button class="chip">Челябинск</button>
+            <button class="chip">Самара</button>
+            <button class="chip">Ростов-на-Дону</button>
+          </div>
+
+
+          <!-- Districts -->
+          <div class="districts">
+            <div class="districts-title">Округ</div>
+            <div class="districts-list">
+              <button class="chip active">Все</button>
+              <button class="chip">Дальневосточный</button>
+              <button class="chip">Приволжский</button>
+              <button class="chip">Северо-Западный</button>
+              <button class="chip">Северо-Кавказский</button>
+              <button class="chip">Сибирский</button>
+              <button class="chip">Уральский</button>
+              <button class="chip">Центральный</button>
+              <button class="chip">Южный</button>
+            </div>
+          </div>
+
+          <!-- Cities list -->
+          <div class="cities-wrapper">
+            <div class="cities-columns">
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">А</div>
+                  <a href="#">Алапаевск</a>
+                  <a href="#">Арамиль</a>
+                  <a href="#">Артемовский</a>
+                  <a href="#">Арти</a>
+                  <a href="#">Асбест</a>
+                  <a href="#">Атиг</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Б</div>
+                  <a href="#">Бараба</a>
+                  <a href="#">Белоярский</a>
+                  <a href="#">Березовский</a>
+                  <a href="#">Богданович</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">В</div>
+                  <a href="#">Верхнеуральск</a>
+                  <a href="#">Верхний Тагил</a>
+                  <a href="#">Верхний Уфалей</a>
+                  <a href="#">Верхняя Пышма</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">Г</div>
+                  <a href="#">Губкинский</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Д</div>
+                  <a href="#">Далматово</a>
+                  <a href="#">Дегтярск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Е</div>
+                  <a href="#">Екатеринбург</a>
+                  <a href="#">Еманжелинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">З</div>
+                  <a href="#">Заводоуковск</a>
+                  <a href="#">Заречный</a>
+                  <a href="#">Златоуст</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">И</div>
+                  <a href="#">Ивдель</a>
+                  <a href="#">Ирбит</a>
+                  <a href="#">Ишим</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">К</div>
+                  <a href="#">Каменск-Уральский</a>
+                  <a href="#">Камышлов</a>
+                  <a href="#">Карабаш</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">У</div>
+                  <a href="#">Урай</a>
+                  <a href="#">Усть-Катав</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Х</div>
+                  <a href="#">Ханты-Мансийск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ч</div>
+                  <a href="#">Чебаркуль</a>
+                  <a href="#">Челябинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ш</div>
+                  <a href="#">Шадринск</a>
+                  <a href="#">Шумиха</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Я</div>
+                  <a href="#">Ялуторовск</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- add plugins js-->
   <script src="js/jquery.min.js"></script>

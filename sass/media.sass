@@ -449,7 +449,6 @@
         margin: 0 0 16px
         font-size: 12px
         line-height: 14px
-  
 
     .letter
         font-size: 14px
@@ -464,8 +463,26 @@
 
     .modal-content
         margin: 0 auto
-        padding: 24px    
+        padding: 24px
 
+    .salesman-row .col-2
+        width: 300px
+
+    .label-checkbox
+        font-size: 12px
+        line-height: 14px
+    .label-checkbox__custom
+        width: 20px
+        height: 20px
+        min-width: 20px
+        border-radius: 6px
+
+    .list-checkbox-row
+        margin: 0 0 8px
+
+    .salaesman-wrapper
+        margin: 24px 0 0
+        
 @media only screen and (max-width: 930px)
     .products-grid .product-card__body
         padding: 0
@@ -510,7 +527,7 @@
         border-radius: 10px
 
     .product-card .list-labels
-        padding: 8px 
+        padding: 8px
 
     .product-card__img
         border-radius: 18px
@@ -555,6 +572,41 @@
     .districts-title
         font-size: 16px
         line-height: 18px
+
+    .salesman-row
+        padding: 24px 0
+        .product-card-row__body
+            padding: 0
+            flex-direction: column
+            align-items: flex-start
+        .rating
+            width: fit-content
+        .product-card-status
+            margin: 12px 0 0
+        .product-card__address
+            margin: 8px 0 0 
+            color: #000
+        .product-img
+            width: 64px
+            height: 64px
+            min-width: 64px
+        .col-1
+            .product-img
+                display: none
+            .product-card-status, .product-card__address
+                display: flex
+        .col-2
+            display: none 
+        .product-card-row__col 
+            padding: 0 0
+            border: none
+            &.col-3
+                width: 74px
+                padding: 0 0 0 10px
+                .product-info
+                    display: none
+                .product-img
+                    display: flex
 
 @media only screen and (max-width: 690px)
     .link-developer
@@ -690,7 +742,7 @@
                 flex-direction: row !important
                 .product-card__address, .date-public
                     display: none
-            
+
                 .product-card__info
                     display: block
             &.col-4
@@ -752,7 +804,6 @@
         font-size: 10px
         line-height: 12px
 
-
     .rating-icon
         width: 10px
 
@@ -813,7 +864,6 @@
 
     header
         padding: 9px 0
-   
 
     .logo
         max-width: 157px
@@ -928,12 +978,11 @@
     .content-filters
         margin: 16px 0
 
-
     .sales-page__content
         padding: 0
 
     .sales-page__sidebar
-        max-width: 260px    
+        max-width: 260px
 
     .product-card__address
         font-size: 10px
@@ -962,11 +1011,11 @@
         display: flex
         flex-direction: column
         align-items: flex-start
-    
+
     .cities-col a
         font-size: 14px
         line-height: 16px
-        
+
     .letter
         position: relative
         margin: 0 0 16px
@@ -979,7 +1028,7 @@
         margin: 10px auto
 
     .modal-content
-        padding: 24px 16px    
+        padding: 24px 16px
 
 @media only screen and (max-width: 370px)
     .btn
@@ -991,8 +1040,6 @@
 
     .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
         height: 136px
-
-
 
 @media only screen and (max-width: 340px)
     .subsection-link
@@ -1022,4 +1069,3 @@
         box-shadow: none
         background: transparent
         transform: none !important
-

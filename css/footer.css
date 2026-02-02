@@ -55,6 +55,7 @@ footer {
 /* Modal */
 .modal-dialog {
   max-width: 1000px;
+  margin: 20px auto;
 }
 
 .modal-content {
@@ -62,6 +63,8 @@ footer {
   border-radius: 12px;
   background: #fff;
   padding: 32px;
+  width: 100%;
+  max-width: none;
 }
 
 .modal-header {
@@ -108,6 +111,10 @@ footer {
 
 .modal-body {
   padding: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.2;
 }
 
 .popular-cities {

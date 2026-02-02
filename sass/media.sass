@@ -447,8 +447,9 @@
 
     .cities-col a
         margin: 0 0 16px
-        font-size: 10px
-        line-height: 12px
+        font-size: 12px
+        line-height: 14px
+  
 
     .letter
         font-size: 14px
@@ -456,6 +457,14 @@
 
     .cities-wrapper
         max-height: 404px
+
+    .modal-dialog
+        width: calc( 100% - 50px )
+        max-width: none
+
+    .modal-content
+        margin: 0 auto
+        padding: 24px    
 
 @media only screen and (max-width: 930px)
     .products-grid .product-card__body
@@ -542,6 +551,10 @@
     .text-small
         font-size: 12px
         line-height: 20px
+
+    .districts-title
+        font-size: 16px
+        line-height: 18px
 
 @media only screen and (max-width: 690px)
     .link-developer
@@ -926,6 +939,9 @@
         font-size: 10px
         line-height: 12px
 
+    .districts-list
+        gap: 8px
+
 @media only screen and (max-width: 480px)
     // .products-grid
     //     grid-template-columns: 1fr
@@ -933,6 +949,37 @@
 @media only screen and (max-width: 420px)
     .btn
         padding: 0 20px
+
+    .cities-wrapper
+        max-height: 312px
+        box-shadow: none
+
+    .cities-col-list
+        position: relative
+        padding: 0
+
+    .cities-columns
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    
+    .cities-col a
+        font-size: 14px
+        line-height: 16px
+        
+    .letter
+        position: relative
+        margin: 0 0 16px
+        font-size: 18px
+        line-height: 20px
+
+    .modal-dialog
+        max-width: none
+        width: 100%
+        margin: 10px auto
+
+    .modal-content
+        padding: 24px 16px    
 
 @media only screen and (max-width: 370px)
     .btn
@@ -944,6 +991,7 @@
 
     .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
         height: 136px
+
 
 
 @media only screen and (max-width: 340px)

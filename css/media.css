@@ -101,6 +101,39 @@
   .date-public span {
     display: none;
   }
+  .purchase-card .product-card-row__body {
+    padding: 0;
+  }
+  .purchase-card .date-public {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .purchase-card .date-public span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 5px 0 0;
+  }
+  .purchase-card .list-labels {
+    margin: 8px 0;
+  }
+  .purchase-card .product-card-row__col {
+    width: 167px;
+  }
+  .purchase-card .product-card-row__col:last-child {
+    width: 200px;
+  }
+  .purchase-card .col-2 .product-card__address {
+    display: none;
+  }
+  .purchase-card .col-3 {
+    display: block;
+  }
 }
 @media only screen and (max-width: 1260px) {
   .sidebar-tags__selected-text {
@@ -531,6 +564,39 @@
   .salaesman-wrapper {
     margin: 24px 0 0;
   }
+  .purchase-card .product-card-row__body {
+    padding: 0;
+  }
+  .purchase-card .date-public {
+    margin: 0 0 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .purchase-card .date-public span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 5px 0 0;
+  }
+  .purchase-card .list-labels {
+    margin: 8px 0;
+  }
+  .purchase-card .product-card-row__col {
+    width: 186px;
+  }
+  .purchase-card .col-1 {
+    width: 100%;
+  }
+  .purchase-card .col-2 .product-card__address {
+    display: block;
+  }
+  .purchase-card .col-3 {
+    display: none;
+  }
 }
 @media only screen and (max-width: 930px) {
   .products-grid .product-card__body {
@@ -591,6 +657,9 @@
   }
   .filter-mobile {
     display: block;
+  }
+  .purchase-card .list-labels {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1003,6 +1072,25 @@
   }
   .buttons-navigation-group .btn-toggle-product {
     height: 40px;
+  }
+  .purchase-card .product-card-row__col {
+    width: 100%;
+  }
+  .purchase-card .col-2 .date-public {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 2px 0 0 auto;
+    border: none;
+    border-radius: 0;
+    opacity: 0.6;
+  }
+  .purchase-card .col-2 .date-public span {
+    display: none;
+  }
+  .purchase-card .col-4 .date-public {
+    display: none;
   }
 }
 @media only screen and (max-width: 576px) {

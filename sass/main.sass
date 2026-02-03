@@ -778,11 +778,18 @@
     display: none
 
 // category menu
-
 .category-menu
     padding: 32px
+    width: 320px
+
+.category-menu-inner
+    display: flex
+    height: 100%
+    transition: transform .3s ease
 
 .category-menu-level
+    width: 320px
+    flex-shrink: 0
     list-style: none
     margin: 0
     padding: 0
@@ -810,71 +817,27 @@
         height: 12px
         stroke: rgba(#000, .6)
 
-    &.is-active
-        color: $green
+    // &.is-active
+    //     color: $green
 
 /* ВСЕ подменю */
 .category-menu-level
     flex-wrap: wrap
+    width: 320px
+    flex-shrink: 0
+    padding: 8px 0
+    list-style: none
+    margin: 0
+    background: #fff
 
 .category-menu-level--2,
 .category-menu-level--3
-    position: absolute
-    top: 0
-    left: 100%
-    opacity: 0
-    visibility: hidden
-    pointer-events: none
-    padding-left: 32px
+    display: none
 
-/* Показываем при активности родителя */
-.category-item.is-open > .category-menu-level
-    opacity: 1
-    visibility: visible
-    pointer-events: auto
 
-// .category-menu-item
-//     width: 100%
-//     min-width: 224px
-//     font-size: 14px
-//     font-weight: 500
-//     padding: 0 32px 0 0
-//     &:last-child
-//         padding: 0
-//     a
-//         display: flex
-//         align-items: center
-//         width: 100%
-//         color: #000
-//         padding: 16px 0
-//         border-bottom: 1px solid rgba(#000,.1)
-//         svg
-//             margin: 0 0 0 8px
-//             fill: none
-//             width: 12px
-//             height: 12px
-//             stroke: rgba(#000, .6)
-//         &:first-child
-//             padding-top: 0
-//         &:last-child
-//             padding-bottom: 0
-//             border: none
-//         &:hover, &:focus, &.is-active
-//             color: $green
-
-// .category-menu__col-sub
-//     opacity: 0
-//     visibility: hidden
-//     pointer-events: none
-//     transition: opacity .2s ease
-//     &.is-show
-//         opacity: 1
-//         visibility: visible
-//         pointer-events: auto
 
 .salaesman-wrapper
     max-height: 534px
-
 
 .salesman-row
     &:last-child
@@ -882,7 +845,7 @@
     .product-card-row__body
         flex-direction: row
         align-items: center
-        padding: 0 0 0 16px    
+        padding: 0 0 0 16px
     .rating-value
         color: #000
     .product-card-row__col
@@ -891,7 +854,7 @@
         &.col-3
             display: flex
             .product-info
-                display: flex   
+                display: flex
                 flex-direction: column
                 justify-content: center
         &.col-2
@@ -904,8 +867,8 @@
             align-items: center
             flex-direction: row
         .product-card__address
-            display: none            
-        
+            display: none
+
     .col-2
         width: 338px
         .product-card__address
@@ -926,7 +889,7 @@
         margin: 0 4px 0 0
         &:last-child
             margin: 0
-        
+
 .status-item-v2
     padding: 2px 4px
     color: rgba($green, .6)
@@ -943,3 +906,16 @@
         width: 12px
         &:last-child
             margin: 0
+
+.purchase-card
+    .date-public
+        margin: 0 0 8px
+    .list-labels
+        padding: 0
+        margin: 8px 0 
+        flex-direction: row
+        align-items: flex-start
+        li
+            margin: 0 8px 0 0
+            &:last-child
+                margin: 0           

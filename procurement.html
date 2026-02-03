@@ -31,8 +31,8 @@
           <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
           <nav class="nav-menu">
             <ul class="menu my-ul">
-              <li class="nav-item"><a href="sales.html" class="nav-link active">Продажи</a></li>
-              <li class="nav-item"><a href="procurement.html" class="nav-link">Закупки</a></li>
+              <li class="nav-item"><a href="sales.html" class="nav-link">Продажи</a></li>
+              <li class="nav-item"><a href="procurement.html" class="nav-link active">Закупки</a></li>
               <li class="nav-item"><a href="companies.html" class="nav-link">Компании</a></li>
             </ul>
           </nav>
@@ -129,7 +129,7 @@
           <div class="col-12">
             <ol class="breadcrumb my-ul">
               <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Запасные части</li>
+              <li class="breadcrumb-item active" aria-current="page">Закупки</li>
             </ol>
           </div>
         </div>
@@ -226,7 +226,7 @@
               </div>
 
               <div class="sidebar-block">
-                <div class="sidebar-title">Продавец</div>
+                <div class="sidebar-title">Компания</div>
 
                 <div class="sidebar-tags">
                   <a href="#" class="btn btn-md btn-black-grey btn-radius sidebar-tags__selected" data-bs-toggle="modal"
@@ -270,89 +270,6 @@
                 </div>
               </div>
 
-              <div class="sidebar-block">
-                <div class="sidebar-title">Цена</div>
-
-
-                <div class="filter-block">
-
-                  <!-- Цена -->
-                  <div class="filter-price">
-                    <div class="filter-price__inputs">
-                      <input type="text" id="price-min" value="0">
-                      <span></span>
-                      <input type="text" id="price-max" value="1000000">
-                    </div>
-
-                    <div id="price-slider"></div>
-
-                    <div class="filter-price__prices"><span>1 580</span><span>87 400</span></div>
-                  </div>
-
-                  <!-- Переключатель -->
-                  <div class="filter-vat">
-
-                    <label class="filter-vat__item">
-                      <input type="radio" name="vat" value="all" checked>
-                      <span>Все</span>
-                    </label>
-
-                    <label class="filter-vat__item">
-                      <input type="radio" name="vat" value="vat">
-                      <span>С НДС</span>
-                    </label>
-
-                    <label class="filter-vat__item">
-                      <input type="radio" name="vat" value="novat">
-                      <span>Без НДС</span>
-                    </label>
-
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="sidebar-block">
-                <div class="sidebar-title">Сведения</div>
-
-
-                <div class="list-checkbox">
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">В наличии</span>
-                  </label>
-
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">Опт</span>
-                  </label>
-
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">Розница</span>
-                  </label>
-
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">Есть фото</span>
-                  </label>
-
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">Есть описание</span>
-                  </label>
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <span class="label-checkbox__custom"></span>
-                    <span class="label-checkbox__text">Есть характеристики</span>
-                  </label>
-                </div>
-              </div>
 
               <div class="user-menu__divider"></div>
               <div class="sidebar-actions w-100">
@@ -415,7 +332,7 @@
               </div>
 
               <h1>
-                Запчасти и комплектующие для ж/д транспорта
+                Закупки
               </h1>
 
               <div class="subsections">
@@ -461,13 +378,17 @@
                     <input type="radio" name="radio1" value="novat">
                     <span>Новые</span>
                   </label>
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="novat">
+                    <span>Любые</span>
+                  </label>
                 </div>
 
                 <div class="filter-vat content-filters__sort dropdown">
 
                   <button class="sort-button dropdown-toggle" data-bs-toggle="dropdown">
                     <img src="img/sorting-icon.svg" alt="">
-                    <span class="sort-button__text">Сперва дешевле</span>
+                    <span class="sort-button__text">Сперва новые</span>
                   </button>
 
                   <div class="filter-vat filter-vat-dropdown dropdown-menu">
@@ -478,18 +399,14 @@
 
                     <label class="filter-vat__item">
                       <input type="radio" name="radio2" value="all" checked="" class="filter-vat__item-input">
-                      <span>Сначала дешевле</span>
+                      <span>Сперва новые</span>
                     </label>
 
                     <label class="filter-vat__item">
                       <input type="radio" name="radio2" value="vat" class="filter-vat__item-input">
-                      <span>Сначала дороже</span>
+                      <span>Сперва старые</span>
                     </label>
 
-                    <label class="filter-vat__item">
-                      <input type="radio" name="radio2" value="novat" class="filter-vat__item-input">
-                      <span>По дате</span>
-                    </label>
                   </div>
                 </div>
 
@@ -1469,52 +1386,35 @@
                     <div class="products-list-item">
                       <div class="title-decor h3">1 предложение - Екатеринбург, Нижний Тагил</div>
                       <!-- card -->
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product5.png" alt="">
-                          </div>
 
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
 
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
                             </div>
-                            <div class="product-img">
-                              <img src="img/product5.png" alt="">
-                            </div>
-
                           </div>
                         </div>
 
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
                             <div class="product-card-status">
                               <div class="professional-status bg-green">PRO</div>
                               <div class="status-item"><img src="img/status.svg" alt=""></div>
@@ -1527,9 +1427,8 @@
                           </div>
 
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
 
                           <div class="product-card__address">
@@ -1545,13 +1444,8 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
@@ -1561,207 +1455,30 @@
                     <div class="products-list-item border-bottom">
                       <div class="title-decor h3">103 предложения - в других городах</div>
                       <!-- card -->
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product5.png" alt="">
-                          </div>
 
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
 
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img">
-                              <img src="img/product5.png" alt="">
-                            </div>
-
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
-                            <div class="product-card-status">
-                              <div class="professional-status bg-green">PRO</div>
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                            </div>
-                          </div>
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product6.jpg" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img">
-                              <img src="img/product6.jpg" alt="">
                             </div>
                           </div>
                         </div>
@@ -1779,11 +1496,12 @@
                               </div>
                             </div>
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -1797,61 +1515,46 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                                подшипники</a>
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
                             </div>
                           </div>
                         </div>
 
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
                             <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
                               <div class="status-item"><img src="img/status.svg" alt=""></div>
                               <div class="rating">
                                 <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
@@ -1862,9 +1565,8 @@
                           </div>
 
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
 
                           <div class="product-card__address">
@@ -1880,53 +1582,103 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product7.jpg" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
                             </div>
-                            <div class="product-img">
-                              <img src="img/product7.jpg" alt="">
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1937,15 +1689,13 @@
                           </div>
 
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
 
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
-
                         </div>
 
                         <div class="product-card-row__col col-3">
@@ -1956,53 +1706,35 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
                             </div>
                           </div>
                         </div>
@@ -2011,6 +1743,7 @@
                           <div class="product-info">
                             <div class="product-card__company color-grey">ИП Фкедоренко Максим Юрьевич</div>
                             <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
                               <div class="status-item"><img src="img/status.svg" alt=""></div>
                               <div class="rating">
                                 <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
@@ -2019,11 +1752,12 @@
                               </div>
                             </div>
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -2037,54 +1771,35 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product3.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img">
-                              <img src="img/product3.png" alt="">
                             </div>
                           </div>
                         </div>
@@ -2102,11 +1817,12 @@
                               </div>
                             </div>
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -2120,54 +1836,37 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-
-
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product8.jpg" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
-                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img">
-                              <img src="img/product8.jpg" alt="">
                             </div>
                           </div>
                         </div>
@@ -2175,20 +1874,13 @@
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
                             <div class="product-card__company color-grey">ООО “AxisRail”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -2202,55 +1894,36 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-
-
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
                                 подшипники</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
                             </div>
                           </div>
                         </div>
@@ -2258,250 +1931,6 @@
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
                             <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-
-                            </div>
-                          </div>
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
-                                подшипники</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product5.png" alt="">
-                          </div>
-
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img">
-                              <img src="img/product5.png" alt="">
-                            </div>
-
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
                             <div class="product-card-status">
                               <div class="professional-status bg-green">PRO</div>
                               <div class="status-item"><img src="img/status.svg" alt=""></div>
@@ -2514,9 +1943,8 @@
                           </div>
 
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
 
                           <div class="product-card__address">
@@ -2532,131 +1960,34 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
-
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-green">Новый</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
 
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “Lokar”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                            </div>
-                          </div>
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product6.jpg" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-brown">Б/У</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img">
-                              <img src="img/product6.jpg" alt="">
                             </div>
                           </div>
                         </div>
@@ -2664,21 +1995,14 @@
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
                             <div class="product-card__company color-grey">ООО “Ferros”</div>
-                            <div class="product-card-status">
-                              <div class="professional-status bg-green">PRO</div>
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
+
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -2692,53 +2016,36 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
                                 подшипники</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
                             </div>
                           </div>
                         </div>
@@ -2746,20 +2053,12 @@
                         <div class="product-card-row__col flex-column col-2">
                           <div class="product-info">
                             <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
-                            <div class="product-card-status">
-                              <div class="status-item"><img src="img/status.svg" alt=""></div>
-                              <div class="rating">
-                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                                <div class="rating-value">5.0</div>
-                                <div class="rating-notification">2</div>
-                              </div>
-                            </div>
+
                           </div>
 
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
 
                           <div class="product-card__address">
@@ -2775,129 +2074,37 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
-                      <div class="product-card product-card-row">
+                      <div class="product-card product-card-row purchase-card">
                         <div class="product-card-row__col col-1">
-                          <div class="product-img">
-                            <img src="img/product7.jpg" alt="">
-                          </div>
+
                           <div class="product-card-row__head">
                             <ul class="list-labels my-ul">
                               <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
                             </ul>
                             <a href="#" class="product-card__favorite"></a>
                           </div>
+
                           <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <div class="product-info">
-                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
-                              <div class="product-meta color-grey">
-                                Артикул: 106.01.000-0Сб
-                              </div>
-
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                              <div class="product-card__address">
-                                <p>Рязанская область, Рязань</p>
-                              </div>
-                            </div>
-                            <div class="product-img">
-                              <img src="img/product7.jpg" alt="">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col flex-column col-2">
-                          <div class="product-info">
-                            <div class="product-card__company color-grey">ООО “AxisRail”</div>
-                          </div>
-
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-
-                        </div>
-
-                        <div class="product-card-row__col col-3">
-                          <div class="product-card__address">
-                            <p>Рязанская область, Рязань</p>
-                          </div>
-                        </div>
-
-                        <div class="product-card-row__col col-4">
-                          <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
-                          </div>
-                          <a href="#" class="product-card__favorite"></a>
-                        </div>
-                      </div>
-
-                      <div class="product-card product-card-row">
-                        <div class="product-card-row__col col-1">
-                          <div class="product-img p-10">
-                            <img src="img/product2.png" alt="">
-                          </div>
-                          <div class="product-card-row__head">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
-                            <a href="#" class="product-card__favorite"></a>
-                          </div>
-                          <div class="product-card-row__body">
-                            <ul class="list-labels my-ul">
-                              <li class="list-labels__item label-new bg-green">Новый</li>
-                              <li class="list-labels__item label-wholesale bg-grey">Опт</li>
-                              <li class="list-labels__item label-retail bg-grey">Розница</li>
-                            </ul>
                             <div class="product-info">
                               <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
                               <div class="product-meta color-grey">
                                 Артикул: 106.01.000-0Сб
                               </div>
                               <div class="product-card__address">
                                 <p>Рязанская область, Рязань</p>
                               </div>
-                              <a href="product.html#characteristics"
-                                class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                                и
-                                описание</a>
-                            </div>
-
-                            <div class="product-img p-10">
-                              <img src="img/product2.png" alt="">
                             </div>
                           </div>
                         </div>
@@ -2906,6 +2113,7 @@
                           <div class="product-info">
                             <div class="product-card__company color-grey">ИП Фкедоренко Максим Юрьевич</div>
                             <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
                               <div class="status-item"><img src="img/status.svg" alt=""></div>
                               <div class="rating">
                                 <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
@@ -2914,11 +2122,12 @@
                               </div>
                             </div>
                           </div>
+
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
                           </div>
+
                           <div class="product-card__address">
                             <p>Рязанская область, Рязань</p>
                           </div>
@@ -2932,18 +2141,659 @@
 
                         <div class="product-card-row__col col-4">
                           <div class="product-card__info">
-                            <div class="price">6 000 ₽</div>
-                            <div class="avialability color-grey">В наличии 1 шт.</div>
-                            <a href="product.html#characteristics"
-                              class="btn btn-grey btn-sm color-grey mt-16 product-card__btn-characteristics">Характеристики
-                              и
-                              описание</a>
-                            <div class="date-public color-grey"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
                           </div>
                           <a href="#" class="product-card__favorite"></a>
                         </div>
                       </div>
 
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “AxisRail”</div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ИП Фкедоренко Максим Юрьевич</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “Ferros”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “МИР ЖД”</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-green">Новый</li>
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-green">Новый</li>
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ООО “AxisRail”</div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row purchase-card">
+                        <div class="product-card-row__col col-1">
+
+                          <div class="product-card-row__head">
+                            <ul class="list-labels my-ul">
+                              <li class="list-labels__item label-new bg-brown">Б/У</li>
+                            </ul>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <ul class="list-labels my-ul">
+                                <li class="list-labels__item label-new bg-brown">Б/У</li>
+                              </ul>
+                              <div class="product-meta color-grey">
+                                Артикул: 106.01.000-0Сб
+                              </div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col flex-column col-2">
+                          <div class="product-info">
+                            <div class="product-card__company color-grey">ИП Фкедоренко Максим Юрьевич</div>
+                            <div class="product-card-status">
+                              <div class="professional-status bg-green">PRO</div>
+                              <div class="status-item"><img src="img/status.svg" alt=""></div>
+                              <div class="rating">
+                                <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                <div class="rating-value">5.0</div>
+                                <div class="rating-notification">2</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="product-card__info">
+                            <div class="avialability font-600">Количество 1 шт.</div>
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                          </div>
+
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="date-public"><span>Добавлено</span> 17.03.2023</div>
+                            <div class="avialability color-grey">Количество 1 шт.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
                     </div>
 
                     <div class="buttons-navigation-group w-100">

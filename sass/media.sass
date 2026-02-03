@@ -88,6 +88,28 @@
         span
             display: none
 
+    .purchase-card
+        .product-card-row__body
+            padding: 0
+        .date-public
+            margin: 0
+            display: flex
+            align-items: center
+            span
+                display: flex
+                margin: 0 5px 0 0
+        .list-labels
+            margin: 8px 0
+        .product-card-row__col
+            width: 167px
+            &:last-child
+                width: 200px
+        .col-2
+            .product-card__address
+                display: none
+        .col-3
+            display: block
+
 @media only screen and (max-width: 1260px)
     .sidebar-tags__selected-text
         max-width: 150px
@@ -482,7 +504,29 @@
 
     .salaesman-wrapper
         margin: 24px 0 0
-        
+
+    .purchase-card
+        .product-card-row__body
+            padding: 0
+        .date-public
+            margin: 0 0 8px
+            display: flex
+            align-items: center
+            span
+                display: flex
+                margin: 0 5px 0 0
+        .list-labels
+            margin: 8px 0
+        .product-card-row__col
+            width: 186px
+        .col-1
+            width: 100%
+        .col-2
+            .product-card__address
+                display: block
+        .col-3
+            display: none
+
 @media only screen and (max-width: 930px)
     .products-grid .product-card__body
         padding: 0
@@ -540,6 +584,9 @@
     .filter-mobile
         display: block
 
+    .purchase-card .list-labels
+        padding: 0
+
 @media only screen and (max-width: 768px)
     .btn-registration, .btn-authorization
         min-width: auto
@@ -584,7 +631,7 @@
         .product-card-status
             margin: 12px 0 0
         .product-card__address
-            margin: 8px 0 0 
+            margin: 8px 0 0
             color: #000
         .product-img
             width: 64px
@@ -596,8 +643,8 @@
             .product-card-status, .product-card__address
                 display: flex
         .col-2
-            display: none 
-        .product-card-row__col 
+            display: none
+        .product-card-row__col
             padding: 0 0
             border: none
             &.col-3
@@ -857,6 +904,23 @@
 
     .buttons-navigation-group .btn-toggle-product
         height: 40px
+
+    .purchase-card
+        .product-card-row__col
+            width: 100%
+        .col-2
+            .date-public
+                display: flex
+                padding: 0
+                margin: 2px 0 0 auto
+                border: none
+                border-radius: 0
+                opacity: 0.6
+                span
+                    display: none
+        .col-4
+            .date-public
+                display: none
 
 @media only screen and (max-width: 576px)
     h1, .h1

@@ -1171,9 +1171,24 @@
 
 .category-menu {
   padding: 32px;
+  width: 320px;
+}
+
+.category-menu-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .category-menu-level {
+  width: 320px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1213,32 +1228,23 @@
   height: 12px;
   stroke: rgba(0, 0, 0, 0.6);
 }
-.category-link.is-active {
-  color: #20815C;
-}
 
 /* ВСЕ подменю */
 .category-menu-level {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 320px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+  background: #fff;
 }
 
 .category-menu-level--2,
 .category-menu-level--3 {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  padding-left: 32px;
-}
-
-/* Показываем при активности родителя */
-.category-item.is-open > .category-menu-level {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  display: none;
 }
 
 .salaesman-wrapper {
@@ -1356,5 +1362,26 @@
   width: 12px;
 }
 .status-item-v2 img:last-child {
+  margin: 0;
+}
+
+.purchase-card .date-public {
+  margin: 0 0 8px;
+}
+.purchase-card .list-labels {
+  padding: 0;
+  margin: 8px 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.purchase-card .list-labels li {
+  margin: 0 8px 0 0;
+}
+.purchase-card .list-labels li:last-child {
   margin: 0;
 }

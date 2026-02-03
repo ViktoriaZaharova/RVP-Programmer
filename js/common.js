@@ -265,43 +265,6 @@ $(function(){
 });
 
 
-$(function () {
-
-  const $menu = $('.category-menu');
-
-  $menu.on('mouseenter', '.has-submenu > .category-link', function () {
-    const $item = $(this).parent();
-
-    // закрываем соседей на этом уровне
-    $item
-      .siblings('.has-submenu')
-      .removeClass('is-open')
-      .find('.is-open')
-      .removeClass('is-open');
-
-    // активируем текущий
-    $item.addClass('is-open');
-
-    // активная ссылка
-    $item
-      .closest('.category-menu')
-      .find('.category-link')
-      .removeClass('is-active');
-
-    $(this).addClass('is-active');
-
-    // активируем всю цепочку родителей
-    $item.parents('.category-item').addClass('is-open');
-    $item.parents('.category-item').children('.category-link').addClass('is-active');
-  });
-
-  // чтобы меню не закрывалось при движении внутри
-  $menu.on('mouseleave', function () {
-    $menu.find('.is-open').removeClass('is-open');
-    $menu.find('.is-active').removeClass('is-active');
-  });
-
-});
 
 
 

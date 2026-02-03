@@ -123,6 +123,44 @@ $('.watched-slider').slick({
   ]
 });
 
+$('.similar-slider').slick({
+  slidesToShow: 6,
+  infinite: false,
+  arrows: false,
+  prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
+  nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+  responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+        arrows: false
+      }
+    }
+  ]
+});
+
+
 // ==================================================
 // SLICK: скрывать точки если 1 слайд
 // ==================================================

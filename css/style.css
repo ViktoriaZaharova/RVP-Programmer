@@ -277,6 +277,19 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   padding: 9px 16px;
 }
 
+.btn-md-sm {
+  height: 40px;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.btn-md-sm .svg-icon-btn-arrow {
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  margin: 0 0 0 10px;
+}
+
 .btn-lg {
   height: 68px;
 }
@@ -296,6 +309,10 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   background: url("../img/arrow-bottom-white.svg") no-repeat center;
   background-size: 100%;
   border: none;
+}
+.btn-black .svg-icon {
+  stroke: #fff;
+  fill: none;
 }
 
 .drodpown-toggle.show:after {
@@ -480,6 +497,10 @@ h3, .h3 {
 
 .mt-16 {
   margin-top: 16px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 .m-32 {
@@ -773,6 +794,18 @@ h3, .h3 {
 }
 .slick-dots li button {
   display: none;
+}
+
+.slider-stretch .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.slider-stretch .slide {
+  height: auto;
 }
 
 .label-checkbox {

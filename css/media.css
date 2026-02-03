@@ -599,7 +599,7 @@
   }
 }
 @media only screen and (max-width: 930px) {
-  .products-grid .product-card__body {
+  .product-card-column .product-card__body {
     padding: 0;
     border: none;
     border-radius: 0;

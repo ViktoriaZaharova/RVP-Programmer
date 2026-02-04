@@ -1390,8 +1390,20 @@
   margin: 0;
 }
 
-.procurement-page-section .container {
+.procurement-page-section .container-fluid {
   padding: 0;
+  max-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.procurement-page-section .container {
+  max-width: 1300px;
 }
 
 .similar-slider .product-card-column .price {
@@ -1399,4 +1411,21 @@
 }
 .similar-slider .product-card__body {
   height: calc(100% - 275px);
+}
+
+.product-iformation-item {
+  padding: 24px 48px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.product-company {
+  width: calc(100% - 400px);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-company-item {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 48px 0;
 }

@@ -926,8 +926,15 @@
 
 
 .procurement-page-section
+    .container-fluid
+        padding: 0
+        max-width: none
+        display: flex
+        align-items: stretch
+        flex-wrap: wrap 
     .container
-        padding: 0                
+        max-width: 1300px
+
 
 
 .similar-slider
@@ -936,3 +943,21 @@
             margin: 0
     .product-card__body
         height: calc( 100% - 275px )
+
+
+.product-iformation-item
+    padding: 24px 48px
+    max-width: 400px
+    width: 100%
+
+.product-company
+    width: calc( 100% - 400px )
+    border-right: 1px solid rgba(#000, .05)    
+
+
+.product-company-item
+    width: 100%
+    border-bottom: 1px solid rgba(#000, .05) 
+    padding: 48px 0 
+
+

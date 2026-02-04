@@ -1,6 +1,10 @@
 // mask phone
 $('[name="phone"]').mask('+7 (999) 999-99-99');
 
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 // active link menu
 $(function () {
   const currentPath = window.location.pathname.split('/').pop();
@@ -399,6 +403,56 @@ $(function () {
     if (window.innerWidth < 992) {
       bsDropdown.hide();
     }
+  });
+});
+
+
+
+// text hidden-show
+$(function () {
+  $('.js-text-wrap').each(function () {
+    const $text = $(this);
+    const $btn = $text.next('.js-show-text');
+
+    // clone без ограничений — для вычисления реальной высоты
+    const $clone = $text.clone()
+      .removeClass('is-collapsed is-expanded')
+      .css({
+        position: 'absolute',
+        visibility: 'hidden',
+        maxHeight: 'none',
+        height: 'auto'
+      })
+      .appendTo('body');
+
+    const fullHeight = $clone.outerHeight();
+    $clone.remove();
+
+    const collapsedHeight = $text.outerHeight();
+
+    if (fullHeight <= collapsedHeight) {
+      $btn.hide();
+    }
+  });
+
+  $('.js-show-text').on('click', function (e) {
+    e.preventDefault();
+
+    const $btn = $(this);
+    const $text = $btn.prev('.js-text-wrap');
+
+    $text.toggleClass('is-collapsed is-expanded');
+
+    const isOpen = $text.hasClass('is-expanded');
+
+    $btn.find('span').text(
+      isOpen ? 'Скрыть описание' : 'Показать описание целиком'
+    );
+
+    $btn.find('img').css(
+      'transform',
+      isOpen ? 'rotate(180deg)' : 'rotate(0)'
+    );
   });
 });
 

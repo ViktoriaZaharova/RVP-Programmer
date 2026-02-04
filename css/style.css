@@ -328,6 +328,10 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   background: #383E40;
   color: #fff;
 }
+.btn-border:hover img, .btn-border:focus img, .btn-border.active img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
 
 .btn-grey {
   -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.0509803922) inset;
@@ -381,6 +385,9 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 }
 
 .btn-group > .btn-group:not(:first-child), .btn-group > :not(.btn-check:first-child) + .btn {
+  margin: 0 10px 0 0;
+}
+.btn-group > .btn-group:not(:first-child):last-child, .btn-group > :not(.btn-check:first-child) + .btn:last-child {
   margin: 0;
 }
 

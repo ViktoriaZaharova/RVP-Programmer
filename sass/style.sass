@@ -197,6 +197,12 @@ button, .btn
 .btn-lg
   height: 68px
 
+.btn-md-lg
+  height: 56px  
+  padding: 10px 43px
+  font-size: 14px
+  line-height: 16px
+
 .btn-black
   color: #fff
   background: #000
@@ -214,6 +220,9 @@ button, .btn
   .svg-icon
     stroke: #fff
     fill: none
+    &.stroke-none
+      fill: #fff
+      stroke: none
 
 .drodpown-toggle
   &.show
@@ -223,11 +232,25 @@ button, .btn
 .btn-border
   border: 2px solid rgba(#000, .1)
   color: rgba(#000, .6)
+  &.color-black
+    color: #000
   &:hover, &:focus, &.active
     background: $accent
     color: #fff
     img
       filter: invert(1)
+    .svg-icon
+      stroke: #fff
+    &.color-black
+      color: #fff
+  .svg-icon
+    width: 8px
+    height: 8px
+    fill: none
+    stroke: #000
+    margin: 0 0 0 10px
+  
+
 
 .btn-grey
   box-shadow: 0px -2px 0px 0px #0000000D inset
@@ -261,6 +284,8 @@ button, .btn
 
 .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn.dropdown-toggle-split:first-child, .btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:nth-child(n+3), .btn-group>:not(.btn-check)+.btn
   border-radius: 40px
+  &.btn-radius
+    border-radius: 12px
 
 .btn-group>.btn-group:not(:first-child), .btn-group>:not(.btn-check:first-child)+.btn
   margin: 0 10px 0 0
@@ -309,7 +334,6 @@ a.color-white
 
 
 
-
 .row
   margin: 0 -24px
   >*
@@ -335,6 +359,14 @@ h3, .h3
   font-size: 24px
   line-height: normal
   margin: 0 0 32px
+
+h4, .h4
+  margin: 0 0 8px
+  width: 100%
+  font-size: 18px
+  font-weight: 600
+  line-height: 20px
+
 
 .title-decor
   margin: 0 0 24px

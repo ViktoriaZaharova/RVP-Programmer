@@ -294,6 +294,13 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   height: 68px;
 }
 
+.btn-md-lg {
+  height: 56px;
+  padding: 10px 43px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .btn-black {
   color: #fff;
   background: #000;
@@ -314,6 +321,10 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   stroke: #fff;
   fill: none;
 }
+.btn-black .svg-icon.stroke-none {
+  fill: #fff;
+  stroke: none;
+}
 
 .drodpown-toggle.show:after {
   -webkit-transform: rotate(180deg);
@@ -324,6 +335,9 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   border: 2px solid rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
 }
+.btn-border.color-black {
+  color: #000;
+}
 .btn-border:hover, .btn-border:focus, .btn-border.active {
   background: #383E40;
   color: #fff;
@@ -331,6 +345,19 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 .btn-border:hover img, .btn-border:focus img, .btn-border.active img {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+.btn-border:hover .svg-icon, .btn-border:focus .svg-icon, .btn-border.active .svg-icon {
+  stroke: #fff;
+}
+.btn-border:hover.color-black, .btn-border:focus.color-black, .btn-border.active.color-black {
+  color: #fff;
+}
+.btn-border .svg-icon {
+  width: 8px;
+  height: 8px;
+  fill: none;
+  stroke: #000;
+  margin: 0 0 0 10px;
 }
 
 .btn-grey {
@@ -382,6 +409,9 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 
 .btn-group > .btn-group:not(:last-child) > .btn, .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:first-child) > .btn, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn {
   border-radius: 40px;
+}
+.btn-group > .btn-group:not(:last-child) > .btn.btn-radius, .btn-group > .btn.dropdown-toggle-split:first-child.btn-radius, .btn-group > .btn:not(:last-child):not(.dropdown-toggle).btn-radius, .btn-group > .btn-group:not(:first-child) > .btn.btn-radius, .btn-group > .btn:nth-child(n+3).btn-radius, .btn-group > :not(.btn-check) + .btn.btn-radius {
+  border-radius: 12px;
 }
 
 .btn-group > .btn-group:not(:first-child), .btn-group > :not(.btn-check:first-child) + .btn {
@@ -471,6 +501,14 @@ h3, .h3 {
   font-size: 24px;
   line-height: normal;
   margin: 0 0 32px;
+}
+
+h4, .h4 {
+  margin: 0 0 8px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 .title-decor {

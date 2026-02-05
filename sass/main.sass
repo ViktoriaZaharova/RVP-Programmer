@@ -505,6 +505,7 @@
 
 .professional-status, .status-item
     margin: 0 8px 0 0
+    @include d-flex
     &:last-child
         margin: 0
 
@@ -945,6 +946,68 @@
     padding: 24px 48px
     max-width: 400px
     width: 100%
+    &__head
+        width: 100%
+        display: flex
+        align-items: center
+        margin: 0 0 16px
+        font-weight: 600
+        .professional-status
+            margin: 0 0 0 8px
+
+    .link-add-favorite
+        margin: 0 0 0 auto
+    &__line
+        width: 100%
+        display: flex
+        align-items: center
+        p
+            font-weight: 500
+            line-height: 16px
+            font-size: 14px
+        .rating
+            margin: 0 0 0 auto
+    .date
+        margin: 16px 0
+        font-weight: 500
+        line-height: 16px
+        font-size: 14px
+        opacity: 0.6
+    &__footer
+        margin: 16px 0 0
+        .btn
+            margin: 0 0 16px
+            &:last-child
+                margin: 0
+
+.professional-status-max
+    height: 24px
+    font-size: 10px
+    line-height: 10px
+    padding: 7px 12px
+    border-radius: 20px
+
+.status-item-max
+    height: 32px
+    border-radius: 20px
+    width: fit-content
+    padding: 8px 16px
+    font-size: 14px
+    line-height: 16px
+    img
+        width: 24px
+        margin: 0 8px 0 0
+
+.btn-phone-max
+    .svg-icon
+        width: 12px
+        height: 12px
+        margin: 0 10px 0 0
+
+.company-name
+    margin: 16px 0
+    color: #000
+    font-weight: 600
 
 .product-company
     width: calc( 100% - 400px )
@@ -954,6 +1017,8 @@
     width: 100%
     border-bottom: 1px solid rgba(#000, .05)
     padding: 48px 0
+    h1
+        margin: 0 0 24px
     &:last-child
         border: none
     &__name
@@ -1038,3 +1103,91 @@
         max-height: 162px
     &.is-expanded
         max-height: 1000px
+
+.address-delivery
+    >span
+        color: rgba(#000, .6)
+
+.product-company-labels
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    font-size: 14px
+    font-weight: 500
+    line-height: 16px
+    gap: 8px
+    .date-public
+        margin: 0
+        font-size: 14px
+        line-height: 16px
+        padding: 7px 16px
+        border-radius: 20px
+
+.category-label
+    border: 1px solid #000
+    border-radius: 20px
+    color: #000
+    padding: 7px 16px
+
+.list-characteristics
+    margin: 24px 0
+    max-width: 550px
+    width: 100%
+    font-size: 18px
+    font-weight: 600
+    >li
+        width: 100%
+        padding: 8px 0
+        margin: 0 0 16px
+        display: flex
+        align-items: flex-start
+        position: relative
+        z-index: 1
+        &:last-child
+            margin: 0
+    &__value
+        text-align: right
+        margin: 0 0 0 auto
+        background: #fff
+        padding: 0 0 0 8px
+        position: relative
+        z-index: 1
+    &__name
+        background: #fff
+        position: relative
+        padding: 0 8px 0 0
+        color: rgba(#000, .48 )
+        &:before
+            content: ''
+            position: absolute
+            bottom: 4px
+            left: 0
+            width: 550px
+            height: 1px
+            z-index: -1
+            background: #D9D9D9
+    .list-labels
+        position: relative
+        z-index: 1
+        li
+            margin: 0 8px 0 0
+            height: 32px
+            font-size: 14px
+            line-height: 16px
+            padding: 6px 16px
+            border-radius: 20px
+            @include d-flex
+            &:last-child
+                margin: 0
+
+.link-favorite-add
+    opacity: 0.6
+    color: #000
+    margin: 0 0 0 24px
+    display: flex
+    align-items: center
+    img
+        margin: 0 8px 0 0
+    &:hover
+        opacity: 1

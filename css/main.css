@@ -1427,12 +1427,12 @@
   height: calc(100% - 275px);
 }
 
-.product-iformation-item {
+.product-information-item {
   padding: 24px 48px;
   max-width: 400px;
   width: 100%;
 }
-.product-iformation-item__head {
+.product-information-item__head {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1443,13 +1443,13 @@
   margin: 0 0 16px;
   font-weight: 600;
 }
-.product-iformation-item__head .professional-status {
+.product-information-item__head .professional-status {
   margin: 0 0 0 8px;
 }
-.product-iformation-item .link-add-favorite {
+.product-information-item .link-add-favorite {
   margin: 0 0 0 auto;
 }
-.product-iformation-item__line {
+.product-information-item__line {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1458,29 +1458,33 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.product-iformation-item__line p {
+.product-information-item__line p {
   font-weight: 500;
   line-height: 16px;
   font-size: 14px;
 }
-.product-iformation-item__line .rating {
+.product-information-item__line .rating {
   margin: 0 0 0 auto;
 }
-.product-iformation-item .date {
+.product-information-item .date {
   margin: 16px 0;
   font-weight: 500;
   line-height: 16px;
   font-size: 14px;
   opacity: 0.6;
 }
-.product-iformation-item__footer {
+.product-information-item__footer {
   margin: 16px 0 0;
 }
-.product-iformation-item__footer .btn {
+.product-information-item__footer .btn {
   margin: 0 0 16px;
 }
-.product-iformation-item__footer .btn:last-child {
+.product-information-item__footer .btn:last-child {
   margin: 0;
+}
+.product-information-item .link-add-favorite {
+  background: url("../img/favorite.svg") no-repeat center;
+  background-size: 100%;
 }
 
 .professional-status-max {
@@ -1492,7 +1496,7 @@
 }
 
 .status-item-max {
-  height: 32px;
+  height: 40px;
   border-radius: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1545,6 +1549,12 @@
   margin: 0 0 4px;
 }
 .product-company-item__description p:last-child {
+  margin: 0;
+}
+.product-company-item .btn-group {
+  gap: 10px;
+}
+.product-company-item .btn-group .btn {
   margin: 0;
 }
 

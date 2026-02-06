@@ -114,6 +114,13 @@
     .sidebar-tags__selected-text
         max-width: 150px
 
+    .product-information-item
+        max-width: 350px
+        padding: 24px 32px
+
+    .product-company
+        width: calc( 100% - 350px )
+
 @media only screen and (max-width: 1200px)
     footer
         font-size: 14px
@@ -526,6 +533,30 @@
                 display: block
         .col-3
             display: none
+
+    .similar-slider
+        .product-card__btn-characteristics
+            display: none
+
+    .product-information-item
+        max-width: 250px
+
+    .product-company
+        width: calc( 100% - 250px )
+
+    .btn-md-sm
+        font-size: 12px
+        line-height: 14px
+        height: 32px
+
+    .status-item-max
+        height: 32px
+        font-size: 12px
+        line-height: 14px
+        padding: 8px 12px
+        img
+            width: 16px
+
 
 @media only screen and (max-width: 930px)
     .product-card-column .product-card__body
@@ -1025,6 +1056,15 @@
                 font-size: 10px
             .price
                 margin: 6px 0 0
+
+    .similar-slider
+        width: calc( 100% + 14px ) 
+        .product-card
+            width: 132px
+            &__img
+                height: 132px
+            &__body
+                height: calc( 100% - 132px )
 
     .price
         font-size: 12px

@@ -313,9 +313,6 @@ $(function(){
 
 
 
-
-
-
 // subsection toggle
 $(function () {
   const $container = $('.subsections');
@@ -391,25 +388,7 @@ $(function () {
   });
 });
 
-// $(function () {
-//   const $radios = $('.filter-vat__item-input');
-//   const dropdownEl = document.querySelector('.content-filters__sort.dropdown');
-//   const dropdownBtn = document.querySelector('.sort-button');
 
-//   // экземпляр Bootstrap dropdown
-//   const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdownBtn);
-
-//   $radios.on('change', function () {
-//     // обновляем текст кнопки
-//     const text = $(this).siblings('span').text();
-//     $('.sort-button__text').text(text);
-
-//     // закрываем dropdown только на < 992
-//     if (window.innerWidth < 992) {
-//       bsDropdown.hide();
-//     }
-//   });
-// });
 
 $(function () {
   const $radios = $('.filter-vat__item-input');

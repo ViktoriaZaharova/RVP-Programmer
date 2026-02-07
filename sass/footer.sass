@@ -189,3 +189,75 @@ footer
         margin: 0 24px 16px 0 
         &:last-child
             margin: 0
+
+.modal-md 
+    .modal-dialog
+        max-width: 800px
+
+.form-order
+    .label-title
+        text-align: left
+        width: 100%
+        justify-content: flex-start
+    textarea
+        height: 68px
+        background: #fff  
+        color: #000
+        border: 2px solid rgba(#000, .1)  
+        font-weight: 500        
+    [type="submit"]
+        margin: 32px 0 0
+
+.files-results
+    width: 100%
+    margin: 32px 0 12px
+    gap: 8px
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+
+.file-result-item
+    display: flex
+    align-items: center
+    box-shadow: 0px 1px 3px 0px #0000001A
+    background: rgba(#000,.05 )
+    border-radius: 20px
+    padding: 8px 16px
+    font-size: 12px
+    line-height: 14px
+    font-weight: 600
+    color: rgba(#000, .6)
+    &__close
+        @include d-flex
+        margin: 0 0 0 8px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background: #000
+        stroke: #fff
+        padding: 4px
+        
+
+.label-file
+    height: 40px
+    display: flex
+    align-items: center
+    padding: 10px 24px
+    font-size: 12px
+    line-height: 14px
+    font-weight: 600
+    color: rgba(#000, .6)
+    border: 2px solid rgba(#000,.1 )
+    border-radius: 12px
+    width: fit-content
+    img
+        margin: 0 10px 0 0
+        width: 12px
+    input
+        display: none
+    
+    &__description
+        margin: 12px 0 0
+        color: rgba(#000, .6)
+        font-size: 12px
+        line-height: 14px

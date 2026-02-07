@@ -148,8 +148,7 @@
                   <div class="product-company-item__head">
                     <h1>Автосцепка СА-3 106.01.000-0-05сб</h1>
                     <div class="btn-group-social">
-                      <a href="#" class="btn-group-social__item"><img src="img/schedule-icon.svg"
-                        alt=""></a>
+                      <a href="#" class="btn-group-social__item"><img src="img/schedule-icon.svg" alt=""></a>
                       <a href="#" class="btn-group-social__item"><img src="img/heart-icon2.svg" alt=""></a>
                     </div>
                   </div>
@@ -2067,6 +2066,48 @@
           </div>
 
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-md fade" id="offerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Запрос на товар</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-order">
+            <label>
+              <span class="label-title">Сообщение</span>
+              <textarea
+                name="message">Здравствуйте, интересует Автосцепка СА-3 106.01.000-0-05сб, Артикул: 106.01.000-0-05сб</textarea>
+            </label>
+
+            <div class="files-results">
+              <div class="file-result-item">
+                <span>Номенклатура.doc 768кб</span>
+                <a href="#" class="file-result-item__close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <label class="label-file">
+              <input type="file" name="file" required>
+              <span class="label-file__icon"><img src="img/plus-black.svg" alt=""></span>
+              <span class="label-file__text">Добавить файл</span>
+            </label>
+            <div class="label-file__description">Можно добавить файлы форматом pdf, docx, excl размером не более 2 Мб
+            </div>
+
+            <button type="submit" class="btn btn-black btn-radius btn-md">Отправить запрос</button>
+          </form>
+
+        </div>
+
       </div>
     </div>
   </div>

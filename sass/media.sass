@@ -110,6 +110,16 @@
         .col-3
             display: block
 
+    .product-company-item
+        padding: 32px 0
+
+    .product-company-labels .date-public
+        display: flex
+        align-items: center
+        span
+            display: block
+            margin: 0 5px 0 0
+
 @media only screen and (max-width: 1260px)
     .sidebar-tags__selected-text
         max-width: 150px
@@ -321,6 +331,11 @@
         line-height: 20px
         margin: 0 0 24px
 
+    h4, .h4
+        font-size: 14px
+        line-height: 16px
+        margin: 0 0 8px
+
     .label-title
         font-size: 14px
 
@@ -458,7 +473,7 @@
                 display: none
 
     .btn img
-        width: 12px
+        width: 8px
 
     .modal-content
         padding: 24px
@@ -557,6 +572,73 @@
         img
             width: 16px
 
+    .list-characteristics
+        font-size: 16px
+        line-height: 18px
+        >li
+            padding: 6px 0
+            margin: 0 0 8px
+            &:last-child
+                margin: 0
+
+    .product-company-item
+        padding: 24px 0
+
+    .product-company-labels .date-public
+        font-size: 12px
+        line-height: 14px
+
+    .list-characteristics
+        margin: 16px 0
+        .list-labels li
+            font-size: 12px
+            line-height: 14px
+            height: 24px
+            padding: 5px 8px
+
+    .link-favorite-add
+        margin: 0 0 0 16px
+        font-size: 12px
+        line-height: 14px
+        img
+            margin: 0 10px 0 0
+
+    .list-characteristics
+        max-width: 550px
+
+    .files-wrapper
+        padding: 6px
+        background: rgba(#000, .1)
+        border-radius: 18px
+
+    .file-item
+        background: #fff
+        padding: 6px
+        border-radius: 12px
+        box-shadow: 0px 1px 3px 0px #0000001A
+        margin: 0 0 6px
+        font-size: 14px
+        line-height: 16px
+        &:last-child
+            margin: 0
+        &__icon
+            border-radius: 9px
+            font-size: 12px
+        &__size
+            font-size: 12px
+            line-height: 14px
+
+    .text-small
+        font-size: 12px
+        line-height: 20px
+        
+    .gallery-item
+        width: 100px
+        height: 100px
+        min-width: 100px
+
+    .js-text-wrap.is-collapsed
+        max-height: 190px
 
 @media only screen and (max-width: 930px)
     .product-card-column .product-card__body
@@ -618,7 +700,39 @@
     .purchase-card .list-labels
         padding: 0
 
+    .list-characteristics__name:before
+        display: none
+
+    .list-characteristics
+        >li
+            position: relative
+            z-index: 1
+            &:before
+                content: ''
+                position: absolute
+                bottom: 12px
+                left: 0
+                width: 100%
+                height: 1px
+                z-index: -1
+                background: #D9D9D9
+
+    .product-information-item__line p, .product-information-item .date
+        font-size: 12px
+        line-height: 14px
+
+    .product-information-item
+        padding: 24px 20px
+
+    .product-company-labels .date-public, .category-label
+        padding: 4px 12px
+        font-size: 12px
+        line-height: 14px
+
 @media only screen and (max-width: 768px)
+    
+
+
     .btn-registration, .btn-authorization
         min-width: auto
 
@@ -686,7 +800,15 @@
                 .product-img
                     display: flex
 
-@media only screen and (max-width: 690px)
+    .product-company-item
+        &__name
+            margin: 0 0 18px
+
+    .js-text-wrap.is-collapsed
+        max-height: 210px
+
+
+@media only screen and (max-width: 710px)
     .link-developer
         width: 100%
         margin: 24px 0 0
@@ -953,6 +1075,19 @@
             .date-public
                 display: none
 
+    .product-company
+        width: 100%
+        border: none
+
+    .product-information-item
+        max-width: none
+        border-top: 1px solid rgba(0, 0, 0, 0.05)
+
+        .company-name
+            font-size: 14px
+            line-height: 16px
+
+
 @media only screen and (max-width: 576px)
     h1, .h1
         margin: 0 auto 24px
@@ -1058,7 +1193,7 @@
                 margin: 6px 0 0
 
     .similar-slider
-        width: calc( 100% + 14px ) 
+        width: calc( 100% + 14px )
         .product-card
             width: 132px
             &__img
@@ -1095,7 +1230,25 @@
     .districts-list
         gap: 8px
 
+    .product-company-item__head
+        .btn-group-social
+            display: flex
 
+    .link-favorite-add
+        display: none
+
+    .product-company-item__name
+        margin: 0 0 16px
+
+
+    .gallery-item
+        width: 120px
+        height: 120px
+        min-width: 120px
+
+    .js-text-wrap.is-collapsed
+        max-height: 250px
+        
 @media only screen and (max-width: 420px)
     .btn
         padding: 0 20px
@@ -1131,6 +1284,14 @@
     .modal-content
         padding: 24px 16px
 
+    .gallery-item
+        width: 108px
+        height: 108px
+        min-width: 108px
+
+    .js-text-wrap.is-collapsed
+        max-height: 290px
+
 @media only screen and (max-width: 370px)
     .btn
         padding: 0 15px
@@ -1141,6 +1302,14 @@
 
     .product-card-slider__item, .product-card-column .product-card__img, .product-card-slider
         height: 136px
+
+    .gallery-item
+        width: 88px
+        height: 88px
+        min-width: 88px
+
+    .js-text-wrap.is-collapsed
+        max-height: 330px
 
 @media only screen and (max-width: 340px)
     .subsection-link

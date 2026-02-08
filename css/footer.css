@@ -388,3 +388,43 @@ footer {
 .modal-sm .modal-dialog {
   max-width: 600px;
 }
+
+.contacts-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contacts-item__name {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  opacity: 0.48;
+  display: block;
+}
+.contacts-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.contacts-item__link:hover {
+  color: #383E40;
+}
+.contacts-item__link img {
+  margin: 0 8px 0 0;
+}

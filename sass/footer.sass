@@ -276,3 +276,30 @@ footer
 .modal-sm
     .modal-dialog
         max-width: 600px
+
+.contacts-wrapper
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    gap: 24px
+
+.contacts-item
+    &__name
+        margin: 0 0 8px
+        font-size: 14px
+        line-height: 16px
+        font-weight: 500
+        opacity: 0.48
+        display: block
+    &__link
+        display: flex
+        align-items: center
+        color: #000
+        font-size: 18px
+        line-height: 20px
+        font-weight: 600
+        &:hover
+            color: $accent
+        img
+            margin: 0 8px 0 0

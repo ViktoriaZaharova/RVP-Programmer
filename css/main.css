@@ -1182,42 +1182,57 @@
   display: none;
 }
 
+/* затемнённая подложка */
+.category-dropdown {
+  position: relative;
+}
+
+.category-dropdown::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+/* когда dropdown открыт */
+.category-dropdown:has(.dropdown-menu.show)::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* само меню поверх подложки */
+.category-dropdown .dropdown-menu {
+  z-index: 1050;
+}
+
 .category-menu {
+  position: relative;
   padding: 32px;
-  width: 320px;
+  background: #fff;
 }
 
-.category-menu-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.category-menu-level {
-  width: 320px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.category-menu-level--1 {
+.category-menu-wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 24px;
 }
 
-.category-item {
-  position: relative;
+.category-menu-level {
+  display: none;
   min-width: 224px;
+}
+.category-menu-level.active {
+  display: block;
 }
 
 .category-link {
@@ -1239,25 +1254,11 @@
   fill: none;
   width: 12px;
   height: 12px;
-  stroke: rgba(0, 0, 0, 0.6);
+  stroke: #000;
+  opacity: 0.6;
 }
-
-/* ВСЕ подменю */
-.category-menu-level {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 320px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  padding: 8px 0;
-  list-style: none;
-  margin: 0;
-  background: #fff;
-}
-
-.category-menu-level--2,
-.category-menu-level--3 {
-  display: none;
+.category-link.active {
+  color: #20815C;
 }
 
 .salaesman-wrapper {

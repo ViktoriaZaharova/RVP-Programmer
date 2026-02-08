@@ -305,7 +305,7 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   color: #fff;
   background: #000;
 }
-.btn-black:hover, .btn-black:focus, .btn-black.active {
+.btn-black:hover, .btn-black:focus, .btn-black.active, .btn-black.show {
   background: #383E40;
   color: #fff;
 }
@@ -912,4 +912,8 @@ h4, .h4 {
   line-height: 10px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.dropdown-menu {
+  border: none;
 }

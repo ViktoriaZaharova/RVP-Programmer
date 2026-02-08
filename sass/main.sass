@@ -783,28 +783,46 @@
     display: none
 
 // category menu
-.category-menu
-    padding: 32px
-    width: 320px
+/* затемнённая подложка */
+.category-dropdown
+    position: relative
 
-.category-menu-inner
+.category-dropdown::before
+    content: ''
+    position: fixed
+    inset: 0
+    background: rgba(0, 0, 0, 0.35)
+    z-index: 1040
+    opacity: 0
+    visibility: hidden
+    transition: opacity .2s ease
+    
+
+/* когда dropdown открыт */
+.category-dropdown:has(.dropdown-menu.show)::before
+    opacity: 1
+    visibility: visible
+
+/* само меню поверх подложки */
+.category-dropdown .dropdown-menu
+    z-index: 1050
+
+.category-menu
+    position: relative
+    padding: 32px
+    background: #fff
+
+.category-menu-wrapper
+    width: 100%
     display: flex
-    height: 100%
-    transition: transform .3s ease
+    align-items: flex-start
+    gap: 24px
 
 .category-menu-level
-    width: 320px
-    flex-shrink: 0
-    list-style: none
-    margin: 0
-    padding: 0
-    &--1
-        display: flex
-        align-items: flex-start
-
-.category-item
-    position: relative
+    display: none
     min-width: 224px
+    &.active
+        display: block
 
 .category-link
     width: 100%
@@ -820,24 +838,11 @@
         fill: none
         width: 12px
         height: 12px
-        stroke: rgba(#000, .6)
+        stroke: #000
+        opacity: 0.6
 
-    // &.is-active
-    //     color: $green
-
-/* ВСЕ подменю */
-.category-menu-level
-    flex-wrap: wrap
-    width: 320px
-    flex-shrink: 0
-    padding: 8px 0
-    list-style: none
-    margin: 0
-    background: #fff
-
-.category-menu-level--2,
-.category-menu-level--3
-    display: none
+    &.active
+        color: $green
 
 .salaesman-wrapper
     max-height: 534px
@@ -1042,7 +1047,7 @@
         display: flex
         align-items: start
         justify-content: space-between
-        .btn-group-social   
+        .btn-group-social
             display: none
     &:last-child
         border: none
@@ -1061,7 +1066,7 @@
             margin: 0
 
 .files-wrapper
-    width: 100%    
+    width: 100%
 
 .file-item
     width: 100%

@@ -150,7 +150,7 @@ $('.similar-slider').slick({
       breakpoint: 992,
       settings: {
         slidesToShow: 5,
-        
+
       }
     },
     {
@@ -202,26 +202,26 @@ $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
 
 
 
-$(function(){
+$(function () {
 
   // ===============================
   // КОЛОНКИ
   // ===============================
-  $('.products.products-column').each(function(){
+  $('.products.products-column').each(function () {
     const $container = $(this);
     const $btn = $container.find('.btn-toggle-column');
 
     function getColumnVisible() {
       const w = $(window).width();
-      if(w >= 992) return 15;       // ПК
-      if(w >= 768) return 16;       // Планшет
+      if (w >= 992) return 15;       // ПК
+      if (w >= 768) return 16;       // Планшет
       return 10;                    // Мобильные (пример, можно менять)
     }
 
     function updateColumns() {
       const COLUMN_VISIBLE = getColumnVisible();
 
-      $container.find('.product-column-item').each(function(){
+      $container.find('.product-column-item').each(function () {
         const $item = $(this);
         const $cards = $item.find('.product-card-column');
 
@@ -229,7 +229,7 @@ $(function(){
         $cards.slice(0, COLUMN_VISIBLE).show();
       });
 
-      if($container.find('.product-card-column:hidden').length > 0){
+      if ($container.find('.product-card-column:hidden').length > 0) {
         $btn.show();
       } else {
         $btn.hide();
@@ -240,15 +240,15 @@ $(function(){
     updateColumns();
 
     // При ресайзе окна пересчитываем
-    $(window).on('resize', function(){
+    $(window).on('resize', function () {
       updateColumns();
     });
 
-    $btn.off('click').on('click', function(e){
+    $btn.off('click').on('click', function (e) {
       e.preventDefault();
       const COLUMN_VISIBLE = getColumnVisible();
 
-      $container.find('.product-column-item').each(function(){
+      $container.find('.product-column-item').each(function () {
         const $item = $(this);
         const $cards = $item.find('.product-card-column');
         const $hidden = $cards.filter(':hidden');
@@ -256,15 +256,15 @@ $(function(){
         $hidden.slice(0, COLUMN_VISIBLE).show();
 
         // обновляем slick
-        $hidden.slice(0, COLUMN_VISIBLE).find('.product-card-slider').each(function(){
+        $hidden.slice(0, COLUMN_VISIBLE).find('.product-card-slider').each(function () {
           const $slider = $(this);
-          if($slider.hasClass('slick-initialized')){
+          if ($slider.hasClass('slick-initialized')) {
             $slider.slick('setPosition');
           }
         });
       });
 
-      if($container.find('.product-card-column:hidden').length === 0){
+      if ($container.find('.product-card-column:hidden').length === 0) {
         $btn.hide();
       }
     });
@@ -274,12 +274,12 @@ $(function(){
   // ===============================
   // РЯДЫ
   // ===============================
-  $('.products.products-list').each(function(){
+  $('.products.products-list').each(function () {
     const $container = $(this);
     const $btn = $container.find('.btn-toggle-row');
     const ROW_VISIBLE = 11;
 
-    $container.find('.products-list-item').each(function(){
+    $container.find('.products-list-item').each(function () {
       const $listItem = $(this);
       const $cards = $listItem.find('.product-card-row');
 
@@ -287,23 +287,23 @@ $(function(){
       $cards.slice(0, ROW_VISIBLE).show();
     });
 
-    if($container.find('.product-card-row:hidden').length > 0){
+    if ($container.find('.product-card-row:hidden').length > 0) {
       $btn.show();
     } else {
       $btn.hide();
     }
 
-    $btn.off('click').on('click', function(e){
+    $btn.off('click').on('click', function (e) {
       e.preventDefault();
 
-      $container.find('.products-list-item').each(function(){
+      $container.find('.products-list-item').each(function () {
         const $listItem = $(this);
         const $cards = $listItem.find('.product-card-row');
         const $hidden = $cards.filter(':hidden');
         $hidden.slice(0, ROW_VISIBLE).show();
       });
 
-      if($container.find('.product-card-row:hidden').length === 0){
+      if ($container.find('.product-card-row:hidden').length === 0) {
         $btn.hide();
       }
     });
@@ -459,3 +459,83 @@ $(function () {
   });
 });
 
+
+// показать карточку товара по наведению в зависимости от значениея data-tab
+$(function () {
+
+  const $dropdown = $('.category-dropdown');
+  const $menu = $dropdown.find('.category-menu');
+
+  /* --------------------------------------------------
+     Bootstrap fix — не закрывать при клике внутри
+  -------------------------------------------------- */
+  $menu.on('click', function (e) {
+    e.stopPropagation();
+  });
+
+  /* --------------------------------------------------
+     Старт
+  -------------------------------------------------- */
+  $('.category-menu-level--1').addClass('active');
+
+  /* --------------------------------------------------
+     Клик по пункту с подменю
+  -------------------------------------------------- */
+  $menu.on('click', '.category-link.has-submenu', function (e) {
+    e.preventDefault();
+
+    const $link = $(this);
+    const $item = $link.closest('.category-item');
+    const $level = $link.closest('.category-menu-level');
+    const $wrapper = $link.closest('.category-menu-wrapper');
+
+    const tabId = $link.data('tab');
+    const $targetLevel = $wrapper.find('.js-tab-content[data-tab="' + tabId + '"]');
+
+    /* -----------------------------
+       Определяем уровень клика
+    ----------------------------- */
+    const isLevel1 = $level.hasClass('category-menu-level--1');
+    const isLevel2 = $level.hasClass('category-menu-level--2');
+
+    /* -----------------------------
+       ACTIVE: чистим ТОЛЬКО нужное
+    ----------------------------- */
+
+    if (isLevel1) {
+      // чистим всё
+      $wrapper.find('.category-link').removeClass('active');
+    }
+
+    if (isLevel2) {
+      // чистим level--2 и level--3
+      $wrapper
+        .find('.category-menu-level--2 .category-link, .category-menu-level--3 .category-link')
+        .removeClass('active');
+    }
+
+    // делаем активным текущий
+    $link.addClass('active');
+
+    /* -----------------------------
+       УРОВНИ: логика открытия
+    ----------------------------- */
+
+    if (isLevel1) {
+      // закрываем всё ниже
+      $wrapper.find('.category-menu-level--2, .category-menu-level--3').removeClass('active');
+    }
+
+    if (isLevel2) {
+      // закрываем ТОЛЬКО level--3
+      $wrapper.find('.category-menu-level--3').removeClass('active');
+    }
+
+    // открываем нужный уровень
+    if ($targetLevel.length) {
+      $targetLevel.addClass('active');
+    }
+
+  });
+
+});

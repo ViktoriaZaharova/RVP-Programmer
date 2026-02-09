@@ -796,7 +796,6 @@
     opacity: 0
     visibility: hidden
     transition: opacity .2s ease
-    
 
 /* когда dropdown открыт */
 .category-dropdown:has(.dropdown-menu.show)::before
@@ -823,6 +822,14 @@
     min-width: 224px
     &.active
         display: block
+    .category-item
+        &:first-child
+            .category-link
+                padding-top: 0
+        &:last-child
+            .category-link
+                padding-bottom: 0
+                border-bottom: none
 
 .category-link
     width: 100%
@@ -833,6 +840,7 @@
     font-weight: 500
     color: #000
     border-bottom: 1px solid rgba(#000, .1)
+    transition: .3s ease
     svg
         margin: 0 0 0 8px
         fill: none
@@ -843,6 +851,55 @@
 
     &.active
         color: $green
+    &:hover
+        color: $green
+
+.category-menu-mobile-head
+    width: 100%
+    display: none
+    align-items: center
+    flex-wrap: wrap
+    padding: 0 40px 0 0
+    margin: 0 0 24px
+    position: relative
+    z-index: 1
+    .category-title
+        order: -1
+        width: 100%
+        font-size: 18px
+        line-height: 20px
+        font-weight: 600
+
+.category-close
+    background: #000
+    fill: #fff
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    padding: 6px
+    position: absolute
+    right: 0
+    top: 0
+    @include d-flex
+
+.category-back
+    display: flex
+    align-items: center
+    color: rgba(#000, .6)
+    fill: none
+    stroke: rgba(#000, .6)
+    background: transparent
+    padding: 0
+    font-size: 14px
+    line-height: 16px
+    font-weight: 500
+    margin: 32px 0 0
+    svg
+        width: 12px
+        height: 12px
+        min-width: 12px
+        margin: 0 8px 0 0
+        opacity: 0.6
 
 .salaesman-wrapper
     max-height: 534px

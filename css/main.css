@@ -1234,6 +1234,13 @@
 .category-menu-level.active {
   display: block;
 }
+.category-menu-level .category-item:first-child .category-link {
+  padding-top: 0;
+}
+.category-menu-level .category-item:last-child .category-link {
+  padding-bottom: 0;
+  border-bottom: none;
+}
 
 .category-link {
   width: 100%;
@@ -1248,6 +1255,8 @@
   font-weight: 500;
   color: #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .category-link svg {
   margin: 0 0 0 8px;
@@ -1259,6 +1268,78 @@
 }
 .category-link.active {
   color: #20815C;
+}
+.category-link:hover {
+  color: #20815C;
+}
+
+.category-menu-mobile-head {
+  width: 100%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 40px 0 0;
+  margin: 0 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.category-menu-mobile-head .category-title {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 100%;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.category-close {
+  background: #000;
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.category-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.6);
+  background: transparent;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin: 32px 0 0;
+}
+.category-back svg {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  margin: 0 8px 0 0;
+  opacity: 0.6;
 }
 
 .salaesman-wrapper {

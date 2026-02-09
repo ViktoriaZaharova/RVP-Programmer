@@ -754,6 +754,9 @@
     font-size: 12px;
     line-height: 14px;
   }
+  .category-dropdown .btn.dropdown-toggle img {
+    width: 16px;
+  }
 }
 @media only screen and (max-width: 930px) {
   .product-card-column .product-card__body {
@@ -846,6 +849,20 @@
     padding: 4px 12px;
     font-size: 12px;
     line-height: 14px;
+  }
+  .category-menu {
+    padding: 24px;
+  }
+  .category-menu-wrapper {
+    gap: 16px;
+  }
+  .category-menu-level {
+    min-width: 210px;
+  }
+  .category-link {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -943,6 +960,21 @@
   }
   .js-text-wrap.is-collapsed {
     max-height: 210px;
+  }
+  .category-menu-mobile-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .category-menu-wrapper {
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 @media only screen and (max-width: 710px) {
@@ -1510,6 +1542,9 @@
   }
   .modal-sm .modal-dialog {
     max-width: 420px;
+  }
+  .category-dropdown .btn.dropdown-toggle img {
+    width: 12px;
   }
 }
 @media only screen and (max-width: 420px) {

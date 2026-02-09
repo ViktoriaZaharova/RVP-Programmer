@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
   <!-- add plugins css end -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -145,8 +145,8 @@
               <a href="#" class="sidebar-btn__close"><img src="img/close-icon.svg" alt=""></a>
               <div class="category-dropdown dropdown">
                 <button class="btn btn-black btn-lg btn-radius w-100 dropdown-toggle" data-bs-toggle="dropdown">
-                  <span><img src="img/toggle-icon.svg" alt=""></span>
-                  Категория
+                  <img src="img/toggle-icon.svg" alt="">
+                  <span>Категория</span>
                 </button>
 
                 <div class="dropdown-menu category-menu">
@@ -195,12 +195,12 @@
                             <use xlink:href="img/sprite.svg#arrow-right"></use>
                           </svg></a>
                       </div>
-                        <div class="category-item">
+                      <div class="category-item">
                         <a href="#" class="category-link has-submenu" data-tab="7">Изотермический<svg class="svg-icon">
                             <use xlink:href="img/sprite.svg#arrow-right"></use>
                           </svg></a>
                       </div>
-                        <div class="category-item">
+                      <div class="category-item">
                         <a href="#" class="category-link has-submenu" data-tab="8">Прочие<svg class="svg-icon">
                             <use xlink:href="img/sprite.svg#arrow-right"></use>
                           </svg></a>
@@ -296,81 +296,110 @@
 
               <div class="wrapper-row w-100">
                 <div class="category-dropdown dropdown">
-                <button class="btn btn-black btn-lg btn-radius w-100 dropdown-toggle" data-bs-toggle="dropdown">
-                  <span><img src="img/toggle-icon.svg" alt=""></span>
-                  Категория
-                </button>
+                  <button class="btn btn-black btn-lg btn-radius w-100 dropdown-toggle" data-bs-toggle="dropdown">
+                    <img src="img/toggle-icon.svg" alt="">
+                    <span>Категория</span>
+                  </button>
 
-                <div class="dropdown-menu category-menu">
-                  <div class="category-menu-wrapper">
-                    <div class="category-menu-level category-menu-level--1 active">
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="1">
-                          Запасные части
-                          <svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="2">
-                          Подвижной состав (вагоны)
-                          <svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="category-menu-level category-menu-level--2 js-tab-content" data-tab="2">
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="3">
-                          Крытый
-                          <svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg>
-                        </a>
-                      </div>
-
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="4">Платформа<svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg></a>
-                      </div>
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="5">Полувагон<svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg></a>
-                      </div>
-                      <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="6">Цистерна<svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg></a>
-                      </div>
+                  <div class="dropdown-menu category-menu">
+                    <div class="category-menu-wrapper">
+                      <div class="category-menu-level category-menu-level--1 active">
                         <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="7">Изотермический<svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg></a>
-                      </div>
+                          <a href="#" class="category-link has-submenu" data-tab="1">
+                            Запасные части
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </a>
+                        </div>
                         <div class="category-item">
-                        <a href="#" class="category-link has-submenu" data-tab="8">Прочие<svg class="svg-icon">
-                            <use xlink:href="img/sprite.svg#arrow-right"></use>
-                          </svg></a>
+                          <a href="#" class="category-link has-submenu" data-tab="2">
+                            Подвижной состав (вагоны)
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="category-menu-level category-menu-level--3 js-tab-content" data-tab="3">
-                      <div class="category-item">
-                        <a href="#" class="category-link">Универсальные</a>
+                      <div class="category-menu-level category-menu-level--2 js-tab-content" data-tab="2">
+                        <div class="category-menu-mobile-head">
+                          <button class="category-back" type="button">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-left"></use>
+                            </svg>Вернуться назад
+                          </button>
+
+                          <div class="category-title">Подвижной состав (вагоны)
+                          </div>
+
+                          <button class="category-close" type="button">
+                            <img src="img/close-icon.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu pt-0" data-tab="3">
+                            Крытый
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </a>
+                        </div>
+
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu" data-tab="4">Платформа<svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu" data-tab="5">Полувагон<svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu" data-tab="6">Цистерна<svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu" data-tab="7">Изотермический<svg
+                              class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link has-submenu" data-tab="8">Прочие<svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                        </div>
                       </div>
-                      <div class="category-item">
-                        <a href="#" class="category-link">Специализированные</a>
+
+                      <div class="category-menu-level category-menu-level--3 js-tab-content" data-tab="3">
+                        <div class="category-menu-mobile-head">
+                          <button class="category-back" type="button">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-left"></use>
+                            </svg>Вернуться назад
+                          </button>
+
+                          <div class="category-title">Крытый
+                          </div>
+
+                          <button class="category-close" type="button">
+                            <img src="img/close-icon.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link pt-0">Универсальные</a>
+                        </div>
+                        <div class="category-item">
+                          <a href="#" class="category-link">Специализированные</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-              </div>
+                </div>
 
                 <form method="post" class="form-search w-100">
                   <label>
@@ -1445,7 +1474,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
                               </ul>
@@ -1515,7 +1545,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-green">Новый</li>
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
@@ -1772,7 +1803,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
                               </ul>
@@ -1837,7 +1869,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
                               </ul>
@@ -2141,7 +2174,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-green">Новый</li>
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
@@ -2208,7 +2242,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-green">Новый</li>
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
@@ -2465,7 +2500,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
                               </ul>
@@ -2532,7 +2568,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-green">Новый</li>
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
@@ -2789,7 +2826,8 @@
 
                           <div class="product-card-row__body">
                             <div class="product-info">
-                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <a href="procurement-page.html" class="product-card__name">Автосцепка СА-3
+                                106.01.000-0-05сб</a>
                               <ul class="list-labels my-ul">
                                 <li class="list-labels__item label-new bg-brown">Б/У</li>
                               </ul>
@@ -3947,6 +3985,106 @@
           </div>
 
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-md fade" id="offerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Запрос на товар</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-order">
+            <label>
+              <span class="label-title">Сообщение</span>
+              <textarea
+                name="message">Здравствуйте, интересует Автосцепка СА-3 106.01.000-0-05сб, Артикул: 106.01.000-0-05сб</textarea>
+            </label>
+
+            <div class="files-results">
+              <div class="file-result-item">
+                <span>Номенклатура.doc 768кб</span>
+                <a href="#" class="file-result-item__close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <label class="label-file">
+              <input type="file" name="file" required>
+              <span class="label-file__icon"><img src="img/plus-black.svg" alt=""></span>
+              <span class="label-file__text">Добавить файл</span>
+            </label>
+            <div class="label-file__description">Можно добавить файлы форматом pdf, docx, excl размером не более 2 Мб
+            </div>
+
+            <button type="submit" class="btn btn-black btn-radius btn-md">Отправить запрос</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Расположение</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <div class="address-modal mb-32">
+            <p class="font-600">г. Рязань, ул. Молодежная, зд.18</p>
+            <div class="text-small color-grey mt-16">Рязанская область</div>
+          </div>
+
+          <div class="map-modal">
+            <iframe
+                src="https://yandex.com/map-widget/v1/?ll=39.648941%2C54.659500&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM0MDI2MhJe0KDQvtGB0YHQuNGPLCDQoNGP0LfQsNC90YwsINGA0LDQudC-0L0g0J_RgNC40L7QutGB0LrQuNC5LCDQnNC-0LvQvtC00ZHQttC90LDRjyDRg9C70LjRhtCwLCAxOCIKDYWYHkIVVKNaQg%2C%2C&z=16"
+                allowfullscreen="true" style="position:relative;"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-sm fade" id="contactsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Контакты ООО “РосВагонПартс”</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <div class="contacts-wrapper">
+            <div class="contacts-item">
+              <span class="contacts-item__name">Телефон</span>
+              <a href="tel:+79123456789" class="contacts-item__link">
+                <img src="img/phone-icon.svg" alt="">
+                <span>+7 (912) 345-67-89</span>
+              </a>
+            </div>
+
+            <div class="contacts-item">
+              <span class="contacts-item__name">Почта</span>
+              <a href="mailto:info@mail.ru" class="contacts-item__link">
+                <img src="img/mail-icon.svg" alt="">
+                <span>info@mail.ru</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -3959,7 +4097,7 @@
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
   <!-- add plugins js end-->
 
   <script src="js/common.js"></script>

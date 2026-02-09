@@ -671,6 +671,10 @@
             font-size: 12px
             line-height: 14px
 
+    .category-dropdown 
+        .btn.dropdown-toggle
+            img
+                width: 16px
 
 @media only screen and (max-width: 930px)
     .product-card-column .product-card__body
@@ -761,10 +765,22 @@
         font-size: 12px
         line-height: 14px
 
+
+    .category-menu
+        padding: 24px
+
+    .category-menu-wrapper
+        gap: 16px
+
+    .category-menu-level
+        min-width: 210px
+
+    .category-link
+        font-size: 12px
+        line-height: 14px
+        padding: 12px 0
+
 @media only screen and (max-width: 768px)
-    
-
-
     .btn-registration, .btn-authorization
         min-width: auto
 
@@ -839,7 +855,14 @@
     .js-text-wrap.is-collapsed
         max-height: 210px
 
-    
+    .category-menu-mobile-head
+        display: flex
+
+    .category-menu-wrapper
+        gap: 0
+        flex-direction: column
+        align-items: flex-start
+        
 
 @media only screen and (max-width: 710px)
     .link-developer
@@ -1304,6 +1327,11 @@
 
     .modal-sm .modal-dialog
         max-width: 420px
+
+    .category-dropdown 
+        .btn.dropdown-toggle
+            img
+                width: 12px
         
 @media only screen and (max-width: 420px)
     .btn

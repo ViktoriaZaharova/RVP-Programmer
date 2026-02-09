@@ -461,81 +461,207 @@ $(function () {
 
 
 // показать карточку товара по наведению в зависимости от значениея data-tab
+// $(function () {
+
+//   const $dropdown = $('.category-dropdown');
+//   const $menu = $dropdown.find('.category-menu');
+
+//   /* --------------------------------------------------
+//      Bootstrap fix — не закрывать при клике внутри
+//   -------------------------------------------------- */
+//   $menu.on('click', function (e) {
+//     e.stopPropagation();
+//   });
+
+//   /* --------------------------------------------------
+//      Старт
+//   -------------------------------------------------- */
+//   $('.category-menu-level--1').addClass('active');
+
+//   /* --------------------------------------------------
+//      Клик по пункту с подменю
+//   -------------------------------------------------- */
+//   $menu.on('click', '.category-link.has-submenu', function (e) {
+//     e.preventDefault();
+
+//     const $link = $(this);
+//     const $item = $link.closest('.category-item');
+//     const $level = $link.closest('.category-menu-level');
+//     const $wrapper = $link.closest('.category-menu-wrapper');
+
+//     const tabId = $link.data('tab');
+//     const $targetLevel = $wrapper.find('.js-tab-content[data-tab="' + tabId + '"]');
+
+//     /* -----------------------------
+//        Определяем уровень клика
+//     ----------------------------- */
+//     const isLevel1 = $level.hasClass('category-menu-level--1');
+//     const isLevel2 = $level.hasClass('category-menu-level--2');
+
+//     /* -----------------------------
+//        ACTIVE: чистим ТОЛЬКО нужное
+//     ----------------------------- */
+
+//     if (isLevel1) {
+//       // чистим всё
+//       $wrapper.find('.category-link').removeClass('active');
+//     }
+
+//     if (isLevel2) {
+//       // чистим level--2 и level--3
+//       $wrapper
+//         .find('.category-menu-level--2 .category-link, .category-menu-level--3 .category-link')
+//         .removeClass('active');
+//     }
+
+//     // делаем активным текущий
+//     $link.addClass('active');
+
+//     /* -----------------------------
+//        УРОВНИ: логика открытия
+//     ----------------------------- */
+
+//     if (isLevel1) {
+//       // закрываем всё ниже
+//       $wrapper.find('.category-menu-level--2, .category-menu-level--3').removeClass('active');
+//     }
+
+//     if (isLevel2) {
+//       // закрываем ТОЛЬКО level--3
+//       $wrapper.find('.category-menu-level--3').removeClass('active');
+//     }
+
+//     // открываем нужный уровень
+//     if ($targetLevel.length) {
+//       $targetLevel.addClass('active');
+//     }
+
+//   });
+
+// });
+
 $(function () {
 
+  const MOBILE_BREAKPOINT = 768;
+
   const $dropdown = $('.category-dropdown');
+  const $toggle = $dropdown.find('[data-bs-toggle="dropdown"]');
   const $menu = $dropdown.find('.category-menu');
+  const $wrapper = $menu.find('.category-menu-wrapper');
 
   /* --------------------------------------------------
-     Bootstrap fix — не закрывать при клике внутри
+     Helpers
+  -------------------------------------------------- */
+  function isMobile() {
+    return window.innerWidth < MOBILE_BREAKPOINT;
+  }
+
+  function resetMenu() {
+    $wrapper.find('.category-menu-level').removeClass('active');
+    $wrapper.find('.category-menu-level--1').addClass('active');
+    $wrapper.find('.category-link').removeClass('active');
+  }
+
+  resetMenu();
+
+  /* --------------------------------------------------
+     Bootstrap fix:
+     клики внутри меню НЕ закрывают dropdown
+     (кроме mobile-close)
   -------------------------------------------------- */
   $menu.on('click', function (e) {
-    e.stopPropagation();
+    if (!$(e.target).closest('.category-close').length) {
+      e.stopPropagation();
+    }
   });
 
   /* --------------------------------------------------
-     Старт
-  -------------------------------------------------- */
-  $('.category-menu-level--1').addClass('active');
-
-  /* --------------------------------------------------
-     Клик по пункту с подменю
+     Клик по пункту с подменю (MOBILE)
   -------------------------------------------------- */
   $menu.on('click', '.category-link.has-submenu', function (e) {
+    if (!isMobile()) return;
+
     e.preventDefault();
+    e.stopPropagation();
 
     const $link = $(this);
-    const $item = $link.closest('.category-item');
-    const $level = $link.closest('.category-menu-level');
-    const $wrapper = $link.closest('.category-menu-wrapper');
-
+    const $currentLevel = $link.closest('.category-menu-level');
     const tabId = $link.data('tab');
     const $targetLevel = $wrapper.find('.js-tab-content[data-tab="' + tabId + '"]');
 
-    /* -----------------------------
-       Определяем уровень клика
-    ----------------------------- */
-    const isLevel1 = $level.hasClass('category-menu-level--1');
-    const isLevel2 = $level.hasClass('category-menu-level--2');
+    if (!$targetLevel.length) return;
 
-    /* -----------------------------
-       ACTIVE: чистим ТОЛЬКО нужное
-    ----------------------------- */
-
-    if (isLevel1) {
-      // чистим всё
+    /* ACTIVE логика */
+    if ($currentLevel.hasClass('category-menu-level--1')) {
       $wrapper.find('.category-link').removeClass('active');
     }
 
-    if (isLevel2) {
-      // чистим level--2 и level--3
+    if ($currentLevel.hasClass('category-menu-level--2')) {
       $wrapper
         .find('.category-menu-level--2 .category-link, .category-menu-level--3 .category-link')
         .removeClass('active');
     }
 
-    // делаем активным текущий
+    /* LEVELS */
+    $wrapper.find('.category-menu-level').removeClass('active');
+
     $link.addClass('active');
+    $targetLevel.addClass('active');
+  });
 
-    /* -----------------------------
-       УРОВНИ: логика открытия
-    ----------------------------- */
+  /* --------------------------------------------------
+     Назад (MOBILE)
+  -------------------------------------------------- */
+  $menu.on('click', '.category-back', function (e) {
+    if (!isMobile()) return;
 
-    if (isLevel1) {
-      // закрываем всё ниже
-      $wrapper.find('.category-menu-level--2, .category-menu-level--3').removeClass('active');
+    e.preventDefault();
+    e.stopPropagation();
+
+    const $currentLevel = $(this).closest('.category-menu-level');
+
+    // level 3 → level 2
+    if ($currentLevel.hasClass('category-menu-level--3')) {
+      $wrapper.find('.category-menu-level').removeClass('active');
+      $wrapper.find('.category-menu-level--2').addClass('active');
+
+      $wrapper
+        .find('.category-menu-level--3 .category-link')
+        .removeClass('active');
     }
 
-    if (isLevel2) {
-      // закрываем ТОЛЬКО level--3
-      $wrapper.find('.category-menu-level--3').removeClass('active');
+    // level 2 → level 1
+    else if ($currentLevel.hasClass('category-menu-level--2')) {
+      resetMenu();
     }
+  });
 
-    // открываем нужный уровень
-    if ($targetLevel.length) {
-      $targetLevel.addClass('active');
+  /* --------------------------------------------------
+     ❌ КРЕСТИК — MOBILE
+     закрывает ТОЛЬКО .category-menu
+  -------------------------------------------------- */
+  $menu.on('click', '.category-close', function (e) {
+    if (!isMobile()) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    resetMenu();
+
+    // закрываем dropdown-menu вручную
+    $menu.removeClass('show');
+    $toggle
+      .removeClass('show')
+      .attr('aria-expanded', 'false');
+  });
+
+  /* --------------------------------------------------
+     Resize
+  -------------------------------------------------- */
+  $(window).on('resize', function () {
+    if (!isMobile()) {
+      resetMenu();
     }
-
   });
 
 });

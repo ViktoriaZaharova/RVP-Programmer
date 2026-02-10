@@ -1942,18 +1942,23 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  white-space: nowrap;
   margin: 0;
 }
-.companies-page__content .label-checkbox:before {
-  content: "";
-  width: 100%;
-  height: 10px;
-  background: url("../img/line-decor.png") no-repeat center;
-  background-size: cover;
+.companies-page__content .label-checkbox__wrap {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-.wrapper-row-gap {
-  gap: 16px;
+.companies-page__content .user-menu__divider {
+  margin: 0 16px;
+  width: 100%;
 }
 
 .companies-card-row {

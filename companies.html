@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVP programmer</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex align-items-center flex-wrap">
+          <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
+          <nav class="nav-menu">
+            <ul class="menu my-ul">
+              <li class="nav-item"><a href="sales.html" class="nav-link">Продажи</a></li>
+              <li class="nav-item"><a href="procurement.html" class="nav-link">Закупки</a></li>
+              <li class="nav-item"><a href="companies.html" class="nav-link active">Компании</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-user">
+            <a href="#" class="btn-help nav-user__btn"><img src="img/help-icon.svg" alt=""></a>
+            <a href="#" class="btn-chat nav-user__btn"><img src="img/chat-icon.svg" alt=""></a>
+            <a href="#" class="btn-notification nav-user__btn"><img src="img//notification-icon.svg" alt="">
+              <span class="nav-user__btn-val">2</span>
+            </a>
+
+            <div class="dropdown nav-user__dropdown">
+              <a href="#" class="btn-cabinet nav-user__btn dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="img/user.svg" alt="">
+                <span>Кабинет</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end user-menu">
+
+                <div class="user-menu__mobile-head">
+                  <div class="user-menu__mobile-title">Личный кабинет</div>
+                  <button class="user-menu__close" type="button" data-bs-toggle="dropdown">
+                    <img src="img/close-icon.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="user-menu__header">
+                  <div class="user-menu__avatar">
+                    <img src="img/user-icon.svg" alt="">
+                  </div>
+                  <div class="user-menu__info">
+                    <div class="user-menu__name">Иван Иванов</div>
+                    <a href="mailto:info@mail.ru" class="user-menu__email">info@mail.ru</a>
+                  </div>
+
+                  <a href="#" class="btn-notification nav-user__btn user-menu__notify"><img
+                      src="img//notification-icon.svg" alt="">
+                    <span class="nav-user__btn-val">2</span>
+                  </a>
+
+                </div>
+
+                <div class="user-menu__actions">
+                  <a href="messages.html" class="user-menu__action btn btn-grey">
+                    <img src="img/chat.svg" alt="">
+                    <span>Сообщения</span>
+                  </a>
+                  <a href="documents.html" class="user-menu__action btn btn-grey">
+                    <img src="img/docs.svg" alt="">
+                    <span>Документы</span>
+                  </a>
+                </div>
+
+
+                <div class="user-menu__section">
+                  <div class="user-menu__title">Объявления</div>
+                  <a href="sales.html" class="user-menu__link">Продажи</a>
+                  <a href="procurement.html" class="user-menu__link">Закупки</a>
+                </div>
+
+                <div class="user-menu__divider"></div>
+                <div class="user-menu__section">
+                  <a href="favorites.html" class="user-menu__link">Избранное</a>
+                </div>
+                <div class="user-menu__divider"></div>
+
+                <div class="user-menu__section">
+                  <a href="main-company.html" class="user-menu__link">Моя компания</a>
+                  <a href="presets.html" class="user-menu__link">Предустановки</a>
+                  <a href="paid-services.html" class="user-menu__link">Платные услуги</a>
+                  <a href="settings.html" class="user-menu__link">Настройки уведомлений</a>
+                  <a href="profile.html" class="user-menu__link">Профиль</a>
+                </div>
+
+                <div class="user-menu__footer">
+                  <a href="#" class="btn btn-grey btn-md w-100 btn-radius user-menu__logout">
+                    <img src="img/exit-icon.svg" alt="">
+                    <span>Выйти</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="nav-breadcrumb">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Компании</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="companies-page page bg-white">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12">
+            <div class="companies-page__content">
+              <h1>
+                Компании
+              </h1>
+
+              <div class="wrapper-row w-100">
+
+                <form method="post" class="form-search w-100">
+                  <label>
+                    <input type="text" placeholder="Поиск предложений" name="search">
+                  </label>
+                  <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+                </form>
+              </div>
+
+              <div class="wrapper-row w-100 align-items-center wrapper-row-gap">
+                <a href="#" class="btn btn-md btn-black-grey btn-radius sidebar-tags__selected" data-bs-toggle="modal"
+                  data-bs-target="#cityModal"><span class="sidebar-tags__selected-icon"><img src="img/plus-icon.svg"
+                      alt=""></span><span class="sidebar-tags__selected-text">Выбрать город или регион</span></a>
+
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox3">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text"><img src="img/confirmed-icon.svg" alt="">Подтвержденные</span>
+                </label>
+
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox3">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text">Только <span class="pro-label">PRO</span></span>
+                </label>
+
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox3" checked="">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text"><img src="img/star-icon.svg" alt="">4 звезды и выше</span>
+                </label>
+
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox3">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text"><img src="img/heart-icon.svg" alt="">В моем избранном</span>
+                </label>
+              </div>
+
+
+              <!-- фильтры -->
+              <div class="content-filters m-32">
+                <div class="filter-vat filter-mobile">
+                  <a href="#" class="btn-filter-mobile"><img src="img/filter-icon.svg" alt="">
+                    <span>Фильтр</span></a>
+                </div>
+
+                <div class="filter-vat content-filters__vat">
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="all" checked="">
+                    <span>Все</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="vat">
+                    <span>Продают</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio1" value="novat">
+                    <span>Покупают</span>
+                  </label>
+                </div>
+
+                <div class="filter-vat content-filters__sort dropdown">
+
+                  <button class="sort-button dropdown-toggle" data-bs-toggle="dropdown">
+                    <img src="img/sorting-icon.svg" alt="">
+                    <span class="sort-button__text">По названию</span>
+                  </button>
+
+                  <div class="filter-vat filter-vat-dropdown dropdown-menu">
+                    <label class="filter-vat__item">
+                      <input type="radio" name="radio2" value="vat" class="filter-vat__item-input">
+                      <span><img src="img/sorting-icon.svg" alt=""></span>
+                    </label>
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="radio2" value="all" checked="" class="filter-vat__item-input">
+                      <span>По названию</span>
+                    </label>
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="radio2" value="vat" class="filter-vat__item-input">
+                      <span>По рейтингу</span>
+                    </label>
+
+                    <label class="filter-vat__item">
+                      <input type="radio" name="radio2" value="novat" class="filter-vat__item-input">
+                      <span>Дата регистрации</span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="tab-content" id="myTabContent">
+
+
+                <div class="tab-pane fade show active w-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <!-- products -->
+                  <div class="products products-list">
+
+                    <div class="products-list-item">
+                      <div class="title-decor h3">1 запрос - Екатеринбург, Нижний Тагил</div>
+                      <!-- card -->
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img product-img-logo">
+                            <img src="img/lokar.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img product-img-logo">
+                              <img src="img/lokar.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="products-list-item border-bottom">
+                      <div class="title-decor h3">103 запроса - в других городах</div>
+                      <!-- card -->
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img product-img-logo">
+                            <img src="img/lokar.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img product-img-logo">
+                              <img src="img/lokar.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                              подшипники</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img">
+                            <img src="img/product7.jpg" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img">
+                              <img src="img/product7.jpg" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img">
+                            <img src="img/product3.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img">
+                              <img src="img/product3.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img">
+                            <img src="img/product8.jpg" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img">
+                              <img src="img/product8.jpg" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                              подшипники</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                              подшипники</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+<div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img product-img-logo">
+                            <img src="img/lokar.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img product-img-logo">
+                              <img src="img/lokar.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img p-10">
+                            <img src="img/product2.png" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                              подшипники</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд подшипники железнодорожные
+                                подшипники</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img p-10">
+                              <img src="img/product2.png" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+
+                      <div class="product-card product-card-row companies-card-row">
+                        <div class="product-card-row__col col-1">
+                          <div class="product-img">
+                            <img src="img/product7.jpg" alt="">
+                          </div>
+
+                          <div class="product-card-row__head">
+                            <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                            <a href="#" class="product-card__favorite"></a>
+                          </div>
+
+                          <div class="product-card-row__body">
+
+                            <div class="product-info">
+                              <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                              <div class="avialability color-grey">На платформе с 2023г.</div>
+                              <div class="product-card__address">
+                                <p>Рязанская область, Рязань</p>
+                              </div>
+                              <div class="product-card-status">
+                                <div class="professional-status bg-green">PRO</div>
+                                <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                                    проверены</span></div>
+                                <div class="rating">
+                                  <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                                  <div class="rating-value">5.0</div>
+                                  <div class="rating-notification">25</div>
+                                </div>
+                              </div>
+
+
+                              <a href="product.html#characteristics"
+                                class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                                data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                            </div>
+                            <div class="product-img">
+                              <img src="img/product7.jpg" alt="">
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-2">
+                          <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>1072 предложений</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-border btn-radius color-black btn-modal mt-16"
+                              data-bs-toggle="modal" data-bs-target="#mapModal">
+                              <span>56 запросов</span>
+                              <svg class="svg-icon">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </div>
+
+                          <a href="product.html#characteristics"
+                            class="btn btn-grey btn-sm btn-radius color-grey mt-16 product-card__btn-characteristics"
+                            data-bs-toggle="modal" data-bs-target="#contactsModal">Показать контакты</a>
+                        </div>
+
+                        <div class="product-card-row__col col-3">
+                          <div class="product-card__address">
+                            <p>Рязанская область, Рязань</p>
+                          </div>
+                        </div>
+
+                        <div class="product-card-row__col col-4">
+                          <div class="product-card__info">
+                            <div class="rating">
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                              <div class="rating-value">5.0</div>
+                              <div class="rating-notification">25</div>
+                            </div>
+
+                            <div class="avialability color-grey">На платформе с 2023г.</div>
+                          </div>
+                          <a href="#" class="product-card__favorite"></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="buttons-navigation-group w-100">
+                      <a href="#" class="nav-link nav-link-arrow nav-link-arrow-prev disabled"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg></a>
+                      <a href="#" class="btn btn-md btn-radius btn-grey w-100 btn-toggle-product btn-toggle-row">
+                        <img src="img/plus-black.svg" alt="">
+                        <span>Показать еще</span>
+                      </a>
+                      <a href="#" class="nav-link nav-link-arrow nav-link-arrow-next"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg></a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="products-footer">
+
+                <nav class="nav-pagination">
+                  <ul class="my-ul pagination">
+                    <li class="nav-item"><a href="#" class="nav-link nav-link-arrow nav-link-arrow-prev disabled"><svg
+                          class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">1</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">2</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">3</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">4</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">5</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">6</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">7</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">8</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">9</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">10</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">...</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">17</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link nav-link-arrow nav-link-arrow-next"><svg
+                          class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg></a></li>
+                  </ul>
+                </nav>
+
+                <div class="filter-vat content-filters__pages">
+                  <span>Показывать по</span>
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio3" value="all" checked="">
+                    <span>25</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio3" value="vat">
+                    <span>55</span>
+                  </label>
+
+                  <label class="filter-vat__item">
+                    <input type="radio" name="radio3" value="novat">
+                    <span>100</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="watched-section p-48 section-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Вы недавно смотрели</h2>
+          </div>
+
+          <div class="col-12">
+            <div class="watched-slider">
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img p-32">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product4.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seo-section p-48 section-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-small color-grey">
+              <p>«ЭТП 1520» – это специализированная электронная торговая площадка для профессионального сообщества.
+                Здесь размещаются объявления о продаже, покупке и аренде нового и б/у оборудования для железнодорожной
+                сферы. Найдите локомотивы, вагоны, путевую технику, запчасти, комплектующие и профильные услуги. Прямые
+                контакты поставщиков, актуальные лоты и удобный поиск помогут вам быстро закрыть потребности вашего
+                бизнеса. Станьте частью крупнейшего отраслевого рынка «на колесах».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-wrap align-items-start">
+          <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+
+          <div class="footer-column">
+            <div class="copyright">© 2023-2025 ООО «ВашВагон»</div>
+            <a href="tel:+78001234567" class="footer-phone footer-link color-white">+7 800 123-45-67</a>
+            <a href="mailto:info@rvpgroup.com" class="footer-mail footer-link color-white">info@rvpgroup.com</a>
+          </div>
+
+
+          <ul class="menu-documents my-ul">
+            <li><a href="politics.html" target="_blank">Политика конфиденциальности</a></li>
+            <li><a href="agreement.html" target="_blank">Пользовательское соглашение
+              </a></li>
+          </ul>
+
+          <a href="#" class="link-developer" target="_blank">
+            <span>Разработано в</span>
+            <img src="img/logo-developer.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modals -->
+  <div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Выбор региона или города</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-search w-100">
+            <label>
+              <input type="text" placeholder="Поиск предложений" name="search">
+            </label>
+            <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+          </form>
+
+          <!-- Popular cities -->
+          <div class="popular-cities">
+            <button class="chip">Москва</button>
+            <button class="chip">Санкт-Петербург</button>
+            <button class="chip">Новосибирск</button>
+            <button class="chip">Краснодар</button>
+            <button class="chip">Екатеринбург</button>
+            <button class="chip">Казань</button>
+            <button class="chip">Уфа</button>
+            <button class="chip">Нижний Новгород</button>
+            <button class="chip">Челябинск</button>
+            <button class="chip">Самара</button>
+            <button class="chip">Ростов-на-Дону</button>
+          </div>
+
+
+          <!-- Districts -->
+          <div class="districts">
+            <div class="districts-title">Округ</div>
+            <div class="districts-list">
+              <button class="chip active">Все</button>
+              <button class="chip">Дальневосточный</button>
+              <button class="chip">Приволжский</button>
+              <button class="chip">Северо-Западный</button>
+              <button class="chip">Северо-Кавказский</button>
+              <button class="chip">Сибирский</button>
+              <button class="chip">Уральский</button>
+              <button class="chip">Центральный</button>
+              <button class="chip">Южный</button>
+            </div>
+          </div>
+
+          <!-- Cities list -->
+          <div class="cities-wrapper scroll-vertical">
+            <div class="cities-columns">
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">А</div>
+                  <a href="#">Алапаевск</a>
+                  <a href="#">Арамиль</a>
+                  <a href="#">Артемовский</a>
+                  <a href="#">Арти</a>
+                  <a href="#">Асбест</a>
+                  <a href="#">Атиг</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Б</div>
+                  <a href="#">Бараба</a>
+                  <a href="#">Белоярский</a>
+                  <a href="#">Березовский</a>
+                  <a href="#">Богданович</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">В</div>
+                  <a href="#">Верхнеуральск</a>
+                  <a href="#">Верхний Тагил</a>
+                  <a href="#">Верхний Уфалей</a>
+                  <a href="#">Верхняя Пышма</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">Г</div>
+                  <a href="#">Губкинский</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Д</div>
+                  <a href="#">Далматово</a>
+                  <a href="#">Дегтярск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Е</div>
+                  <a href="#">Екатеринбург</a>
+                  <a href="#">Еманжелинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">З</div>
+                  <a href="#">Заводоуковск</a>
+                  <a href="#">Заречный</a>
+                  <a href="#">Златоуст</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">И</div>
+                  <a href="#">Ивдель</a>
+                  <a href="#">Ирбит</a>
+                  <a href="#">Ишим</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">К</div>
+                  <a href="#">Каменск-Уральский</a>
+                  <a href="#">Камышлов</a>
+                  <a href="#">Карабаш</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">У</div>
+                  <a href="#">Урай</a>
+                  <a href="#">Усть-Катав</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Х</div>
+                  <a href="#">Ханты-Мансийск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ч</div>
+                  <a href="#">Чебаркуль</a>
+                  <a href="#">Челябинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ш</div>
+                  <a href="#">Шадринск</a>
+                  <a href="#">Шумиха</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Я</div>
+                  <a href="#">Ялуторовск</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="salesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Выбор продавцов</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-search w-100">
+            <label>
+              <input type="text" placeholder="Поиск предложений" name="search">
+            </label>
+            <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+          </form>
+
+          <div class="list-checkbox list-checkbox-row">
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/confirmed-icon.svg" alt="">Подтвержденные</span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text">Только <span class="pro-label">PRO</span></span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3" checked="">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/star-icon.svg" alt="">4 звезды и выше</span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/heart-icon.svg" alt="">В моем избранном</span>
+            </label>
+          </div>
+
+
+
+          <!-- Cities list -->
+          <div class="salaesman-wrapper scroll-vertical">
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>

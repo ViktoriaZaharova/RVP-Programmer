@@ -120,6 +120,12 @@
             display: block
             margin: 0 5px 0 0
 
+    .companies-card-row
+        .product-card-row__col
+            width: 205px
+        .col-3
+            display: flex
+
 @media only screen and (max-width: 1260px)
     .sidebar-tags__selected-text
         max-width: 150px
@@ -166,6 +172,33 @@
 
     .pagination li:nth-child(6), .pagination li:nth-child(7)
         display: block
+
+    .companies-card-row
+        .product-img
+            width: 90px
+            height: 90px
+            min-width: 90px
+        .product-card-row__body
+            padding: 0 0 0 16px
+            .product-card__address
+                display: block
+                margin: 8px 0
+        .col-3
+            display: none
+        .avialability
+            font-size: 10px
+            line-height: 12px
+        .status-item, .professional-status
+            font-size: 8px
+            line-height: 10px
+            padding: 3px 8px
+        .status-item
+            padding: 1px 4px
+            img
+                width: 12px
+                height: 12px
+                min-width: 12px
+
 
 @media only screen and (max-width: 1100px)
     .filter-vat-dropdown.dropdown-menu
@@ -631,7 +664,7 @@
     .text-small
         font-size: 12px
         line-height: 20px
-        
+
     .gallery-item
         width: 100px
         height: 100px
@@ -671,10 +704,19 @@
             font-size: 12px
             line-height: 14px
 
-    .category-dropdown 
+    .category-dropdown
         .btn.dropdown-toggle
             img
                 width: 16px
+
+    .companies-card-row
+        .product-card-row__col
+            width: 190px
+        .product-card-row__col.col-2
+            width: 212px
+        .btn-group
+            flex-direction: column
+            align-items: flex-start
 
 @media only screen and (max-width: 930px)
     .product-card-column .product-card__body
@@ -764,7 +806,6 @@
         padding: 4px 12px
         font-size: 12px
         line-height: 14px
-
 
     .category-menu
         padding: 24px
@@ -862,7 +903,6 @@
         gap: 0
         flex-direction: column
         align-items: flex-start
-        
 
 @media only screen and (max-width: 710px)
     .link-developer
@@ -1143,6 +1183,41 @@
             font-size: 14px
             line-height: 16px
 
+    .companies-card-row
+        .product-card-row__col
+            width: 100%
+            flex: none
+            &.col-2
+                width: 100%
+                .product-card__btn-characteristics
+                    display: flex
+            &.col-4
+                display: none
+        .product-card-row__body
+            padding: 0
+            .product-info
+                flex-direction: column
+                align-items: flex-start
+                display: flex
+            .avialability
+                display: block
+            .product-card__address
+                order: 1
+                margin: 8px 0 0
+            .product-card__name
+                display: none
+        .product-card__name
+            font-size: 14px
+            line-height: 16px
+        .product-card-status
+            margin: 8px 0 0
+            .rating
+                display: flex
+        .btn-group
+            width: 100%
+            flex-direction: row
+            align-items: flex-start
+
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -1296,7 +1371,6 @@
     .product-company-item__name
         margin: 0 0 16px
 
-
     .gallery-item
         width: 120px
         height: 120px
@@ -1321,18 +1395,18 @@
 
     .map-modal
         height: 300px
-        
+
     .contacts-item
         width: 100%
 
     .modal-sm .modal-dialog
         max-width: 420px
 
-    .category-dropdown 
+    .category-dropdown
         .btn.dropdown-toggle
             img
                 width: 12px
-        
+
 @media only screen and (max-width: 420px)
     .btn
         padding: 0 20px
@@ -1435,5 +1509,3 @@
         box-shadow: none
         background: transparent
         transform: none !important
-
-    

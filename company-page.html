@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVP programmer</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex align-items-center flex-wrap">
+          <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
+          <nav class="nav-menu">
+            <ul class="menu my-ul">
+              <li class="nav-item"><a href="sales.html" class="nav-link">Продажи</a></li>
+              <li class="nav-item"><a href="procurement.html" class="nav-link active">Закупки</a></li>
+              <li class="nav-item"><a href="companies.html" class="nav-link">Компании</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-user">
+            <a href="#" class="btn-help nav-user__btn"><img src="img/help-icon.svg" alt=""></a>
+            <a href="#" class="btn-chat nav-user__btn"><img src="img/chat-icon.svg" alt=""></a>
+            <a href="#" class="btn-notification nav-user__btn"><img src="img//notification-icon.svg" alt="">
+              <span class="nav-user__btn-val">2</span>
+            </a>
+
+            <div class="dropdown nav-user__dropdown">
+              <a href="#" class="btn-cabinet nav-user__btn dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="img/user.svg" alt="">
+                <span>Кабинет</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end user-menu">
+
+                <div class="user-menu__mobile-head">
+                  <div class="user-menu__mobile-title">Личный кабинет</div>
+                  <button class="user-menu__close" type="button" data-bs-toggle="dropdown">
+                    <img src="img/close-icon.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="user-menu__header">
+                  <div class="user-menu__avatar">
+                    <img src="img/user-icon.svg" alt="">
+                  </div>
+                  <div class="user-menu__info">
+                    <div class="user-menu__name">Иван Иванов</div>
+                    <a href="mailto:info@mail.ru" class="user-menu__email">info@mail.ru</a>
+                  </div>
+
+                  <a href="#" class="btn-notification nav-user__btn user-menu__notify"><img
+                      src="img//notification-icon.svg" alt="">
+                    <span class="nav-user__btn-val">2</span>
+                  </a>
+
+                </div>
+
+                <div class="user-menu__actions">
+                  <a href="messages.html" class="user-menu__action btn btn-grey">
+                    <img src="img/chat.svg" alt="">
+                    <span>Сообщения</span>
+                  </a>
+                  <a href="documents.html" class="user-menu__action btn btn-grey">
+                    <img src="img/docs.svg" alt="">
+                    <span>Документы</span>
+                  </a>
+                </div>
+
+
+                <div class="user-menu__section">
+                  <div class="user-menu__title">Объявления</div>
+                  <a href="sales.html" class="user-menu__link">Продажи</a>
+                  <a href="procurement.html" class="user-menu__link">Закупки</a>
+                </div>
+
+                <div class="user-menu__divider"></div>
+                <div class="user-menu__section">
+                  <a href="favorites.html" class="user-menu__link">Избранное</a>
+                </div>
+                <div class="user-menu__divider"></div>
+
+                <div class="user-menu__section">
+                  <a href="main-company.html" class="user-menu__link">Моя компания</a>
+                  <a href="presets.html" class="user-menu__link">Предустановки</a>
+                  <a href="paid-services.html" class="user-menu__link">Платные услуги</a>
+                  <a href="settings.html" class="user-menu__link">Настройки уведомлений</a>
+                  <a href="profile.html" class="user-menu__link">Профиль</a>
+                </div>
+
+                <div class="user-menu__footer">
+                  <a href="#" class="btn btn-grey btn-md w-100 btn-radius user-menu__logout">
+                    <img src="img/exit-icon.svg" alt="">
+                    <span>Выйти</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="nav-breadcrumb">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="sales.html">Продажи</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Компании</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sales-page procurement-page-section page page-p0 company-page">
+      <div class="company-page-head">
+        <div class="company-page-head__item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-8 col-lg-9">
+                <div class="product-company-item__head">
+                  <h1>TRAIN Group</h1>
+                  <div class="btn-group-social">
+                    <a href="#" class="btn-group-social__item"><img src="img/schedule-icon.svg" alt=""></a>
+                    <a href="#" class="btn-group-social__item"><img src="img/heart-icon2.svg" alt=""></a>
+                  </div>
+                </div>
+                <div class="product-company-labels mb-24">
+                  <div class="category-label">12 успешных продаж</div>
+                  <div class="date-public color-grey">Нет завершенных закупок</div>
+                </div>
+
+                <div class="product-card-status product-card-status-md">
+                  <div class="professional-status bg-green">PRO</div>
+                  <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                      проверены</span></div>
+
+                  <div class="rating">
+                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                    <div class="rating-value">5.0</div>
+                    <div class="rating-notification">2 отзыва</div>
+                  </div>
+                </div>
+
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                  <div class="avialability color-grey">На платформе с 2023г.</div>
+                </div>
+
+                <div class="btn-group w-100 mb-24">
+                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                    data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <span>56 активных предложений</span>
+                    <svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                    data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <span>21 активных запросов</span>
+                    <svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="btn-group w-100">
+                  <a href="#" class="link-favorite-add"><img src="img/favorite-icon-black.svg" alt=""><span>В
+                      избранное</span></a>
+                  <a href="#" class="link-favorite-add"><img src="img/schedule-icon.svg"
+                      alt=""><span>Поделиться</span></a>
+                  <a href="#" class="link-favorite-add"><span>Это ваша компания?</span></a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="company-logo-image"><img src="img/train-logo.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-company-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="h3 product-company-item__name">Связаться</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-md btn-radius btn-black" data-bs-toggle="modal"
+                    data-bs-target="#chatModal">
+                    <svg class="svg-icon stroke-none">
+                      <use xlink:href="img/sprite.svg#chat-icon"></use>
+                    </svg>
+                    <span>Написать сообщение</span>
+                  </a>
+
+                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                    data-bs-toggle="modal" data-bs-target="#contactsModal">
+                    <svg class="svg-icon stroke-none">
+                      <use xlink:href="img/sprite.svg#phone-icon"></use>
+                    </svg>
+                    <span>Показать телефон</span>
+                  </a>
+
+                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                    data-bs-toggle="modal" data-bs-target="#contactsModal">
+                    <svg class="svg-icon stroke-none">
+                      <use xlink:href="img/sprite.svg#mail-icon"></use>
+                    </svg>
+                    <span>Показать почту</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-page-body">
+        <div class="product-company-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="h3 product-company-item__name">О компании</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="text-small product-company-item__description js-text-wrap is-collapsed">
+                  <p>TRAIN Group — поставщик комплексных решений для железнодорожной отрасли, ориентированный
+                    на надёжные и долгосрочные партнёрства. Компания работает в сегменте поставок оборудования, узлов
+                    и комплектующих для грузового и пассажирского подвижного состава, а также сопутствующих
+                    технических решений для эксплуатации и обслуживания железнодорожной инфраструктуры.</p>
+                  <p>TRAIN Group выстраивает процессы с учётом требований отраслевых стандартов, регламентов
+                    безопасности и технической совместимости. В работе с клиентами компания делает акцент на точности
+                    спецификаций, прозрачности поставок и контроле качества на всех этапах — от подбора решений
+                    до их внедрения и сопровождения.</p>
+                  <p>Благодаря взаимодействию с производителями, операторами и сервисными организациями TRAIN Group
+                    обеспечивает стабильность поставок и инженерную поддержку, адаптированную под реальные условия
+                    эксплуатации. Компания ориентируется на практическую эффективность решений, снижение операционных
+                    рисков и соблюдение сроков, что особенно критично для железнодорожной отрасли.</p>
+                  <p>TRAIN Group рассматривает каждый проект как часть единой транспортной системы, где надёжность,
+                    техническая дисциплина и ответственность перед партнёрами имеют ключевое значение.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro modi asperiores ipsum sed
+                    laboriosam impedit ipsa fugit in mollitia quia harum natus fugiat doloribus expedita qui, suscipit
+                    molestias error neque!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro modi asperiores ipsum sed
+                    laboriosam impedit ipsa fugit in mollitia quia harum natus fugiat doloribus expedita qui, suscipit
+                    molestias error neque!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro modi asperiores ipsum sed
+                    laboriosam impedit ipsa fugit in mollitia quia harum natus fugiat doloribus expedita qui, suscipit
+                    molestias error neque!</p>
+                </div>
+
+                <a href="#" class="btn btn-md-sm btn-border btn-radius w-100 btn-show-text js-show-text"><span>Показать
+                    целиком</span><img src="img/arrow-bottom.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-company-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="h3 product-company-item__name">Фото</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="company-gallery-slider">
+                  <div class="slide"><a href="img/company1.jpg" class="company-gallery__item"
+                      data-fancybox="company-photo"><img src="img/company1.jpg" alt=""></a></div>
+                  <div class="slide"><a href="img/company2.jpg" class="company-gallery__item"
+                      data-fancybox="company-photo"><img src="img/company2.jpg" alt=""></a></div>
+                  <div class="slide"><a href="img/company3.jpg" class="company-gallery__item"
+                      data-fancybox="company-photo"><img src="img/company3.jpg" alt=""></a></div>
+                  <div class="slide"><a href="img/company1.jpg" class="company-gallery__item"
+                      data-fancybox="company-photo"><img src="img/company1.jpg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="watched-section p-48 section-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Вы недавно смотрели</h2>
+          </div>
+
+          <div class="col-12">
+            <div class="watched-slider">
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img p-32">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product4.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product2.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Жд. Магистральная часть</a>
+                    <div class="price">120 000 ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product3.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product-card">
+                  <div class="product-card__img">
+                    <a href="#" class="link-add-favorite"></a>
+                    <img src="img/product1.png" alt="">
+                    <ul class="list-labels my-ul">
+                      <li class="list-labels__item label-new bg-green">Новый</li>
+                      <li class="list-labels__item label-wholesale bg-white">Опт</li>
+                      <li class="list-labels__item label-retail bg-white">Розница</li>
+                    </ul>
+                  </div>
+                  <div class="product-card__body">
+                    <a href="product.html" class="product-card__name">Автосцепка СА-3 106.01.000-0-05сб</a>
+                    <div class="price">7 300
+                      ₽</div>
+                    <div class="product-card__address">
+                      <p>Рязанская область, Рязань</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="seo-section p-48 section-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-small color-grey">
+              <p>«ЭТП 1520» – это специализированная электронная торговая площадка для профессионального сообщества.
+                Здесь размещаются объявления о продаже, покупке и аренде нового и б/у оборудования для железнодорожной
+                сферы. Найдите локомотивы, вагоны, путевую технику, запчасти, комплектующие и профильные услуги. Прямые
+                контакты поставщиков, актуальные лоты и удобный поиск помогут вам быстро закрыть потребности вашего
+                бизнеса. Станьте частью крупнейшего отраслевого рынка «на колесах».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-wrap align-items-start">
+          <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+
+          <div class="footer-column">
+            <div class="copyright">© 2023-2025 ООО «ВашВагон»</div>
+            <a href="tel:+78001234567" class="footer-phone footer-link color-white">+7 800 123-45-67</a>
+            <a href="mailto:info@rvpgroup.com" class="footer-mail footer-link color-white">info@rvpgroup.com</a>
+          </div>
+
+
+          <ul class="menu-documents my-ul">
+            <li><a href="politics.html" target="_blank">Политика конфиденциальности</a></li>
+            <li><a href="agreement.html" target="_blank">Пользовательское соглашение
+              </a></li>
+          </ul>
+
+          <a href="#" class="link-developer" target="_blank">
+            <span>Разработано в</span>
+            <img src="img/logo-developer.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modals -->
+  <div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Выбор региона или города</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-search w-100">
+            <label>
+              <input type="text" placeholder="Поиск предложений" name="search">
+            </label>
+            <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+          </form>
+
+          <!-- Popular cities -->
+          <div class="popular-cities">
+            <button class="chip">Москва</button>
+            <button class="chip">Санкт-Петербург</button>
+            <button class="chip">Новосибирск</button>
+            <button class="chip">Краснодар</button>
+            <button class="chip">Екатеринбург</button>
+            <button class="chip">Казань</button>
+            <button class="chip">Уфа</button>
+            <button class="chip">Нижний Новгород</button>
+            <button class="chip">Челябинск</button>
+            <button class="chip">Самара</button>
+            <button class="chip">Ростов-на-Дону</button>
+          </div>
+
+
+          <!-- Districts -->
+          <div class="districts">
+            <div class="districts-title">Округ</div>
+            <div class="districts-list">
+              <button class="chip active">Все</button>
+              <button class="chip">Дальневосточный</button>
+              <button class="chip">Приволжский</button>
+              <button class="chip">Северо-Западный</button>
+              <button class="chip">Северо-Кавказский</button>
+              <button class="chip">Сибирский</button>
+              <button class="chip">Уральский</button>
+              <button class="chip">Центральный</button>
+              <button class="chip">Южный</button>
+            </div>
+          </div>
+
+          <!-- Cities list -->
+          <div class="cities-wrapper scroll-vertical">
+            <div class="cities-columns">
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">А</div>
+                  <a href="#">Алапаевск</a>
+                  <a href="#">Арамиль</a>
+                  <a href="#">Артемовский</a>
+                  <a href="#">Арти</a>
+                  <a href="#">Асбест</a>
+                  <a href="#">Атиг</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Б</div>
+                  <a href="#">Бараба</a>
+                  <a href="#">Белоярский</a>
+                  <a href="#">Березовский</a>
+                  <a href="#">Богданович</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">В</div>
+                  <a href="#">Верхнеуральск</a>
+                  <a href="#">Верхний Тагил</a>
+                  <a href="#">Верхний Уфалей</a>
+                  <a href="#">Верхняя Пышма</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">Г</div>
+                  <a href="#">Губкинский</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Д</div>
+                  <a href="#">Далматово</a>
+                  <a href="#">Дегтярск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Е</div>
+                  <a href="#">Екатеринбург</a>
+                  <a href="#">Еманжелинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">З</div>
+                  <a href="#">Заводоуковск</a>
+                  <a href="#">Заречный</a>
+                  <a href="#">Златоуст</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">И</div>
+                  <a href="#">Ивдель</a>
+                  <a href="#">Ирбит</a>
+                  <a href="#">Ишим</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">К</div>
+                  <a href="#">Каменск-Уральский</a>
+                  <a href="#">Камышлов</a>
+                  <a href="#">Карабаш</a>
+                </div>
+              </div>
+
+              <div class="cities-col">
+                <div class="cities-col-list">
+                  <div class="letter">У</div>
+                  <a href="#">Урай</a>
+                  <a href="#">Усть-Катав</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Х</div>
+                  <a href="#">Ханты-Мансийск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ч</div>
+                  <a href="#">Чебаркуль</a>
+                  <a href="#">Челябинск</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Ш</div>
+                  <a href="#">Шадринск</a>
+                  <a href="#">Шумиха</a>
+                </div>
+                <div class="cities-col-list">
+                  <div class="letter">Я</div>
+                  <a href="#">Ялуторовск</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="salesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Выбор продавцов</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-search w-100">
+            <label>
+              <input type="text" placeholder="Поиск предложений" name="search">
+            </label>
+            <button type="submit" class="form-search__btn"><img src="img/search-icon.svg" alt=""></button>
+          </form>
+
+          <div class="list-checkbox list-checkbox-row">
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/confirmed-icon.svg" alt="">Подтвержденные</span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text">Только <span class="pro-label">PRO</span></span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3" checked="">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/star-icon.svg" alt="">4 звезды и выше</span>
+            </label>
+
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox3">
+              <span class="label-checkbox__custom"></span>
+              <span class="label-checkbox__text"><img src="img/heart-icon.svg" alt="">В моем избранном</span>
+            </label>
+          </div>
+
+
+
+          <!-- Cities list -->
+          <div class="salaesman-wrapper scroll-vertical">
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="product-card product-card-row salesman-row">
+              <div class="product-card-row__col col-1">
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+
+                <div class="product-card-row__body">
+                  <div class="product-info">
+                    <a href="product.html" class="product-card__name">ООО “Lokar”</a>
+                  </div>
+
+                  <div class="product-card-status">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-2">
+                <div class="product-card__address">
+                  <p>Рязанская область, Рязань</p>
+                </div>
+              </div>
+
+              <div class="product-card-row__col col-3">
+                <div class="product-info">
+                  <div class="product-card-status">
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">25</div>
+                    </div>
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+                  </div>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/salesman-logo1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-md fade" id="offerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Запрос на товар</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-order">
+            <label>
+              <span class="label-title">Сообщение</span>
+              <textarea
+                name="message">Здравствуйте, интересует Автосцепка СА-3 106.01.000-0-05сб, Артикул: 106.01.000-0-05сб</textarea>
+            </label>
+
+            <div class="files-results">
+              <div class="file-result-item">
+                <span>Номенклатура.doc 768кб</span>
+                <a href="#" class="file-result-item__close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <label class="label-file">
+              <input type="file" name="file" required>
+              <span class="label-file__icon"><img src="img/plus-black.svg" alt=""></span>
+              <span class="label-file__text">Добавить файл</span>
+            </label>
+            <div class="label-file__description">Можно добавить файлы форматом pdf, docx, excl размером не более 2 Мб
+            </div>
+
+            <button type="submit" class="btn btn-black btn-radius btn-md">Отправить запрос</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Расположение</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <div class="address-modal mb-32">
+            <p class="font-600">г. Рязань, ул. Молодежная, зд.18</p>
+            <div class="text-small color-grey mt-16">Рязанская область</div>
+          </div>
+
+          <div class="map-modal">
+            <iframe
+              src="https://yandex.com/map-widget/v1/?ll=39.648941%2C54.659500&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM0MDI2MhJe0KDQvtGB0YHQuNGPLCDQoNGP0LfQsNC90YwsINGA0LDQudC-0L0g0J_RgNC40L7QutGB0LrQuNC5LCDQnNC-0LvQvtC00ZHQttC90LDRjyDRg9C70LjRhtCwLCAxOCIKDYWYHkIVVKNaQg%2C%2C&z=16"
+              allowfullscreen="true" style="position:relative;"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-sm fade" id="contactsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Контакты ООО “РосВагонПартс”</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <div class="contacts-wrapper">
+            <div class="contacts-item">
+              <span class="contacts-item__name">Телефон</span>
+              <a href="tel:+79123456789" class="contacts-item__link">
+                <img src="img/phone-icon.svg" alt="">
+                <span>+7 (912) 345-67-89</span>
+              </a>
+            </div>
+
+            <div class="contacts-item">
+              <span class="contacts-item__name">Почта</span>
+              <a href="mailto:info@mail.ru" class="contacts-item__link">
+                <img src="img/mail-icon.svg" alt="">
+                <span>info@mail.ru</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>

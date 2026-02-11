@@ -1684,6 +1684,9 @@
 .product-company-item .btn-group-category .btn {
   margin: 0;
 }
+.product-company-item .btn-group-category .btn:last-child {
+  margin: 0;
+}
 
 .files-wrapper {
   width: 100%;
@@ -1929,6 +1932,9 @@
 .link-favorite-add:hover {
   opacity: 1;
 }
+.link-favorite-add:first-child {
+  margin: 0;
+}
 
 .companies-page__content {
   max-width: 1300px;
@@ -2035,4 +2041,43 @@
 .companies-card-row .btn-group .btn-sm svg {
   width: 6px;
   height: 6px;
+}
+
+.company-page {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.company-page .container {
+  max-width: 1300px;
+}
+
+.company-page-head {
+  background: #fff;
+  -webkit-box-shadow: 0px 16px 30px 0px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 16px 30px 0px rgba(0, 0, 0, 0.0784313725);
+}
+.company-page-head__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 32px 0;
+}
+.company-page-head__item:last-child {
+  border: none;
+}
+
+.company-logo-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 200px;
+  width: 100%;
+  margin-left: auto;
+}
+.company-logo-image img {
+  width: 100%;
 }

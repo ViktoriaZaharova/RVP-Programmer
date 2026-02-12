@@ -167,6 +167,11 @@ button, .btn
   img
     margin: 0 10px 0 0
     width: 16px
+  .w-16
+    width: 16px
+    height: 16px
+    min-width: 16px
+    
 
 .btn-radius
   border-radius: 12px
@@ -241,6 +246,8 @@ button, .btn
       filter: invert(1)
     .svg-icon
       stroke: #fff
+      &.stroke-none
+        fill: #fff
     &.color-black
       color: #fff
   .svg-icon
@@ -249,6 +256,15 @@ button, .btn
     fill: none
     stroke: #000
     margin: 0 0 0 10px
+    &.mr-10
+      margin: 0 10px 0 0
+    &.w-16
+      width: 16px
+      height: 16px
+      min-width: 16px
+    &.stroke-none
+      stroke: none
+      fill: #000
   
 
 
@@ -294,6 +310,21 @@ button, .btn
 
 .btn-group-category>.btn-group-category:not(:first-child), .btn-group-category>:not(.btn-check:first-child)+.btn
   margin: 0
+
+.btn-group-gap
+  .btn
+    margin: 0
+  .flex-1
+    flex: 1
+
+.btn-group-gap>.btn-group-gap:not(:first-child), .btn-group-gap>:not(.btn-check:first-child)+.btn
+  margin: 0
+
+.gap-16
+  gap: 16px 
+
+.flex-1
+  flex: 1   
 
 .svg-icon
   display: inline-block
@@ -396,7 +427,10 @@ h4, .h4
   margin-top: 16px
 
 .mt-20
-  margin-top: 20px      
+  margin-top: 20px 
+
+.mr-10
+  margin-right: 10px       
 
 .m-32
   margin: 32px 0

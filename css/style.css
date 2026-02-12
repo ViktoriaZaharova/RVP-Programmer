@@ -260,6 +260,11 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   margin: 0 10px 0 0;
   width: 16px;
 }
+.btn .w-16 {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+}
 
 .btn-radius {
   border-radius: 12px;
@@ -349,6 +354,9 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 .btn-border:hover .svg-icon, .btn-border:focus .svg-icon, .btn-border.active .svg-icon {
   stroke: #fff;
 }
+.btn-border:hover .svg-icon.stroke-none, .btn-border:focus .svg-icon.stroke-none, .btn-border.active .svg-icon.stroke-none {
+  fill: #fff;
+}
 .btn-border:hover.color-black, .btn-border:focus.color-black, .btn-border.active.color-black {
   color: #fff;
 }
@@ -358,6 +366,18 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   fill: none;
   stroke: #000;
   margin: 0 0 0 10px;
+}
+.btn-border .svg-icon.mr-10 {
+  margin: 0 10px 0 0;
+}
+.btn-border .svg-icon.w-16 {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+}
+.btn-border .svg-icon.stroke-none {
+  stroke: none;
+  fill: #000;
 }
 
 .btn-grey {
@@ -423,6 +443,29 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 
 .btn-group-category > .btn-group-category:not(:first-child), .btn-group-category > :not(.btn-check:first-child) + .btn {
   margin: 0;
+}
+
+.btn-group-gap .btn {
+  margin: 0;
+}
+.btn-group-gap .flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.btn-group-gap > .btn-group-gap:not(:first-child), .btn-group-gap > :not(.btn-check:first-child) + .btn {
+  margin: 0;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .svg-icon {
@@ -550,6 +593,10 @@ h4, .h4 {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
 }
 
 .m-32 {

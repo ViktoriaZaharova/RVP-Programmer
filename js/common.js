@@ -172,7 +172,7 @@ $('.similar-slider').slick({
 $('.company-gallery-slider').slick({
   slidesToShow: 3,
   arrows: true,
-  infinite: false,
+  // infinite: false,
   prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
 });

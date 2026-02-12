@@ -513,7 +513,7 @@
     padding: 3px 8px
     border-radius: 10px
     font-size: 9px
-    line-height: 10px
+    line-height: 20px
     font-weight: bold
     &.bg-green
         background: $green
@@ -1380,6 +1380,24 @@
     box-shadow: none
     .container
         max-width: 1300px
+    .company-page-head
+        .link-favorite-add
+            font-size: 14px
+            img
+                width: 16px
+                min-width: 16px
+        .product-card__address
+            margin: 16px 0 24px
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            font-size: 14px
+            line-height: 16px
+            font-weight: 500
+            color: #000
+            .color-grey
+                color: rgba(#000, .6)
+                margin: 0 0 0 12px
 
 .company-page-head
     background: #fff
@@ -1399,3 +1417,66 @@
     margin-left: auto
     img
         width: 100%
+
+.company-gallery-slider
+    .slide
+        padding: 0 24px 0 0
+    .slick-arrow
+        top: 50%
+        transform: translate(0,-50%)
+        background: #000 url('../img/arrow-right.svg') no-repeat center
+        background-size: 16px
+    .slick-prev
+        opacity: 0
+
+
+.company-gallery__item
+    width: 100%
+    height: 100%
+    @include d-flex
+    img
+        border-radius: 12px
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+
+.product-card-status-md
+    .professional-status, .status-item
+        font-size: 12px
+        line-height: 14px
+        padding: 9px 16px
+        box-shadow: none
+        img
+            width: 12px
+    .professional-status
+        padding: 9px 16px
+    .status-item
+        color: #20815C
+    .rating
+        font-size: 14px
+        line-height: 16px
+        color: #000
+    .rating-notification
+        margin: 0 0 0 8px
+        padding: 4px 7px
+
+.list-requisites
+    font-size: 14px
+    font-weight: 500
+    line-height: 16px
+    p
+        opacity: 0.4
+        padding: 0 8px 0 0
+   
+    p, span
+        width: 50%
+
+    li
+        padding: 20px 24px
+        display: flex
+        align-items: flex-start
+        &:nth-child(odd)
+            background: rgba(#000, .02)
+
+

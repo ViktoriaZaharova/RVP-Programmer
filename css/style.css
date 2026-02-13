@@ -915,6 +915,9 @@ h4, .h4 {
 .slick-slider-v2 .slick-prev {
   opacity: 0;
 }
+.slick-slider-v2 .slick-dots {
+  margin: 16px auto 0;
+}
 
 .label-checkbox {
   position: relative;

@@ -2145,6 +2145,7 @@
 }
 .product-card-status-md .professional-status {
   padding: 9px 16px;
+  border-radius: 20px;
 }
 .product-card-status-md .status-item {
   color: #20815C;
@@ -2176,9 +2177,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .list-requisites li:nth-child(odd) {
   background: rgba(0, 0, 0, 0.02);
@@ -2256,4 +2257,9 @@
 .reviews-card__date {
   white-space: nowrap;
   text-align: right;
+}
+
+.product-company-item__body {
+  position: relative;
+  z-index: 1;
 }

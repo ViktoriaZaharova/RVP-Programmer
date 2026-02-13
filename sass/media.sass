@@ -726,7 +726,39 @@
     .companies-page__content .label-checkbox__wrap
         flex: auto
 
-    
+    .company-gallery-slider
+        .slick-list
+            margin: 0 -12px
+        .slide
+            padding: 0 12px
+
+    .reviews-slider .slide
+        padding: 0
+
+    .reviews-card .box-text
+        font-size: 12px
+        line-height: 20px
+
+    .reviews-card
+        font-size: 12px
+        line-height: 14px
+
+    .reviews-card .box-text-max
+        max-height: 140px
+
+    .reviews-card__user img
+        width: 12px
+
+    .list-requisites
+        font-size: 12px
+        line-height: 14px
+        li
+            padding: 12px 16px
+
+    .btn-md-mobile
+        height: 40px
+        font-size: 12px
+        line-height: 14px
 
 @media only screen and (max-width: 930px)
     .product-card-column .product-card__body
@@ -834,7 +866,6 @@
     .companies-page__content .label-checkbox
         white-space: normal
 
-
 @media only screen and (max-width: 768px)
     .btn-registration, .btn-authorization
         min-width: auto
@@ -925,7 +956,21 @@
         .content-filters
             margin-top: 0
 
-            
+    .reviews-slider
+        margin-top: 16px
+
+    .company-page-head__item
+        padding: 24px 0
+
+    .product-company-item__title
+        display: flex
+        align-items: center
+        .product-company-item__name
+            width: fit-content
+            margin: 0
+        .btn
+            margin: 0 0 0 auto
+
 @media only screen and (max-width: 710px)
     .link-developer
         width: 100%
@@ -1428,6 +1473,87 @@
             img
                 width: 12px
 
+    .company-page
+        padding: 0
+        .product-company-labels
+            flex-direction: column
+            align-items: flex-start
+            margin: 0 0 16px
+        .category-label, .date-public
+            padding: 8px 16px
+            font-size: 12px
+            line-height: 14px
+        .company-page-head .product-card__address
+            font-size: 12px
+            line-height: 14px
+            margin: 16px 0
+            .avialability
+                margin: 4px 0 0
+                display: block
+                width: 100%
+        .company-page-head__item
+            .btn-group-gap
+                gap: 8px
+                .flex-1
+                    flex: 1
+
+    .company-page .company-page-head .link-favorite-add
+        margin: 0 0 16px
+        font-size: 12px
+        line-height: 14px
+
+    .company-logo-image
+        position: absolute
+        right: 0
+        top: 0
+        width: 162px
+        height: 162px
+        max-width: none
+
+    .product-company-item__body
+        padding: 0 165px 0 0
+        .rating
+            .rating-icon
+                display: none
+                &:first-child
+                    display: flex
+        .rating-notification
+            span
+                display: none
+
+    .gap-16
+        gap: 8px
+
+    .btn-group-gap .flex-1
+        flex: none
+        width: 100%
+
+    .product-company-item__head
+        margin: 0 0 16px
+        h1
+            margin: 0
+
+    .product-card-status-md .professional-status, .product-card-status-md .status-item
+        padding: 3px 8px
+        font-size: 8px
+        line-height: 10px
+        img
+            width: 12px
+            margin: 0 4px 0 0
+
+    .product-card-status-md .rating
+        font-size: 10px
+        line-height: 12px
+
+    .company-gallery-slider
+        .slick-list
+            margin: 0 -4px
+        .slide
+            padding: 0 4px
+
+    .reviews-card .box-text-max
+        max-height: 240px
+
 @media only screen and (max-width: 420px)
     .btn
         padding: 0 20px
@@ -1480,7 +1606,7 @@
     .form-order textarea
         height: 80px
 
-@media only screen and (max-width: 370px)
+@media only screen and (max-width: 380px)
     .btn
         padding: 0 15px
 
@@ -1499,6 +1625,22 @@
     .js-text-wrap.is-collapsed
         max-height: 330px
 
+    .company-logo-image
+        width: 122px
+        height: 122px
+
+    .product-company-item__body
+        padding: 0 122px 0 0
+
+    .company-page-head__item, .product-company-item
+        padding: 16px 0
+
+    .reviews-card .box-text-max
+        max-height: 220px
+
+    .reviews-card .box-text-min
+        max-height: 107px
+        
 @media only screen and (max-width: 340px)
     .subsection-link
         font-size: 10px
@@ -1509,6 +1651,16 @@
 
     .form-order textarea
         height: 96px
+
+    .company-logo-image
+        width: 62px
+        height: 62px
+
+    .product-company-item__body
+        padding: 0 62px 0 0
+
+    .reviews-card .box-text-max
+        max-height: 280px
 
 @media (min-width: 1100px)
     .content-filters__sort.dropdown

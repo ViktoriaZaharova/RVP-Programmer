@@ -142,7 +142,7 @@
         <div class="company-page-head__item">
           <div class="container">
             <div class="row">
-              <div class="col-12 col-md-8 col-lg-9">
+              <div class="col-12 col-sm-8 col-lg-9">
                 <div class="product-company-item__head">
                   <h1>TRAIN Group</h1>
                   <div class="btn-group-social">
@@ -150,41 +150,66 @@
                     <a href="#" class="btn-group-social__item"><img src="img/favorite-icon-black.svg" alt=""></a>
                   </div>
                 </div>
-                <div class="product-company-labels mb-24">
-                  <div class="category-label">12 успешных продаж</div>
-                  <div class="date-public color-grey">Нет завершенных закупок</div>
-                </div>
-
-                <div class="product-card-status product-card-status-md">
-                  <div class="professional-status bg-green">PRO</div>
-                  <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
-                      проверены</span></div>
-
-                  <div class="rating">
-                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                    <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
-                    <div class="rating-value">5.0</div>
-                    <div class="rating-notification">2 отзыва</div>
+                <div class="product-company-item__body">
+                  <div class="product-company-labels mb-24">
+                    <div class="category-label">12 успешных продаж</div>
+                    <div class="date-public color-grey">Нет завершенных закупок</div>
                   </div>
+
+                  <div class="product-card-status product-card-status-md">
+                    <div class="professional-status bg-green">PRO</div>
+                    <div class="status-item status-item-v2"><img src="img/status.svg" alt=""><span>Реквизиты
+                        проверены</span></div>
+
+                    <div class="rating">
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-icon"><img src="img/star-icon.svg" alt=""></div>
+                      <div class="rating-value">5.0</div>
+                      <div class="rating-notification">2 <span>отзыва</span></div>
+                    </div>
+                  </div>
+
+                  <div class="product-card__address">
+                    <p>Рязанская область, Рязань</p>
+                    <div class="avialability color-grey">На платформе с 2023г.</div>
+                  </div>
+
+                  <div class="company-logo-image"><img src="img/train-logo.png" alt=""></div>
                 </div>
 
-                <div class="product-card__address">
-                  <p>Рязанская область, Рязань</p>
-                  <div class="avialability color-grey">На платформе с 2023г.</div>
+                <a href="#" class="link-favorite-add d-flex d-sm-none"><span>Это ваша компания?</span></a>
+
+                <div class="btn-group btn-group-gap w-100 d-flex d-sm-none">
+
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black flex-1"
+                    data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <span>56 предложений</span>
+                    <svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black flex-1"
+                    data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <span>21 запросов</span>
+                    <svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
 
-                <div class="btn-group w-100 mb-24">
-                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                <div class="btn-group w-100 mb-24 d-none d-sm-flex">
+
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black btn-modal mt-16"
                     data-bs-toggle="modal" data-bs-target="#mapModal">
                     <span>56 активных предложений</span>
                     <svg class="svg-icon">
                       <use xlink:href="img/sprite.svg#arrow-right"></use>
                     </svg>
                   </a>
-                  <a href="#" class="btn btn-md btn-border btn-radius color-black btn-modal mt-16"
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black btn-modal mt-16"
                     data-bs-toggle="modal" data-bs-target="#mapModal">
                     <span>21 активных запросов</span>
                     <svg class="svg-icon">
@@ -193,15 +218,16 @@
                   </a>
                 </div>
 
-                <div class="btn-group w-100">
+                <div class="btn-group w-100 d-none d-sm-flex">
                   <a href="#" class="link-favorite-add"><img src="img/favorite-icon-black.svg" alt=""><span>В
                       избранное</span></a>
                   <a href="#" class="link-favorite-add"><img src="img/schedule-icon.svg"
                       alt=""><span>Поделиться</span></a>
                   <a href="#" class="link-favorite-add"><span>Это ваша компания?</span></a>
                 </div>
+
               </div>
-              <div class="col-12 col-md-4 col-lg-3">
+              <div class="col-12 col-sm-4 col-lg-3 d-none d-sm-flex">
                 <div class="company-logo-image"><img src="img/train-logo.png" alt=""></div>
               </div>
             </div>
@@ -216,7 +242,7 @@
               </div>
               <div class="col-12 col-md-9">
                 <div class="btn-group btn-group-gap gap-16 w-100">
-                  <a href="#" class="btn btn-md btn-radius btn-black flex-1" data-bs-toggle="modal"
+                  <a href="#" class="btn btn-md btn-md-mobile btn-radius btn-black flex-1" data-bs-toggle="modal"
                     data-bs-target="#chatModal">
                     <svg class="svg-icon stroke-none w-16 mr-10">
                       <use xlink:href="img/sprite.svg#chat-icon"></use>
@@ -224,16 +250,16 @@
                     <span>Написать сообщение</span>
                   </a>
 
-                  <a href="#" class="btn btn-md btn-border btn-radius color-black flex-1" data-bs-toggle="modal"
-                    data-bs-target="#contactsModal">
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black flex-1"
+                    data-bs-toggle="modal" data-bs-target="#contactsModal">
                     <svg class="svg-icon stroke-none w-16 mr-10">
                       <use xlink:href="img/sprite.svg#phone-icon2"></use>
                     </svg>
                     <span>Показать телефон</span>
                   </a>
 
-                  <a href="#" class="btn btn-md btn-border btn-radius color-black flex-1" data-bs-toggle="modal"
-                    data-bs-target="#contactsModal">
+                  <a href="#" class="btn btn-md btn-md-mobile btn-border btn-radius color-black flex-1"
+                    data-bs-toggle="modal" data-bs-target="#contactsModal">
                     <svg class="svg-icon stroke-none w-16 mr-10">
                       <use xlink:href="img/sprite.svg#mail-icon"></use>
                     </svg>
@@ -313,9 +339,11 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-3">
-                <div class="h3 product-company-item__name n">Отзыв</div>
-                <a href="#" class="btn btn-border btn-radius btn-md mt-16" data-bs-toggle="modal"
-                  data-bs-target="#reviewsModal">Оставить отзыв</a>
+                <div class="product-company-item__title w-100">
+                  <div class="h3 product-company-item__name">Отзыв</div>
+                  <a href="#" class="btn btn-border btn-radius btn-md-sm mt-16" data-bs-toggle="modal"
+                    data-bs-target="#reviewsModal">Оставить отзыв</a>
+                </div>
               </div>
               <div class="col-12 col-md-9">
                 <div class="reviews-slider slick-slider-v2">
@@ -331,7 +359,7 @@
                           <p>Отгрузки в большинстве случаев укладываются в согласованные сроки, упаковка адекватная, без
                             повреждений при транспортировке. Документооборот выстроен корректно, счета и сертификаты
                             предоставляются без напоминаний. Коммуникация рабочая, без лишней суеты</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus
                             in repudiandae. Ducimus laudantium quaerat labore quisquam iure possimus ad eum
                             exercitationem, vitae dolore sed aperiam tempore?</p>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus
@@ -392,7 +420,7 @@
                           <p>Отгрузки в большинстве случаев укладываются в согласованные сроки, упаковка адекватная, без
                             повреждений при транспортировке. Документооборот выстроен корректно, счета и сертификаты
                             предоставляются без напоминаний. Коммуникация рабочая, без лишней суеты</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus
                             in repudiandae. Ducimus laudantium quaerat labore quisquam iure possimus ad eum
                             exercitationem, vitae dolore sed aperiam tempore?</p>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, eum fugit doloribus

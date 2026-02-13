@@ -175,6 +175,17 @@ $('.company-gallery-slider').slick({
   // infinite: false,
   prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+        autoplay: true
+      }
+    }
+  ]
 });
 
 $('.reviews-slider').slick({
@@ -183,6 +194,19 @@ $('.reviews-slider').slick({
   // infinite: false,
   prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        fade: true,
+        autoplay: true,
+        adaptiveHeight: true
+      }
+    }
+  ]
 });
 
 
@@ -220,8 +244,8 @@ $(function () {
     if ($text.hasClass('box-text-max') || $text.hasClass('box-text-min')) {
 
       // запоминаем какой класс был
-      const originalClass = $text.hasClass('box-text-max') 
-        ? 'box-text-max' 
+      const originalClass = $text.hasClass('box-text-max')
+        ? 'box-text-max'
         : 'box-text-min';
 
       $text.data('collapsed-class', originalClass);

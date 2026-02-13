@@ -1123,7 +1123,6 @@
             margin: 0
             &:last-child
                 margin: 0
-       
 
 .files-wrapper
     width: 100%
@@ -1307,15 +1306,13 @@
             white-space: nowrap
             margin: 0
             &__wrap
-                flex: 0 0 auto 
+                flex: 0 0 auto
                 display: flex
                 align-items: center
 
         .user-menu__divider
             margin: 0 16px
             width: 100%
-
-
 
 .companies-card-row
     position: relative
@@ -1374,7 +1371,6 @@
                 width: 6px
                 height: 6px
 
-
 // company page
 .company-page
     box-shadow: none
@@ -1421,14 +1417,6 @@
 .company-gallery-slider
     .slide
         padding: 0 24px 0 0
-    .slick-arrow
-        top: 50%
-        transform: translate(0,-50%)
-        background: #000 url('../img/arrow-right.svg') no-repeat center
-        background-size: 16px
-    .slick-prev
-        opacity: 0
-
 
 .company-gallery__item
     width: 100%
@@ -1439,7 +1427,6 @@
         width: 100%
         height: 100%
         object-fit: cover
-
 
 .product-card-status-md
     .professional-status, .status-item
@@ -1468,7 +1455,7 @@
     p
         opacity: 0.4
         padding: 0 8px 0 0
-   
+
     p, span
         width: 50%
 
@@ -1479,4 +1466,55 @@
         &:nth-child(odd)
             background: rgba(#000, .02)
 
+.btn-toggle-reviews
+    color: #000
+    margin: 16px 0 0
+    img
+        width: 8px
+        margin: 0 0 0 10px
 
+.reviews-slider
+    .slide
+        padding: 0 32px 0 0
+
+.reviews-card
+    width: 100%
+    font-size: 14px
+    line-height: 16px
+    color: #000
+    .box-text
+        font-size: 14px
+        line-height: 22px
+        overflow: hidden
+        transition: max-height .3s ease
+        p
+            margin: 0 0 10px
+            &:last-child
+                margin: 0
+    .box-text-max
+        max-height: 282px
+    .box-text-min
+        max-height: 118px
+    &__footer
+        width: 100%
+        display: flex
+        align-items: center
+        margin: 16px 0 0
+        font-weight: 500
+
+    &__user
+        display: flex
+        align-items: center
+        width: 100%
+        img
+            margin: 0 10px 0 0
+        &:after
+            content: ''
+            margin: 0 16px
+            width: 100%
+            height: 10px
+            background: url('../img/line-decor.png') no-repeat center
+            background-size: cover
+    &__date
+        white-space: nowrap
+        text-align: right

@@ -177,6 +177,82 @@ $('.company-gallery-slider').slick({
   nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
 });
 
+$('.reviews-slider').slick({
+  slidesToShow: 2,
+  arrows: true,
+  // infinite: false,
+  prevArrow: '<button class="slick-prev slick-arrow" type="button"></button>',
+  nextArrow: '<button class="slick-next slick-arrow" type="button"></button>',
+});
+
+
+$(function () {
+
+  function checkCards() {
+    $('.reviews-card').each(function () {
+
+      const $card = $(this);
+      const $text = $card.find('.box-text');
+      const $btn = $card.find('.btn-toggle-reviews');
+
+      if ($text.hasClass('box-text-max') || $text.hasClass('box-text-min')) {
+
+        const collapsedHeight = parseInt($text.css('max-height'));
+        const fullHeight = $text[0].scrollHeight;
+
+        if (fullHeight <= collapsedHeight) {
+          $btn.hide();
+        }
+      }
+    });
+  }
+
+  checkCards();
+
+  // делегирование для slick
+  $('.reviews-slider').on('click', '.btn-toggle-reviews', function (e) {
+    e.preventDefault();
+
+    const $btn = $(this);
+    const $text = $btn.closest('.reviews-card').find('.box-text');
+
+    // если свернуто
+    if ($text.hasClass('box-text-max') || $text.hasClass('box-text-min')) {
+
+      // запоминаем какой класс был
+      const originalClass = $text.hasClass('box-text-max') 
+        ? 'box-text-max' 
+        : 'box-text-min';
+
+      $text.data('collapsed-class', originalClass);
+
+      // раскрываем
+      $text.removeClass('box-text-max box-text-min');
+
+      $btn.find('span').text('Скрыть');
+
+    } else {
+
+      // сворачиваем обратно
+      const collapsedClass = $text.data('collapsed-class');
+
+      if (collapsedClass) {
+        $text.addClass(collapsedClass);
+      }
+
+      $btn.find('span').text('Показать целиком');
+    }
+
+    // обновляем slick
+    setTimeout(function () {
+      $('.reviews-slider').slick('setPosition');
+    }, 300);
+
+  });
+
+});
+
+
 
 // ==================================================
 // SLICK: скрывать точки если 1 слайд

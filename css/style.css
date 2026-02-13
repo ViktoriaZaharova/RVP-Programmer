@@ -905,6 +905,17 @@ h4, .h4 {
   height: auto;
 }
 
+.slick-slider-v2 .slick-arrow {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background: #000 url("../img/arrow-right.svg") no-repeat center;
+  background-size: 16px;
+}
+.slick-slider-v2 .slick-prev {
+  opacity: 0;
+}
+
 .label-checkbox {
   position: relative;
   display: -webkit-box;

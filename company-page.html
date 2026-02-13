@@ -177,7 +177,7 @@
                     <div class="avialability color-grey">На платформе с 2023г.</div>
                   </div>
 
-                  <div class="company-logo-image"><img src="img/train-logo.png" alt=""></div>
+                  <div class="company-logo-image d-flex d-sm-none"><img src="img/train-logo.png" alt=""></div>
                 </div>
 
                 <a href="#" class="link-favorite-add d-flex d-sm-none"><span>Это ваша компания?</span></a>
@@ -1644,6 +1644,106 @@
               </a>
             </div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-md fade" id="chatModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Написать TRAIN Group</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-order">
+            <label>
+              <span class="label-title">Сообщение</span>
+              <input type="text" name="message_company" placeholder="Введите сообщение для компании" required>
+            </label>
+
+            <div class="files-results">
+              <div class="file-result-item">
+                <span>Номенклатура.doc 768кб</span>
+                <a href="#" class="file-result-item__close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <label class="label-file">
+              <input type="file" name="file" required>
+              <span class="label-file__icon"><img src="img/plus-black.svg" alt=""></span>
+              <span class="label-file__text">Добавить файл</span>
+            </label>
+            <div class="label-file__description">Можно добавить файлы форматом pdf, docx, excl размером не более 2 Мб
+            </div>
+
+            <button type="submit" class="btn btn-black btn-radius btn-md">Отправить сообщение</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-md fade" id="reviewsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title h3">Отзыв о компании «TRAIN Group»</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" class="form-order form-reviews">
+            <div class="grade-wrapper">
+              <div class="label-title">Оценка</div>
+
+              <div class="grade">
+                <input type="hidden" name="grade" value="0">
+
+                <svg class="grade-star" data-value="1" width="29" height="27" viewBox="0 0 29 27">
+                  <path
+                    d="M14.5 0L18.5237 9.47092L29 10.2776L21.0105 16.9375L23.4615 26.907L14.5 21.5522L5.53851 26.907L7.9895 16.9375L0 10.2776L10.4763 9.47092L14.5 0Z" />
+                </svg>
+
+                <svg class="grade-star" data-value="2" width="29" height="27" viewBox="0 0 29 27">
+                  <path
+                    d="M14.5 0L18.5237 9.47092L29 10.2776L21.0105 16.9375L23.4615 26.907L14.5 21.5522L5.53851 26.907L7.9895 16.9375L0 10.2776L10.4763 9.47092L14.5 0Z" />
+                </svg>
+
+                <svg class="grade-star" data-value="3" width="29" height="27" viewBox="0 0 29 27">
+                  <path
+                    d="M14.5 0L18.5237 9.47092L29 10.2776L21.0105 16.9375L23.4615 26.907L14.5 21.5522L5.53851 26.907L7.9895 16.9375L0 10.2776L10.4763 9.47092L14.5 0Z" />
+                </svg>
+
+                <svg class="grade-star" data-value="4" width="29" height="27" viewBox="0 0 29 27">
+                  <path
+                    d="M14.5 0L18.5237 9.47092L29 10.2776L21.0105 16.9375L23.4615 26.907L14.5 21.5522L5.53851 26.907L7.9895 16.9375L0 10.2776L10.4763 9.47092L14.5 0Z" />
+                </svg>
+
+                <svg class="grade-star" data-value="5" width="29" height="27" viewBox="0 0 29 27">
+                  <path
+                    d="M14.5 0L18.5237 9.47092L29 10.2776L21.0105 16.9375L23.4615 26.907L14.5 21.5522L5.53851 26.907L7.9895 16.9375L0 10.2776L10.4763 9.47092L14.5 0Z" />
+                </svg>
+              </div>
+            </div>
+
+
+            <label>
+              <span class="label-title">Отзыв</span>
+              <input type="text" name="message"
+                placeholder="В отзыве не допускается оскорбление или не цензурная лексика" class="input-v2" required>
+              <span class="text-small color-grey mt-8 d-block">Допустимое количество символов 250</span>
+            </label>
+
+            <button type="submit" class="btn btn-black btn-radius btn-md">Отправить отзыв</button>
+          </form>
         </div>
 
       </div>

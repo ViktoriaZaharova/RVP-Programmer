@@ -105,6 +105,10 @@ input, textarea, select
   &.text-center
     text-align: center
 
+.input-v2
+  border: 2px solid rgba(#000,.1)
+  background: transparent
+
 input[type="radio"], input[type="checkbox"]
   width: auto
   height: auto
@@ -115,7 +119,7 @@ input[type="radio"], input[type="checkbox"]
 label
   display: block
   width: 100%
-  margin: 0 0 13px
+  margin: 0 0 16px
 
   &:last-child
     margin: 0
@@ -415,6 +419,9 @@ h4, .h4
     border-radius: 6px
     margin: 0 24px 0 0
 
+.mt-8
+  margin-top: 8px
+
 .mt-16
   margin-top: 16px
 
@@ -692,3 +699,24 @@ h4, .h4
 
 .dropdown-menu
   border: none
+
+
+.grade-wrapper
+    margin: 0 0 32px
+    &:last-child
+        margin: 0
+
+.grade
+    display: flex
+    gap: 16px
+
+    &-star
+        cursor: pointer
+
+        path
+            fill: rgba(#000, .48)
+            transition: fill 0.2s ease
+
+.grade-star.active path,
+.grade-star.hover path
+    fill: $brown

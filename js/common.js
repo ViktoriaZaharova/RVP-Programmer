@@ -695,3 +695,36 @@ $(function () {
 
 
 
+// rating star
+$(function () {
+
+  const $rating = $('.grade');
+  const $stars = $rating.find('.grade-star');
+  const $input = $rating.find('input[name="grade"]');
+
+  // hover
+  $stars.on('mouseenter', function () {
+    const value = $(this).data('value');
+
+    $stars.each(function () {
+      $(this).toggleClass('hover', $(this).data('value') <= value);
+    });
+  });
+
+  // убрать hover
+  $rating.on('mouseleave', function () {
+    $stars.removeClass('hover');
+  });
+
+  // click
+  $stars.on('click', function () {
+    const value = $(this).data('value');
+
+    $input.val(value);
+
+    $stars.each(function () {
+      $(this).toggleClass('active', $(this).data('value') <= value);
+    });
+  });
+
+});

@@ -362,6 +362,16 @@ footer {
   font-size: 12px;
   line-height: 14px;
 }
+.label-file:hover {
+  border-color: #000;
+}
+
+[name=message_company] {
+  padding: 0 16px 0 60px;
+  background: url("../img/mail-input.svg") no-repeat 24px center;
+  background-size: 24px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
 
 .map-modal {
   width: 100%;
@@ -427,4 +437,11 @@ footer {
 }
 .contacts-item__link img {
   margin: 0 8px 0 0;
+}
+
+.form-reviews label {
+  margin: 0 0 32px;
+}
+.form-reviews label:last-child {
+  margin: 0;
 }

@@ -445,3 +445,7 @@ footer {
 .form-reviews label:last-child {
   margin: 0;
 }
+
+#requisitesModal .modal-dialog {
+  max-width: 688px;
+}
